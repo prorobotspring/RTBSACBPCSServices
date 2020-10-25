@@ -1,0 +1,103 @@
+[2014Dec10 17:47:18,075][INFO ][RTBS_ACBPCS--1418249838074][service AcbpcsServlet.java:51][Input:<AppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs"><Channel>FEATC</Channel><MSISDN>584129117195</MSISDN><SearchDateRange><StartDate>2014-12-01T00:00:00.000-04:30</StartDate><EndDate>2014-12-10T23:59:59.000-04:30</EndDate></SearchDateRange><SearchMaxRecords>50</SearchMaxRecords><ProductChargeConditions><SearchMTRReason/><SearchOfferReason/></ProductChargeConditions></AppliedCustomerBillingProductChargeSearchRequest>]
+[2014Dec10 17:47:18,084][INFO ][RTBS_ACBPCS--1418249838074][execute RTBS_ACBPCS.java:180][ _I execute:]
+[2014Dec10 17:47:18,085][INFO ][RTBS_ACBPCS--1418249838074][getParameterSignFromRequest RTBS_ACBPCS_SIGN_PARSER.java:30][Parser para obtener filtro del signo para debito o credito con el xml: <AppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs"><Channel>FEATC</Channel><MSISDN>584129117195</MSISDN><SearchDateRange><StartDate>2014-12-01T00:00:00.000-04:30</StartDate><EndDate>2014-12-10T23:59:59.000-04:30</EndDate></SearchDateRange><SearchMaxRecords>50</SearchMaxRecords><ProductChargeConditions><SearchMTRReason/><SearchOfferReason/></ProductChargeConditions></AppliedCustomerBillingProductChargeSearchRequest>]
+[2014Dec10 17:47:18,095][INFO ][RTBS_ACBPCS--1418249838074][getParameterSignFromRequest RTBS_ACBPCS_SIGN_PARSER.java:36][Instancia del metodo run ]
+[2014Dec10 17:47:18,098][INFO ][RTBS_ACBPCS--1418249838074][run RTBS_ACBPCS_SIGN_PARSER.java:55][Element Obtenido]
+[2014Dec10 17:47:18,099][INFO ][RTBS_ACBPCS--1418249838074][run RTBS_ACBPCS_SIGN_PARSER.java:66][Aplicar Signo al AppliedAmount: false]
+[2014Dec10 17:47:18,118][INFO ][RTBS_ACBPCS--1418249838074][info RTBS_ACBPCS.java:118][ _M execute: before getRtbsAcbpcs() ]
+[2014Dec10 17:47:18,119][DEBUG][RTBS_ACBPCS--1418249838074][debug RTBS_ACBPCS.java:113][ _I getRtbsAcbpcs:]
+[2014Dec10 17:47:18,122][INFO ][RTBS_ACBPCS-584129117195-1418249838074][getRtbsAcbpcs RTBS_ACBPCS.java:353][_M getRtbsAcbpcs: Recibiendo: channel= FEATC,msisdn=584129117195,startDate=2014-12-01T00:00:00.000-04:30,endDate=2014-12-10T23:59:59.000-04:30,maxNumRecords=50]
+[2014Dec10 17:47:18,124][INFO ][RTBS_ACBPCS-584129117195-1418249838074][getRtbsAcbpcs RTBS_ACBPCS.java:360][_M getRtbsAcbpcs: Recibiendo mtrReason= [Ljava.lang.String;@ce4ed7]
+[2014Dec10 17:47:18,125][INFO ][RTBS_ACBPCS-584129117195-1418249838074][info RTBS_ACBPCS.java:118][_M getRtbsAcbpcs: No hay offerReason]
+[2014Dec10 17:47:18,126][DEBUG][RTBS_ACBPCS-584129117195-1418249838074][getRtbsAcbpcs RTBS_ACBPCS.java:411][ limit_date=Fri Nov 21 00:00:00 VET 2014]
+[2014Dec10 17:47:18,128][DEBUG][RTBS_ACBPCS-584129117195-1418249838074][getRtbsAcbpcs RTBS_ACBPCS.java:420][ limitDateLessOne=Thu Nov 20 23:59:59 VET 2014]
+[2014Dec10 17:47:18,129][INFO ][RTBS_ACBPCS-584129117195-1418249838074][getRtbsAcbpcs RTBS_ACBPCS.java:456][Tipo de Consulta: RECENTrecentStartDate Mon Dec 01 00:00:00 VET 2014recentEndDate Wed Dec 10 23:59:59 VET 2014historicalStartDate nullhistoricalEndDatenull]
+[2014Dec10 17:47:18,130][DEBUG][RTBS_ACBPCS-584129117195-1418249838074][debug RTBS_ACBPCS.java:113][ _M getRtbsAcbpcs: before procesing:]
+[2014Dec10 17:47:18,133][DEBUG][RTBS_ACBPCS-584129117195-1418249838074][getRecentData RTBS_ACBPCS.java:859][_M getRtbsAcbpcs: INPUT RECENT: <RecentAppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs">
+  <Channel>FEATC</Channel>
+  <MSISDN>584129117195</MSISDN>
+  <SearchDateRange>
+    <StartDate>2014-12-01T00:00:00.000-04:30</StartDate>
+    <EndDate>2014-12-10T23:59:59.000-04:30</EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>50</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason/>
+    <SearchOfferReason/>
+  </ProductChargeConditions>
+</RecentAppliedCustomerBillingProductChargeSearchRequest>]
+[2014Dec10 17:47:18,135][INFO ][RTBS_ACBPCS-584129117195-1418249838074][getRecentData RTBS_ACBPCS.java:865][_M getRtbsAcbpcs: INPUT RECENT: <RecentAppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs">
+  <Channel>FEATC</Channel>
+  <MSISDN>584129117195</MSISDN>
+  <SearchDateRange>
+    <StartDate>2014-12-01T00:00:00.000-04:30</StartDate>
+    <EndDate>2014-12-10T23:59:59.000-04:30</EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>50</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason/>
+    <SearchOfferReason/>
+  </ProductChargeConditions>
+</RecentAppliedCustomerBillingProductChargeSearchRequest>]
+[2014Dec10 17:47:18,138][DEBUG][RTBS_ACBPCS-584129117195-1418249838074][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:359][_M getRtbsAcbpcsh: Recibiendo: channel= FEATC,msisdn=584129117195,startDate=2014-12-01T00:00:00.000-04:30,endDate=2014-12-10T23:59:59.000-04:30,maxNumRecords=50]
+[2014Dec10 17:47:18,139][DEBUG][RTBS_ACBPCS-584129117195-1418249838074][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:368][_M getRtbsAcbpcsh: Recibiendo mtrReason= [Ljava.lang.String;@9a1300]
+[2014Dec10 17:47:18,140][DEBUG][RTBS_ACBPCS-584129117195-1418249838074][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:378][_M getRtbsAcbpcsh: Recibiendo offerReason= [Ljava.lang.String;@1559585]
+[2014Dec10 17:47:18,142][DEBUG][RTBS_ACBPCS-584129117195-1418249838074][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:406][ _M getRtbsAcbpcsr: Validate:]
+[2014Dec10 17:47:18,143][DEBUG][RTBS_ACBPCS-584129117195-1418249838074][debug DispatcherConnection.java:64][ _M getCcwsConnectionOther]
+[2014Dec10 17:47:18,161][DEBUG][RTBS_ACBPCS-584129117195-1418249838074][debug DispatcherConnection.java:64][ _M getCcwsConnectionCache]
+[2014Dec10 17:47:18,178][DEBUG][RTBS_ACBPCS-584129117195-1418249838074][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:423][ _M getRtbsAcbpcsr: Obteined Ccws:]
+[2014Dec10 17:47:21,839][DEBUG][RTBS_ACBPCS-584129117195-1418249838074][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:435][ _M getRtbsAcbpcsr: SubscribeRetrieve(msisdn=584129117195,informationToRetrieve=16512,startDate=Mon Dec 01 00:00:00 VET 2014,endDate=Wed Dec 10 23:59:59 VET 2014]
+[2014Dec10 17:47:21,841][INFO ][RTBS_ACBPCS-584129117195-1418249838074][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:449][ _M getRtbsAcbpcsr: retrieveSubscriberWithIdentityWithHistoryForMultipleIdentities:]
+[2014Dec10 17:47:21,842][INFO ][RTBS_ACBPCS-584129117195-1418249838074][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:459][ _M getRtbsAcbpcsr: Obteined MonetaryTransactionRecord and OfferHistoryRecord:]
+[2014Dec10 17:47:21,843][INFO ][RTBS_ACBPCS-584129117195-1418249838074][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:464][Obteniendo getCache]
+[2014Dec10 17:47:21,845][INFO ][RTBS_ACBPCS-584129117195-1418249838074][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:482][getCache obtenido]
+[2014Dec10 17:47:21,846][INFO ][RTBS_ACBPCS-584129117195-1418249838074][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:487][classOfService obtenido]
+[2014Dec10 17:47:21,848][INFO ][RTBS_ACBPCS-584129117195-1418249838074][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:495][periodicCharges obtenido]
+[2014Dec10 17:47:21,850][INFO ][RTBS_ACBPCS-584129117195-1418249838074][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:501][offers obtenido]
+[2014Dec10 17:47:21,853][DEBUG][RTBS_ACBPCS-584129117195-1418249838074][debug DispatcherConnection.java:64][ _M jndiConnection]
+[2014Dec10 17:47:21,854][DEBUG][RTBS_ACBPCS-584129117195-1418249838074][debug DispatcherConnection.java:64][ _M getJndiConnection]
+[2014Dec10 17:47:21,857][DEBUG][RTBS_ACBPCS-584129117195-1418249838074][debug RtbsHistory.java:54][ _I getApplyDay:]
+[2014Dec10 17:47:21,859][DEBUG][RTBS_ACBPCS-584129117195-1418249838074][debug RtbsHistory.java:54][ _M getApplyDay:  PROBLEM CONSULTING BD (getApplyDay) ]
+[2014Dec10 17:47:21,866][ERROR][RTBS_ACBPCS-584129117195-1418249838074][<init> RtbsHistoryException.java:26][RtbsHistoryException -  PROBLEM CONSULTING BD (getApplyDay) ]
+java.sql.SQLException: No more data to read from socket
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:125)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:162)
+	at oracle.jdbc.driver.DatabaseError.check_error(DatabaseError.java:885)
+	at oracle.jdbc.driver.T4CMAREngine.unmarshalUB1(T4CMAREngine.java:994)
+	at oracle.jdbc.driver.T4CMAREngine.unmarshalSB1(T4CMAREngine.java:951)
+	at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:435)
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:181)
+	at oracle.jdbc.driver.T4CCallableStatement.execute_for_rows(T4CCallableStatement.java:870)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1081)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:2905)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:2996)
+	at oracle.jdbc.driver.OracleCallableStatement.execute(OracleCallableStatement.java:4120)
+	at weblogic.jdbc.wrapper.PreparedStatement.execute(PreparedStatement.java:102)
+	at la.integra.digitel.ivr.history.RtbsHistory.getApplyDay(RtbsHistory.java:92)
+	at la.integra.digitel.RTBS_ACBPCSRecent.RTBS_ACBPCSRecent.getRtbsAcbpcsr(RTBS_ACBPCSRecent.java:531)
+	at la.integra.digitel.RTBS_ACBPCS.RTBS_ACBPCS.getRecentData(RTBS_ACBPCS.java:871)
+	at la.integra.digitel.RTBS_ACBPCS.RTBS_ACBPCS.getRtbsAcbpcs(RTBS_ACBPCS.java:468)
+	at la.integra.digitel.RTBS_ACBPCS.RTBS_ACBPCS.execute(RTBS_ACBPCS.java:211)
+	at servlet.AcbpcsServlet.service(AcbpcsServlet.java:52)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:853)
+	at weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run(ServletStubImpl.java:1072)
+	at weblogic.servlet.internal.ServletStubImpl.invokeServlet(ServletStubImpl.java:465)
+	at weblogic.servlet.internal.ServletStubImpl.invokeServlet(ServletStubImpl.java:348)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:6981)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.invokeServlet(WebAppServletContext.java:3892)
+	at weblogic.servlet.internal.ServletRequestImpl.execute(ServletRequestImpl.java:2766)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:224)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:183)
+[2014Dec10 17:47:21,884][DEBUG][RTBS_ACBPCS-584129117195-1418249838074][getRtbsAcbpcs RTBS_ACBPCS.java:479][_M getRtbsAcbpcs: OUTPUT RECENT:<RecentAppliedCustomerBillingProductChargeSearchResponse xmlns="http://integra.la/rtbs">
+  <Error>
+    <Code xmlns="">GEN_S0002-EM0002</Code>
+    <Detail xmlns="">Falla tecnica. Error de comunicación con sistema externo</Detail>
+    <Trace xmlns="">RtbsHistory</Trace>
+    <From xmlns="">PROBLEM CONSULTING BD (getApplyDay)</From>
+  </Error>
+</RecentAppliedCustomerBillingProductChargeSearchResponse>]
+[2014Dec10 17:47:21,885][INFO ][RTBS_ACBPCS-584129117195-1418249838074][getRtbsAcbpcs RTBS_ACBPCS.java:486][_M getRtbsAcbpcs: OUTPUT RECENT: ]
+[2014Dec10 17:47:21,887][INFO ][RTBS_ACBPCS-584129117195-1418249838074][info RTBS_ACBPCS.java:118][ _M execute: after getRtbsAcbpcs() ]
+[2014Dec10 17:47:21,888][INFO ][RTBS_ACBPCS-584129117195-1418249838074][info RTBS_ACBPCS.java:118][ _E execute:]

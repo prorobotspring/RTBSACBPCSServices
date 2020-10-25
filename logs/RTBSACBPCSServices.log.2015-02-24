@@ -1,0 +1,8 @@
+[2015Feb24 16:38:06,509][INFO ][RTBS_ACBPCS--1424812086509][service AcbpcsServlet.java:51][Input:WSDL]
+[2015Feb24 16:38:06,518][INFO ][RTBS_ACBPCS--1424812086509][execute RTBS_ACBPCS.java:180][ _I execute:]
+[2015Feb24 16:38:06,520][INFO ][RTBS_ACBPCS--1424812086509][getParameterSignFromRequest RTBS_ACBPCS_SIGN_PARSER.java:30][Parser para obtener filtro del signo para debito o credito con el xml: WSDL]
+[2015Feb24 16:38:06,607][INFO ][RTBS_ACBPCS--1424812086509][info RTBS_ACBPCS.java:118][ _E execute:]
+[2015Feb24 16:57:50,253][INFO ][RTBS_ACBPCS--1424813270253][service AcbpcsServlet.java:51][Input:wsdl]
+[2015Feb24 16:57:50,255][INFO ][RTBS_ACBPCS--1424813270253][execute RTBS_ACBPCS.java:180][ _I execute:]
+[2015Feb24 16:57:50,256][INFO ][RTBS_ACBPCS--1424813270253][getParameterSignFromRequest RTBS_ACBPCS_SIGN_PARSER.java:30][Parser para obtener filtro del signo para debito o credito con el xml: wsdl]
+[2015Feb24 16:57:50,296][INFO ][RTBS_ACBPCS--1424813270253][info RTBS_ACBPCS.java:118][ _E execute:]

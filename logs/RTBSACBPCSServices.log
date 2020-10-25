@@ -1,0 +1,269 @@
+[2019Nov25 13:53:57,445][INFO ][][configurarLogger BSSIntLogger.java:67][APLICACION: RTBSACBPCSServices - VERSION: 1.0]
+[2019Nov25 13:53:57,462][INFO ][][configurarLogger BSSIntLogger.java:69][DESCRIPCION: Servicios de Historico de Planes y Servicios - RTBSACBPCSServices]
+[2019Nov25 13:53:57,467][INFO ][RTBS_ACBPCS--1574706237466][service AcbpcsServlet.java:51][Input:<AppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs"><Channel>FEATC</Channel><MSISDN>584122696571</MSISDN><SearchDateRange><StartDate>2013-12-31T00:00:00.000-04:30</StartDate><EndDate>2014-01-29T23:59:59.000-04:30</EndDate></SearchDateRange><SearchMaxRecords>10</SearchMaxRecords><ProductChargeConditions><SearchMTRReason><Reason>Cobro de Plan</Reason><Reason>COS CHANGE</Reason><Reason>pc_</Reason><Reason>ALCO Cobro</Reason></SearchMTRReason><SearchOfferReason><Reason>SUBSCRIPTION</Reason><Reason>UNSUBSCRIPTION</Reason><Reason>RCSTATE</Reason></SearchOfferReason></ProductChargeConditions></AppliedCustomerBillingProductChargeSearchRequest>]
+[2019Nov25 13:53:57,482][INFO ][RTBS_ACBPCS--1574706237466][execute RTBS_ACBPCS.java:180][ _I execute:]
+[2019Nov25 13:53:57,497][INFO ][RTBS_ACBPCS--1574706237466][getParameterSignFromRequest RTBS_ACBPCS_SIGN_PARSER.java:30][Parser para obtener filtro del signo para debito o credito con el xml: <AppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs"><Channel>FEATC</Channel><MSISDN>584122696571</MSISDN><SearchDateRange><StartDate>2013-12-31T00:00:00.000-04:30</StartDate><EndDate>2014-01-29T23:59:59.000-04:30</EndDate></SearchDateRange><SearchMaxRecords>10</SearchMaxRecords><ProductChargeConditions><SearchMTRReason><Reason>Cobro de Plan</Reason><Reason>COS CHANGE</Reason><Reason>pc_</Reason><Reason>ALCO Cobro</Reason></SearchMTRReason><SearchOfferReason><Reason>SUBSCRIPTION</Reason><Reason>UNSUBSCRIPTION</Reason><Reason>RCSTATE</Reason></SearchOfferReason></ProductChargeConditions></AppliedCustomerBillingProductChargeSearchRequest>]
+[2019Nov25 13:53:57,631][INFO ][RTBS_ACBPCS--1574706237466][getParameterSignFromRequest RTBS_ACBPCS_SIGN_PARSER.java:36][Instancia del metodo run ]
+[2019Nov25 13:53:57,927][INFO ][RTBS_ACBPCS--1574706237466][run RTBS_ACBPCS_SIGN_PARSER.java:55][Element Obtenido]
+[2019Nov25 13:53:57,928][INFO ][RTBS_ACBPCS--1574706237466][run RTBS_ACBPCS_SIGN_PARSER.java:66][Aplicar Signo al AppliedAmount: false]
+[2019Nov25 13:53:58,911][INFO ][RTBS_ACBPCS--1574706237466][info RTBS_ACBPCS.java:118][ _M execute: before getRtbsAcbpcs() ]
+[2019Nov25 13:53:58,912][DEBUG][RTBS_ACBPCS--1574706237466][debug RTBS_ACBPCS.java:113][ _I getRtbsAcbpcs:]
+[2019Nov25 13:53:58,914][INFO ][RTBS_ACBPCS--1574706237466][loadProperties RTBS_ACBPCS.java:292][ _M getRtbsAcbpcs: Obteined Information of Properties: (rtbsAcbpcs.maxRecentNumRecords=250,rtbsAcbpcs.maxHistoricalNumRecords=250,rtbsAcbpcs.maxNumDates=90.0,rtbsAcbpcs.recentNumDays=20)]
+[2019Nov25 13:53:59,199][INFO ][RTBS_ACBPCS-584122696571-1574706237466][getRtbsAcbpcs RTBS_ACBPCS.java:353][_M getRtbsAcbpcs: Recibiendo: channel= FEATC,msisdn=584122696571,startDate=2013-12-31T00:00:00.000-04:30,endDate=2014-01-29T23:59:59.000-04:30,maxNumRecords=10]
+[2019Nov25 13:53:59,201][INFO ][RTBS_ACBPCS-584122696571-1574706237466][getRtbsAcbpcs RTBS_ACBPCS.java:360][_M getRtbsAcbpcs: Recibiendo mtrReason= [Ljava.lang.String;@93ed29]
+[2019Nov25 13:53:59,202][INFO ][RTBS_ACBPCS-584122696571-1574706237466][info RTBS_ACBPCS.java:118][_M getRtbsAcbpcs: No hay offerReason]
+[2019Nov25 13:53:59,219][DEBUG][RTBS_ACBPCS-584122696571-1574706237466][getRtbsAcbpcs RTBS_ACBPCS.java:411][ limit_date=Wed Nov 06 00:00:00 VET 2019]
+[2019Nov25 13:53:59,221][DEBUG][RTBS_ACBPCS-584122696571-1574706237466][getRtbsAcbpcs RTBS_ACBPCS.java:420][ limitDateLessOne=Tue Nov 05 23:59:59 VET 2019]
+[2019Nov25 13:53:59,222][INFO ][RTBS_ACBPCS-584122696571-1574706237466][getRtbsAcbpcs RTBS_ACBPCS.java:456][Tipo de Consulta: HISTORICALrecentStartDate nullrecentEndDate nullhistoricalStartDate Tue Dec 31 00:00:00 VET 2013historicalEndDateWed Jan 29 23:59:59 VET 2014]
+[2019Nov25 13:53:59,253][DEBUG][RTBS_ACBPCS-584122696571-1574706237466][debug RTBS_ACBPCS.java:113][ _M getRtbsAcbpcs: before procesing:]
+[2019Nov25 13:53:59,327][DEBUG][RTBS_ACBPCS-584122696571-1574706237466][getHistoricData RTBS_ACBPCS.java:803][_M getRtbsAcbpcs: INPUT HISTORY:<HistoryAppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs">
+  <Channel>FEATC</Channel>
+  <MSISDN>584122696571</MSISDN>
+  <SearchDateRange>
+    <StartDate>2013-12-31T00:00:00.000-04:30</StartDate>
+    <EndDate>2014-01-29T23:59:59.000-04:30</EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>10</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason>
+      <Reason>Cobro de Plan</Reason>
+      <Reason>COS CHANGE</Reason>
+      <Reason>pc_</Reason>
+      <Reason>ALCO Cobro</Reason>
+    </SearchMTRReason>
+    <SearchOfferReason>
+      <Reason>SUBSCRIPTION</Reason>
+      <Reason>UNSUBSCRIPTION</Reason>
+      <Reason>RCSTATE</Reason>
+    </SearchOfferReason>
+  </ProductChargeConditions>
+</HistoryAppliedCustomerBillingProductChargeSearchRequest>]
+[2019Nov25 13:53:59,337][INFO ][RTBS_ACBPCS-584122696571-1574706237466][getHistoricData RTBS_ACBPCS.java:809][_M getRtbsAcbpcs: INPUT HISTORY: <HistoryAppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs">
+  <Channel>FEATC</Channel>
+  <MSISDN>584122696571</MSISDN>
+  <SearchDateRange>
+    <StartDate>2013-12-31T00:00:00.000-04:30</StartDate>
+    <EndDate>2014-01-29T23:59:59.000-04:30</EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>10</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason>
+      <Reason>Cobro de Plan</Reason>
+      <Reason>COS CHANGE</Reason>
+      <Reason>pc_</Reason>
+      <Reason>ALCO Cobro</Reason>
+    </SearchMTRReason>
+    <SearchOfferReason>
+      <Reason>SUBSCRIPTION</Reason>
+      <Reason>UNSUBSCRIPTION</Reason>
+      <Reason>RCSTATE</Reason>
+    </SearchOfferReason>
+  </ProductChargeConditions>
+</HistoryAppliedCustomerBillingProductChargeSearchRequest>]
+[2019Nov25 13:53:59,353][INFO ][RTBS_ACBPCS-584122696571-1574706237466][info RTBS_ACBPCSHistory.java:178][ _I getRtbsAcbpcsh:]
+[2019Nov25 13:53:59,355][DEBUG][RTBS_ACBPCS-584122696571-1574706237466][loadProperties RTBS_ACBPCSHistory.java:311][RB A TU ALCANCE 30;RB ALCANCE 30 ZF;RB A TU ALCANCE 60;RB ALCANCE 60 ZF;RB BAM 3G SUPER ZF;RB BAM 3G 1GB ZF;RB BAM 3G 2GB ZF;RB BAM 3G 3GB ZF;RB BAM 3G 5GB ZF;RB BAM 3G SUPER;RB BAM 3G 1GB;RB BAM 3G 2GB;RB BAM 3G 3GB;RB BAM 3G 5GB;RB RUMBA MOVIL ZF;RB RUMBA MOVIL;RB XCRIBE FULL 300;RB XCRIBE FULL 300ZF;RB XCRIBE FULL 400;RB XCRIBE FULL 400ZF;RB XCRIBE FULL 700;RB XCRIBE FULL 700ZF;RB XCRIBE 300 FIJA;RB XCRIBE 300 FIJAZF;RB XCRIBE 400 FIJA;RB XCRIBE 400 FIJAZF;RB XCRIBE 700 FIJA;RB XCRIBE 700 FIJAZF]
+[2019Nov25 13:53:59,363][DEBUG][RTBS_ACBPCS-584122696571-1574706237466][loadProperties RTBS_ACBPCSHistory.java:329][ _M getRtbsAcbpcsh: Obteined Information of Properties:]
+[2019Nov25 13:53:59,370][DEBUG][RTBS_ACBPCS-584122696571-1574706237466][getRtbsAcbpcsh RTBS_ACBPCSHistory.java:385][_M getRtbsAcbpcsh: Recibiendo: channel= FEATC,msisdn=584122696571,startDate=2013-12-31T00:00:00.000-04:30,endDate=2014-01-29T23:59:59.000-04:30,maxNumRecords=10]
+[2019Nov25 13:53:59,371][DEBUG][RTBS_ACBPCS-584122696571-1574706237466][getRtbsAcbpcsh RTBS_ACBPCSHistory.java:392][_M getRtbsAcbpcsh: Recibiendo mtrReason= [Ljava.lang.String;@8b0756]
+[2019Nov25 13:53:59,373][DEBUG][RTBS_ACBPCS-584122696571-1574706237466][getRtbsAcbpcsh RTBS_ACBPCSHistory.java:403][_M getRtbsAcbpcsh: Recibiendo offerReason= [Ljava.lang.String;@18eaaaa]
+[2019Nov25 13:53:59,375][DEBUG][RTBS_ACBPCS-584122696571-1574706237466][getRtbsAcbpcsh RTBS_ACBPCSHistory.java:422][valores:2591999000,93.0,2013-12-31T00:00:00.000-04:30,2014-01-29T23:59:59.000-04:30]
+[2019Nov25 13:53:59,376][DEBUG][RTBS_ACBPCS-584122696571-1574706237466][getRtbsAcbpcsh RTBS_ACBPCSHistory.java:440][ _M getRtbsAcbpcsh: Validate:]
+[2019Nov25 13:53:59,382][DEBUG][RTBS_ACBPCS-584122696571-1574706237466][debug DispatcherConnection.java:64][ _M jndiConnection]
+[2019Nov25 13:53:59,383][DEBUG][RTBS_ACBPCS-584122696571-1574706237466][debug DispatcherConnection.java:64][ _M getJndiConnection]
+[2019Nov25 13:53:59,488][DEBUG][RTBS_ACBPCS-584122696571-1574706237466][debug RTBS_ACBPCSHistory.java:173][_M getRtbsAcbpcsh: before BdHitory - StoreProcedure ApplyDay]
+[2019Nov25 13:53:59,496][DEBUG][RTBS_ACBPCS-584122696571-1574706237466][debug RtbsHistory.java:54][ _I getApplyDay:]
+[2019Nov25 13:54:00,933][DEBUG][RTBS_ACBPCS-584122696571-1574706237466][debug RtbsHistory.java:54][ _E getApplyDay:]
+[2019Nov25 13:54:00,935][DEBUG][RTBS_ACBPCS-584122696571-1574706237466][debug RTBS_ACBPCSHistory.java:173][_M getRtbsAcbpcsh: after BdHitory - StoreProcedure ApplyDay]
+[2019Nov25 13:54:00,937][DEBUG][RTBS_ACBPCS-584122696571-1574706237466][debug RTBS_ACBPCSHistory.java:173][_M getRtbsAcbpcsh: before BdHitory - StoreProcedure MtrHist]
+[2019Nov25 13:54:00,938][DEBUG][RTBS_ACBPCS-584122696571-1574706237466][debug RtbsHistory.java:54][ _I getMtrHist:]
+[2019Nov25 13:54:00,940][DEBUG][RTBS_ACBPCS-584122696571-1574706237466][getMtrHist RtbsHistory.java:142][ _I getMtrHist: dataTypeScheme=null]
+[2019Nov25 13:54:01,599][DEBUG][RTBS_ACBPCS-584122696571-1574706237466][debug RtbsHistory.java:54][ _E getMtrHist:]
+[2019Nov25 13:54:01,600][DEBUG][RTBS_ACBPCS-584122696571-1574706237466][debug RTBS_ACBPCSHistory.java:173][_M getRtbsAcbpcsh: after BdHitory - StoreProcedure MtrHist]
+[2019Nov25 13:54:01,628][DEBUG][RTBS_ACBPCS-584122696571-1574706237466][getRtbsAcbpcs RTBS_ACBPCS.java:548][_M getRtbsAcbpcs: OUTPUT HISTORY:<HistoryAppliedCustomerBillingProductChargeSearchResponse xmlns="http://integra.la/rtbs">
+  <OperationMessage>
+    <Code xmlns="">GEN_S0003-OM0003</Code>
+    <Message xmlns="">La informacion solicitada no ha sido encontrada en la base de datos</Message>
+  </OperationMessage>
+</HistoryAppliedCustomerBillingProductChargeSearchResponse>]
+[2019Nov25 13:54:01,630][DEBUG][RTBS_ACBPCS-584122696571-1574706237466][getRtbsAcbpcs RTBS_ACBPCS.java:555][_M getRtbsAcbpcs: OUTPUT HISTORY: ]
+[2019Nov25 13:54:01,633][INFO ][RTBS_ACBPCS-584122696571-1574706237466][info RTBS_ACBPCS.java:118][ _M execute: after getRtbsAcbpcs() ]
+[2019Nov25 13:54:01,634][INFO ][RTBS_ACBPCS-584122696571-1574706237466][info RTBS_ACBPCS.java:118][ _E execute:]
+[2019Nov25 13:55:26,501][INFO ][RTBS_ACBPCS--1574706326501][service AcbpcsServlet.java:51][Input:<AppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs"><Channel>FEATC</Channel><MSISDN>584128888888</MSISDN><SearchDateRange><StartDate>2019-10-01T00:00:00.000-04:30</StartDate><EndDate>2019-11-25T23:59:59.000-04:30</EndDate></SearchDateRange><SearchMaxRecords>10</SearchMaxRecords><ProductChargeConditions><SearchMTRReason><Reason>Cobro de Plan</Reason><Reason>COS CHANGE</Reason><Reason>pc_</Reason><Reason>ALCO Cobro</Reason></SearchMTRReason><SearchOfferReason><Reason>SUBSCRIPTION</Reason><Reason>UNSUBSCRIPTION</Reason><Reason>RCSTATE</Reason></SearchOfferReason></ProductChargeConditions></AppliedCustomerBillingProductChargeSearchRequest>]
+[2019Nov25 13:55:26,503][INFO ][RTBS_ACBPCS--1574706326501][execute RTBS_ACBPCS.java:180][ _I execute:]
+[2019Nov25 13:55:26,504][INFO ][RTBS_ACBPCS--1574706326501][getParameterSignFromRequest RTBS_ACBPCS_SIGN_PARSER.java:30][Parser para obtener filtro del signo para debito o credito con el xml: <AppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs"><Channel>FEATC</Channel><MSISDN>584128888888</MSISDN><SearchDateRange><StartDate>2019-10-01T00:00:00.000-04:30</StartDate><EndDate>2019-11-25T23:59:59.000-04:30</EndDate></SearchDateRange><SearchMaxRecords>10</SearchMaxRecords><ProductChargeConditions><SearchMTRReason><Reason>Cobro de Plan</Reason><Reason>COS CHANGE</Reason><Reason>pc_</Reason><Reason>ALCO Cobro</Reason></SearchMTRReason><SearchOfferReason><Reason>SUBSCRIPTION</Reason><Reason>UNSUBSCRIPTION</Reason><Reason>RCSTATE</Reason></SearchOfferReason></ProductChargeConditions></AppliedCustomerBillingProductChargeSearchRequest>]
+[2019Nov25 13:55:26,518][INFO ][RTBS_ACBPCS--1574706326501][getParameterSignFromRequest RTBS_ACBPCS_SIGN_PARSER.java:36][Instancia del metodo run ]
+[2019Nov25 13:55:26,521][INFO ][RTBS_ACBPCS--1574706326501][run RTBS_ACBPCS_SIGN_PARSER.java:55][Element Obtenido]
+[2019Nov25 13:55:26,523][INFO ][RTBS_ACBPCS--1574706326501][run RTBS_ACBPCS_SIGN_PARSER.java:66][Aplicar Signo al AppliedAmount: false]
+[2019Nov25 13:55:26,535][INFO ][RTBS_ACBPCS--1574706326501][info RTBS_ACBPCS.java:118][ _M execute: before getRtbsAcbpcs() ]
+[2019Nov25 13:55:26,536][DEBUG][RTBS_ACBPCS--1574706326501][debug RTBS_ACBPCS.java:113][ _I getRtbsAcbpcs:]
+[2019Nov25 13:55:26,544][INFO ][RTBS_ACBPCS-584128888888-1574706326501][getRtbsAcbpcs RTBS_ACBPCS.java:353][_M getRtbsAcbpcs: Recibiendo: channel= FEATC,msisdn=584128888888,startDate=2019-10-01T00:00:00.000-04:30,endDate=2019-11-25T23:59:59.000-04:30,maxNumRecords=10]
+[2019Nov25 13:55:26,545][INFO ][RTBS_ACBPCS-584128888888-1574706326501][getRtbsAcbpcs RTBS_ACBPCS.java:360][_M getRtbsAcbpcs: Recibiendo mtrReason= [Ljava.lang.String;@80657f]
+[2019Nov25 13:55:26,546][INFO ][RTBS_ACBPCS-584128888888-1574706326501][info RTBS_ACBPCS.java:118][_M getRtbsAcbpcs: No hay offerReason]
+[2019Nov25 13:55:26,548][DEBUG][RTBS_ACBPCS-584128888888-1574706326501][getRtbsAcbpcs RTBS_ACBPCS.java:411][ limit_date=Wed Nov 06 00:00:00 VET 2019]
+[2019Nov25 13:55:26,550][DEBUG][RTBS_ACBPCS-584128888888-1574706326501][getRtbsAcbpcs RTBS_ACBPCS.java:420][ limitDateLessOne=Tue Nov 05 23:59:59 VET 2019]
+[2019Nov25 13:55:26,551][INFO ][RTBS_ACBPCS-584128888888-1574706326501][getRtbsAcbpcs RTBS_ACBPCS.java:456][Tipo de Consulta: BOTHrecentStartDate Wed Nov 06 00:00:00 VET 2019recentEndDate Mon Nov 25 23:59:59 VET 2019historicalStartDate Tue Oct 01 00:00:00 VET 2019historicalEndDateTue Nov 05 23:59:59 VET 2019]
+[2019Nov25 13:55:26,553][DEBUG][RTBS_ACBPCS-584128888888-1574706326501][debug RTBS_ACBPCS.java:113][ _M getRtbsAcbpcs: before procesing:]
+[2019Nov25 13:55:26,587][DEBUG][RTBS_ACBPCS-584128888888-1574706326501][getRecentData RTBS_ACBPCS.java:859][_M getRtbsAcbpcs: INPUT RECENT: <RecentAppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs">
+  <Channel>FEATC</Channel>
+  <MSISDN>584128888888</MSISDN>
+  <SearchDateRange>
+    <StartDate>2019-11-06T00:00:00.000-04:30</StartDate>
+    <EndDate>2019-11-25T23:59:59.000-04:30</EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>10</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason>
+      <Reason>Cobro de Plan</Reason>
+      <Reason>COS CHANGE</Reason>
+      <Reason>pc_</Reason>
+      <Reason>ALCO Cobro</Reason>
+    </SearchMTRReason>
+    <SearchOfferReason>
+      <Reason>SUBSCRIPTION</Reason>
+      <Reason>UNSUBSCRIPTION</Reason>
+      <Reason>RCSTATE</Reason>
+    </SearchOfferReason>
+  </ProductChargeConditions>
+</RecentAppliedCustomerBillingProductChargeSearchRequest>]
+[2019Nov25 13:55:26,596][INFO ][RTBS_ACBPCS-584128888888-1574706326501][getRecentData RTBS_ACBPCS.java:865][_M getRtbsAcbpcs: INPUT RECENT: <RecentAppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs">
+  <Channel>FEATC</Channel>
+  <MSISDN>584128888888</MSISDN>
+  <SearchDateRange>
+    <StartDate>2019-11-06T00:00:00.000-04:30</StartDate>
+    <EndDate>2019-11-25T23:59:59.000-04:30</EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>10</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason>
+      <Reason>Cobro de Plan</Reason>
+      <Reason>COS CHANGE</Reason>
+      <Reason>pc_</Reason>
+      <Reason>ALCO Cobro</Reason>
+    </SearchMTRReason>
+    <SearchOfferReason>
+      <Reason>SUBSCRIPTION</Reason>
+      <Reason>UNSUBSCRIPTION</Reason>
+      <Reason>RCSTATE</Reason>
+    </SearchOfferReason>
+  </ProductChargeConditions>
+</RecentAppliedCustomerBillingProductChargeSearchRequest>]
+[2019Nov25 13:55:26,614][DEBUG][RTBS_ACBPCS-584128888888-1574706326501][loadProperties RTBS_ACBPCSRecent.java:276][ _M getRtbsAcbpcsr: maxNumRecords: 250]
+[2019Nov25 13:55:26,616][DEBUG][RTBS_ACBPCS-584128888888-1574706326501][loadProperties RTBS_ACBPCSRecent.java:296][ _M getRtbsAcbpcsr: maxNumDates: 20.0]
+[2019Nov25 13:55:26,617][DEBUG][RTBS_ACBPCS-584128888888-1574706326501][loadProperties RTBS_ACBPCSRecent.java:303][ _M getRtbsAcbpcsr: Obteined Information of Properties:]
+[2019Nov25 13:55:26,623][DEBUG][RTBS_ACBPCS-584128888888-1574706326501][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:359][_M getRtbsAcbpcsh: Recibiendo: channel= FEATC,msisdn=584128888888,startDate=2019-11-06T00:00:00.000-04:30,endDate=2019-11-25T23:59:59.000-04:30,maxNumRecords=10]
+[2019Nov25 13:55:26,627][DEBUG][RTBS_ACBPCS-584128888888-1574706326501][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:368][_M getRtbsAcbpcsh: Recibiendo mtrReason= [Ljava.lang.String;@1ceaaf3]
+[2019Nov25 13:55:26,628][DEBUG][RTBS_ACBPCS-584128888888-1574706326501][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:378][_M getRtbsAcbpcsh: Recibiendo offerReason= [Ljava.lang.String;@13967a2]
+[2019Nov25 13:55:26,630][DEBUG][RTBS_ACBPCS-584128888888-1574706326501][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:406][ _M getRtbsAcbpcsr: Validate:]
+[2019Nov25 13:55:26,631][DEBUG][RTBS_ACBPCS-584128888888-1574706326501][debug DispatcherConnection.java:64][ _M getCcwsConnectionOther]
+[2019Nov25 13:55:29,046][DEBUG][RTBS_ACBPCS-584128888888-1574706326501][debug DispatcherConnection.java:64][ _M getCcwsConnectionCache]
+[2019Nov25 13:55:29,071][DEBUG][RTBS_ACBPCS-584128888888-1574706326501][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:423][ _M getRtbsAcbpcsr: Obteined Ccws:]
+[2019Nov25 13:56:34,441][ERROR][RTBS_ACBPCS-584128888888-1574706326501][<init> CachedCcwsException.java:29][CachedCcwsException -  ERROR in retrieveSubscriberWithIdentityWithHistoryForMultipleIdentities ]
+AxisFault
+ faultCode: {http://schemas.xmlsoap.org/soap/envelope/}Server.userException
+ faultSubcode: 
+ faultString: java.net.SocketTimeoutException: connect timed out
+ faultActor: 
+ faultNode: 
+ faultDetail: 
+	{http://xml.apache.org/axis/}stackTrace:java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:305)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:171)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:158)
+	at java.net.Socket.connect(Socket.java:461)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:324)
+	at org.apache.axis.components.net.DefaultSocketFactory.create(DefaultSocketFactory.java:153)
+	at org.apache.axis.components.net.DefaultSocketFactory.create(DefaultSocketFactory.java:120)
+	at org.apache.axis.transport.http.HTTPSender.getSocket(HTTPSender.java:191)
+	at org.apache.axis.transport.http.HTTPSender.writeToSocket(HTTPSender.java:404)
+	at org.apache.axis.transport.http.HTTPSender.invoke(HTTPSender.java:138)
+	at org.apache.axis.strategies.InvocationStrategy.visit(InvocationStrategy.java:32)
+	at org.apache.axis.SimpleChain.doVisiting(SimpleChain.java:118)
+	at org.apache.axis.SimpleChain.invoke(SimpleChain.java:83)
+	at org.apache.axis.client.AxisClient.invoke(AxisClient.java:165)
+	at org.apache.axis.client.Call.invokeEngine(Call.java:2784)
+	at org.apache.axis.client.Call.invoke(Call.java:2767)
+	at org.apache.axis.client.Call.invoke(Call.java:2443)
+	at org.apache.axis.client.Call.invoke(Call.java:2366)
+	at org.apache.axis.client.Call.invoke(Call.java:1812)
+	at com.comverse_in.prepaid.ccws.ServiceSoapStub.retrieveSubscriberWithIdentityWithHistoryForMultipleIdentities(ServiceSoapStub.java:5715)
+	at la.integra.digitel.ccws.CachedCcws.retrieveSubscriberWithIdentityWithHistoryForMultipleIdentities(CachedCcws.java:58)
+	at la.integra.digitel.RTBS_ACBPCSRecent.RTBS_ACBPCSRecent.getRtbsAcbpcsr(RTBS_ACBPCSRecent.java:428)
+	at la.integra.digitel.RTBS_ACBPCS.RTBS_ACBPCS.getRecentData(RTBS_ACBPCS.java:871)
+	at la.integra.digitel.RTBS_ACBPCS.RTBS_ACBPCS.getRtbsAcbpcs(RTBS_ACBPCS.java:609)
+	at la.integra.digitel.RTBS_ACBPCS.RTBS_ACBPCS.execute(RTBS_ACBPCS.java:211)
+	at servlet.AcbpcsServlet.service(AcbpcsServlet.java:52)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:853)
+	at weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run(ServletStubImpl.java:1072)
+	at weblogic.servlet.internal.ServletStubImpl.invokeServlet(ServletStubImpl.java:465)
+	at weblogic.servlet.internal.ServletStubImpl.invokeServlet(ServletStubImpl.java:348)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:6981)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.invokeServlet(WebAppServletContext.java:3892)
+	at weblogic.servlet.internal.ServletRequestImpl.execute(ServletRequestImpl.java:2766)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:224)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:183)
+
+	{http://xml.apache.org/axis/}hostname:cfglobd05.corp.digitel.com.ve
+
+java.net.SocketTimeoutException: connect timed out
+	at org.apache.axis.AxisFault.makeFault(AxisFault.java:101)
+	at org.apache.axis.transport.http.HTTPSender.invoke(HTTPSender.java:154)
+	at org.apache.axis.strategies.InvocationStrategy.visit(InvocationStrategy.java:32)
+	at org.apache.axis.SimpleChain.doVisiting(SimpleChain.java:118)
+	at org.apache.axis.SimpleChain.invoke(SimpleChain.java:83)
+	at org.apache.axis.client.AxisClient.invoke(AxisClient.java:165)
+	at org.apache.axis.client.Call.invokeEngine(Call.java:2784)
+	at org.apache.axis.client.Call.invoke(Call.java:2767)
+	at org.apache.axis.client.Call.invoke(Call.java:2443)
+	at org.apache.axis.client.Call.invoke(Call.java:2366)
+	at org.apache.axis.client.Call.invoke(Call.java:1812)
+	at com.comverse_in.prepaid.ccws.ServiceSoapStub.retrieveSubscriberWithIdentityWithHistoryForMultipleIdentities(ServiceSoapStub.java:5715)
+	at la.integra.digitel.ccws.CachedCcws.retrieveSubscriberWithIdentityWithHistoryForMultipleIdentities(CachedCcws.java:58)
+	at la.integra.digitel.RTBS_ACBPCSRecent.RTBS_ACBPCSRecent.getRtbsAcbpcsr(RTBS_ACBPCSRecent.java:428)
+	at la.integra.digitel.RTBS_ACBPCS.RTBS_ACBPCS.getRecentData(RTBS_ACBPCS.java:871)
+	at la.integra.digitel.RTBS_ACBPCS.RTBS_ACBPCS.getRtbsAcbpcs(RTBS_ACBPCS.java:609)
+	at la.integra.digitel.RTBS_ACBPCS.RTBS_ACBPCS.execute(RTBS_ACBPCS.java:211)
+	at servlet.AcbpcsServlet.service(AcbpcsServlet.java:52)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:853)
+	at weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run(ServletStubImpl.java:1072)
+	at weblogic.servlet.internal.ServletStubImpl.invokeServlet(ServletStubImpl.java:465)
+	at weblogic.servlet.internal.ServletStubImpl.invokeServlet(ServletStubImpl.java:348)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:6981)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.invokeServlet(WebAppServletContext.java:3892)
+	at weblogic.servlet.internal.ServletRequestImpl.execute(ServletRequestImpl.java:2766)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:224)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:183)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:305)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:171)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:158)
+	at java.net.Socket.connect(Socket.java:461)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:324)
+	at org.apache.axis.components.net.DefaultSocketFactory.create(DefaultSocketFactory.java:153)
+	at org.apache.axis.components.net.DefaultSocketFactory.create(DefaultSocketFactory.java:120)
+	at org.apache.axis.transport.http.HTTPSender.getSocket(HTTPSender.java:191)
+	at org.apache.axis.transport.http.HTTPSender.writeToSocket(HTTPSender.java:404)
+	at org.apache.axis.transport.http.HTTPSender.invoke(HTTPSender.java:138)
+	... 27 more
+[2019Nov25 13:56:34,529][DEBUG][RTBS_ACBPCS-584128888888-1574706326501][getRtbsAcbpcs RTBS_ACBPCS.java:618][_M getRtbsAcbpcs: OUTPUT RECENT:<RecentAppliedCustomerBillingProductChargeSearchResponse xmlns="http://integra.la/rtbs">
+  <Error>
+    <Code xmlns="">GEN_S0002-EM0002</Code>
+    <Detail xmlns="">Falla tecnica. Error de comunicación con sistema externo</Detail>
+    <Trace xmlns="">Ccws</Trace>
+    <From xmlns="">ERROR in retrieveSubscriberWithIdentityWithHistoryForMultipleIdentities</From>
+  </Error>
+</RecentAppliedCustomerBillingProductChargeSearchResponse>]
+[2019Nov25 13:56:34,530][INFO ][RTBS_ACBPCS-584128888888-1574706326501][getRtbsAcbpcs RTBS_ACBPCS.java:624][_M getRtbsAcbpcs: OUTPUT RECENT: ]
+[2019Nov25 13:56:34,533][INFO ][RTBS_ACBPCS-584128888888-1574706326501][info RTBS_ACBPCS.java:118][ _M execute: after getRtbsAcbpcs() ]
+[2019Nov25 13:56:34,535][INFO ][RTBS_ACBPCS-584128888888-1574706326501][info RTBS_ACBPCS.java:118][ _E execute:]

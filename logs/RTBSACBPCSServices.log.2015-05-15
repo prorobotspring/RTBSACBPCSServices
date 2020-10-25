@@ -1,0 +1,1352 @@
+[2015May15 09:29:29,607][INFO ][RTBS_ACBPCS--1431698369606][service AcbpcsServlet.java:51][Input:<AppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs"><Channel>FEATC</Channel><MSISDN>584127083032</MSISDN><SearchDateRange><StartDate>2015-04-16T00:00:00.000-04:30</StartDate><EndDate>2015-05-15T23:59:59.000-04:30</EndDate></SearchDateRange><SearchMaxRecords>10</SearchMaxRecords><ProductChargeConditions><SearchMTRReason><Reason>Cobro de Plan</Reason><Reason>COS CHANGE</Reason><Reason>pc_</Reason><Reason>ALCO Cobro</Reason></SearchMTRReason><SearchOfferReason><Reason>SUBSCRIPTION</Reason><Reason>UNSUBSCRIPTION</Reason><Reason>RCSTATE</Reason></SearchOfferReason></ProductChargeConditions></AppliedCustomerBillingProductChargeSearchRequest>]
+[2015May15 09:29:29,610][INFO ][RTBS_ACBPCS--1431698369606][execute RTBS_ACBPCS.java:180][ _I execute:]
+[2015May15 09:29:29,611][INFO ][RTBS_ACBPCS--1431698369606][getParameterSignFromRequest RTBS_ACBPCS_SIGN_PARSER.java:30][Parser para obtener filtro del signo para debito o credito con el xml: <AppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs"><Channel>FEATC</Channel><MSISDN>584127083032</MSISDN><SearchDateRange><StartDate>2015-04-16T00:00:00.000-04:30</StartDate><EndDate>2015-05-15T23:59:59.000-04:30</EndDate></SearchDateRange><SearchMaxRecords>10</SearchMaxRecords><ProductChargeConditions><SearchMTRReason><Reason>Cobro de Plan</Reason><Reason>COS CHANGE</Reason><Reason>pc_</Reason><Reason>ALCO Cobro</Reason></SearchMTRReason><SearchOfferReason><Reason>SUBSCRIPTION</Reason><Reason>UNSUBSCRIPTION</Reason><Reason>RCSTATE</Reason></SearchOfferReason></ProductChargeConditions></AppliedCustomerBillingProductChargeSearchRequest>]
+[2015May15 09:29:29,622][INFO ][RTBS_ACBPCS--1431698369606][getParameterSignFromRequest RTBS_ACBPCS_SIGN_PARSER.java:36][Instancia del metodo run ]
+[2015May15 09:29:29,625][INFO ][RTBS_ACBPCS--1431698369606][run RTBS_ACBPCS_SIGN_PARSER.java:55][Element Obtenido]
+[2015May15 09:29:29,626][INFO ][RTBS_ACBPCS--1431698369606][run RTBS_ACBPCS_SIGN_PARSER.java:66][Aplicar Signo al AppliedAmount: false]
+[2015May15 09:29:29,651][INFO ][RTBS_ACBPCS--1431698369606][info RTBS_ACBPCS.java:118][ _M execute: before getRtbsAcbpcs() ]
+[2015May15 09:29:29,653][DEBUG][RTBS_ACBPCS--1431698369606][debug RTBS_ACBPCS.java:113][ _I getRtbsAcbpcs:]
+[2015May15 09:29:29,657][INFO ][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcs RTBS_ACBPCS.java:353][_M getRtbsAcbpcs: Recibiendo: channel= FEATC,msisdn=584127083032,startDate=2015-04-16T00:00:00.000-04:30,endDate=2015-05-15T23:59:59.000-04:30,maxNumRecords=10]
+[2015May15 09:29:29,658][INFO ][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcs RTBS_ACBPCS.java:360][_M getRtbsAcbpcs: Recibiendo mtrReason= [Ljava.lang.String;@155394]
+[2015May15 09:29:29,659][INFO ][RTBS_ACBPCS-584127083032-1431698369606][info RTBS_ACBPCS.java:118][_M getRtbsAcbpcs: No hay offerReason]
+[2015May15 09:29:29,705][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcs RTBS_ACBPCS.java:411][ limit_date=Sun Apr 26 00:00:00 VET 2015]
+[2015May15 09:29:29,707][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcs RTBS_ACBPCS.java:420][ limitDateLessOne=Sat Apr 25 23:59:59 VET 2015]
+[2015May15 09:29:29,708][INFO ][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcs RTBS_ACBPCS.java:456][Tipo de Consulta: BOTHrecentStartDate Sun Apr 26 00:00:00 VET 2015recentEndDate Fri May 15 23:59:59 VET 2015historicalStartDate Thu Apr 16 00:00:00 VET 2015historicalEndDateSat Apr 25 23:59:59 VET 2015]
+[2015May15 09:29:29,710][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][debug RTBS_ACBPCS.java:113][ _M getRtbsAcbpcs: before procesing:]
+[2015May15 09:29:29,714][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][getRecentData RTBS_ACBPCS.java:859][_M getRtbsAcbpcs: INPUT RECENT: <RecentAppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs">
+  <Channel>FEATC</Channel>
+  <MSISDN>584127083032</MSISDN>
+  <SearchDateRange>
+    <StartDate>2015-04-26T00:00:00.000-04:30</StartDate>
+    <EndDate>2015-05-15T23:59:59.000-04:30</EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>10</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason>
+      <Reason>Cobro de Plan</Reason>
+      <Reason>COS CHANGE</Reason>
+      <Reason>pc_</Reason>
+      <Reason>ALCO Cobro</Reason>
+    </SearchMTRReason>
+    <SearchOfferReason>
+      <Reason>SUBSCRIPTION</Reason>
+      <Reason>UNSUBSCRIPTION</Reason>
+      <Reason>RCSTATE</Reason>
+    </SearchOfferReason>
+  </ProductChargeConditions>
+</RecentAppliedCustomerBillingProductChargeSearchRequest>]
+[2015May15 09:29:29,717][INFO ][RTBS_ACBPCS-584127083032-1431698369606][getRecentData RTBS_ACBPCS.java:865][_M getRtbsAcbpcs: INPUT RECENT: <RecentAppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs">
+  <Channel>FEATC</Channel>
+  <MSISDN>584127083032</MSISDN>
+  <SearchDateRange>
+    <StartDate>2015-04-26T00:00:00.000-04:30</StartDate>
+    <EndDate>2015-05-15T23:59:59.000-04:30</EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>10</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason>
+      <Reason>Cobro de Plan</Reason>
+      <Reason>COS CHANGE</Reason>
+      <Reason>pc_</Reason>
+      <Reason>ALCO Cobro</Reason>
+    </SearchMTRReason>
+    <SearchOfferReason>
+      <Reason>SUBSCRIPTION</Reason>
+      <Reason>UNSUBSCRIPTION</Reason>
+      <Reason>RCSTATE</Reason>
+    </SearchOfferReason>
+  </ProductChargeConditions>
+</RecentAppliedCustomerBillingProductChargeSearchRequest>]
+[2015May15 09:29:29,721][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:359][_M getRtbsAcbpcsh: Recibiendo: channel= FEATC,msisdn=584127083032,startDate=2015-04-26T00:00:00.000-04:30,endDate=2015-05-15T23:59:59.000-04:30,maxNumRecords=10]
+[2015May15 09:29:29,723][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:368][_M getRtbsAcbpcsh: Recibiendo mtrReason= [Ljava.lang.String;@11c24c1]
+[2015May15 09:29:29,725][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:378][_M getRtbsAcbpcsh: Recibiendo offerReason= [Ljava.lang.String;@b13a0b]
+[2015May15 09:29:29,726][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:406][ _M getRtbsAcbpcsr: Validate:]
+[2015May15 09:29:29,728][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][debug DispatcherConnection.java:64][ _M getCcwsConnectionOther]
+[2015May15 09:29:29,749][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][debug DispatcherConnection.java:64][ _M getCcwsConnectionCache]
+[2015May15 09:29:29,770][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:423][ _M getRtbsAcbpcsr: Obteined Ccws:]
+[2015May15 09:29:30,110][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:435][ _M getRtbsAcbpcsr: SubscribeRetrieve(msisdn=584127083032,informationToRetrieve=16512,startDate=Sun Apr 26 00:00:00 VET 2015,endDate=Fri May 15 23:59:59 VET 2015]
+[2015May15 09:29:30,112][INFO ][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:449][ _M getRtbsAcbpcsr: retrieveSubscriberWithIdentityWithHistoryForMultipleIdentities:]
+[2015May15 09:29:30,113][INFO ][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:459][ _M getRtbsAcbpcsr: Obteined MonetaryTransactionRecord and OfferHistoryRecord:]
+[2015May15 09:29:30,115][INFO ][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:464][Obteniendo getCache]
+[2015May15 09:29:30,116][INFO ][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:482][getCache obtenido]
+[2015May15 09:29:30,118][INFO ][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:487][classOfService obtenido]
+[2015May15 09:29:30,120][INFO ][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:495][periodicCharges obtenido]
+[2015May15 09:29:30,122][INFO ][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:501][offers obtenido]
+[2015May15 09:29:30,126][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][debug DispatcherConnection.java:64][ _M jndiConnection]
+[2015May15 09:29:30,128][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][debug DispatcherConnection.java:64][ _M getJndiConnection]
+[2015May15 09:29:30,132][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][debug RtbsHistory.java:54][ _I getApplyDay:]
+[2015May15 09:29:31,114][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][debug RtbsHistory.java:54][ _E getApplyDay:]
+[2015May15 09:29:31,116][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:535][applyDays=1]
+[2015May15 09:29:31,119][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:809][ _M getRtbsAcbpcsr: monetaryTransactionRecord filtered:]
+[2015May15 09:29:31,121][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:924][ _M getRtbsAcbpcsr: offerHistory filtered:]
+[2015May15 09:29:31,123][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcs RTBS_ACBPCS.java:618][_M getRtbsAcbpcs: OUTPUT RECENT:<RecentAppliedCustomerBillingProductChargeSearchResponse xmlns="http://integra.la/rtbs">
+  <OperationMessage>
+    <Code xmlns="">GEN_S0002-OM0003</Code>
+    <Message xmlns="">La informacion solicitada no ha sido encontrada en la base de datos</Message>
+  </OperationMessage>
+</RecentAppliedCustomerBillingProductChargeSearchResponse>]
+[2015May15 09:29:31,125][INFO ][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcs RTBS_ACBPCS.java:624][_M getRtbsAcbpcs: OUTPUT RECENT: ]
+[2015May15 09:29:31,129][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][getHistoricData RTBS_ACBPCS.java:803][_M getRtbsAcbpcs: INPUT HISTORY:<HistoryAppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs">
+  <Channel>FEATC</Channel>
+  <MSISDN>584127083032</MSISDN>
+  <SearchDateRange>
+    <StartDate>2015-04-16T00:00:00.000-04:30</StartDate>
+    <EndDate>2015-04-25T23:59:59.999-04:30</EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>10</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason>
+      <Reason>Cobro de Plan</Reason>
+      <Reason>COS CHANGE</Reason>
+      <Reason>pc_</Reason>
+      <Reason>ALCO Cobro</Reason>
+    </SearchMTRReason>
+    <SearchOfferReason>
+      <Reason>SUBSCRIPTION</Reason>
+      <Reason>UNSUBSCRIPTION</Reason>
+      <Reason>RCSTATE</Reason>
+    </SearchOfferReason>
+  </ProductChargeConditions>
+</HistoryAppliedCustomerBillingProductChargeSearchRequest>]
+[2015May15 09:29:31,132][INFO ][RTBS_ACBPCS-584127083032-1431698369606][getHistoricData RTBS_ACBPCS.java:809][_M getRtbsAcbpcs: INPUT HISTORY: <HistoryAppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs">
+  <Channel>FEATC</Channel>
+  <MSISDN>584127083032</MSISDN>
+  <SearchDateRange>
+    <StartDate>2015-04-16T00:00:00.000-04:30</StartDate>
+    <EndDate>2015-04-25T23:59:59.999-04:30</EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>10</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason>
+      <Reason>Cobro de Plan</Reason>
+      <Reason>COS CHANGE</Reason>
+      <Reason>pc_</Reason>
+      <Reason>ALCO Cobro</Reason>
+    </SearchMTRReason>
+    <SearchOfferReason>
+      <Reason>SUBSCRIPTION</Reason>
+      <Reason>UNSUBSCRIPTION</Reason>
+      <Reason>RCSTATE</Reason>
+    </SearchOfferReason>
+  </ProductChargeConditions>
+</HistoryAppliedCustomerBillingProductChargeSearchRequest>]
+[2015May15 09:29:31,133][INFO ][RTBS_ACBPCS-584127083032-1431698369606][info RTBS_ACBPCSHistory.java:178][ _I getRtbsAcbpcsh:]
+[2015May15 09:29:31,138][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcsh RTBS_ACBPCSHistory.java:385][_M getRtbsAcbpcsh: Recibiendo: channel= FEATC,msisdn=584127083032,startDate=2015-04-16T00:00:00.000-04:30,endDate=2015-04-25T23:59:59.999-04:30,maxNumRecords=10]
+[2015May15 09:29:31,139][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcsh RTBS_ACBPCSHistory.java:392][_M getRtbsAcbpcsh: Recibiendo mtrReason= [Ljava.lang.String;@579108]
+[2015May15 09:29:31,141][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcsh RTBS_ACBPCSHistory.java:403][_M getRtbsAcbpcsh: Recibiendo offerReason= [Ljava.lang.String;@f2cc66]
+[2015May15 09:29:31,143][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcsh RTBS_ACBPCSHistory.java:422][valores:863999999,93.0,2015-04-16T00:00:00.000-04:30,2015-04-25T23:59:59.999-04:30]
+[2015May15 09:29:31,144][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcsh RTBS_ACBPCSHistory.java:440][ _M getRtbsAcbpcsh: Validate:]
+[2015May15 09:29:31,146][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][debug DispatcherConnection.java:64][ _M jndiConnection]
+[2015May15 09:29:31,147][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][debug DispatcherConnection.java:64][ _M getJndiConnection]
+[2015May15 09:29:31,151][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][debug RTBS_ACBPCSHistory.java:173][_M getRtbsAcbpcsh: before BdHitory - StoreProcedure ApplyDay]
+[2015May15 09:29:31,153][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][debug RtbsHistory.java:54][ _I getApplyDay:]
+[2015May15 09:29:31,840][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][debug RtbsHistory.java:54][ _E getApplyDay:]
+[2015May15 09:29:31,842][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][debug RTBS_ACBPCSHistory.java:173][_M getRtbsAcbpcsh: after BdHitory - StoreProcedure ApplyDay]
+[2015May15 09:29:31,843][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][debug RTBS_ACBPCSHistory.java:173][_M getRtbsAcbpcsh: before BdHitory - StoreProcedure MtrHist]
+[2015May15 09:29:31,845][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][debug RtbsHistory.java:54][ _I getMtrHist:]
+[2015May15 09:29:31,847][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][getMtrHist RtbsHistory.java:142][ _I getMtrHist: dataTypeScheme=null]
+[2015May15 09:29:32,579][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][debug RtbsHistory.java:54][ _E getMtrHist:]
+[2015May15 09:29:32,581][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][debug RTBS_ACBPCSHistory.java:173][_M getRtbsAcbpcsh: after BdHitory - StoreProcedure MtrHist]
+[2015May15 09:29:32,585][DEBUG][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcs RTBS_ACBPCS.java:685][_M getRtbsAcbpcs: OUTPUT HISTORY:<HistoryAppliedCustomerBillingProductChargeSearchResponse xmlns="http://integra.la/rtbs">
+  <OperationMessage>
+    <Code xmlns="">GEN_S0003-OM0003</Code>
+    <Message xmlns="">La informacion solicitada no ha sido encontrada en la base de datos</Message>
+  </OperationMessage>
+</HistoryAppliedCustomerBillingProductChargeSearchResponse>]
+[2015May15 09:29:32,587][INFO ][RTBS_ACBPCS-584127083032-1431698369606][getRtbsAcbpcs RTBS_ACBPCS.java:691][_M getRtbsAcbpcs: OUTPUT HISTORY: ]
+[2015May15 09:29:32,588][INFO ][RTBS_ACBPCS-584127083032-1431698369606][info RTBS_ACBPCS.java:118][ _M execute: after getRtbsAcbpcs() ]
+[2015May15 09:29:32,590][INFO ][RTBS_ACBPCS-584127083032-1431698369606][info RTBS_ACBPCS.java:118][ _E execute:]
+[2015May15 09:59:54,252][INFO ][RTBS_ACBPCS--1431700194251][service AcbpcsServlet.java:51][Input:<AppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs"><Channel>FEATC</Channel><MSISDN>584122592444</MSISDN><SearchDateRange><StartDate>2015-04-16T00:00:00.000-04:30</StartDate><EndDate>2015-05-15T23:59:59.000-04:30</EndDate></SearchDateRange><SearchMaxRecords>10</SearchMaxRecords><ProductChargeConditions><SearchMTRReason><Reason>Cobro de Plan</Reason><Reason>COS CHANGE</Reason><Reason>pc_</Reason><Reason>ALCO Cobro</Reason></SearchMTRReason><SearchOfferReason><Reason>SUBSCRIPTION</Reason><Reason>UNSUBSCRIPTION</Reason><Reason>RCSTATE</Reason></SearchOfferReason></ProductChargeConditions></AppliedCustomerBillingProductChargeSearchRequest>]
+[2015May15 09:59:54,253][INFO ][RTBS_ACBPCS--1431700194251][execute RTBS_ACBPCS.java:180][ _I execute:]
+[2015May15 09:59:54,255][INFO ][RTBS_ACBPCS--1431700194251][getParameterSignFromRequest RTBS_ACBPCS_SIGN_PARSER.java:30][Parser para obtener filtro del signo para debito o credito con el xml: <AppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs"><Channel>FEATC</Channel><MSISDN>584122592444</MSISDN><SearchDateRange><StartDate>2015-04-16T00:00:00.000-04:30</StartDate><EndDate>2015-05-15T23:59:59.000-04:30</EndDate></SearchDateRange><SearchMaxRecords>10</SearchMaxRecords><ProductChargeConditions><SearchMTRReason><Reason>Cobro de Plan</Reason><Reason>COS CHANGE</Reason><Reason>pc_</Reason><Reason>ALCO Cobro</Reason></SearchMTRReason><SearchOfferReason><Reason>SUBSCRIPTION</Reason><Reason>UNSUBSCRIPTION</Reason><Reason>RCSTATE</Reason></SearchOfferReason></ProductChargeConditions></AppliedCustomerBillingProductChargeSearchRequest>]
+[2015May15 09:59:54,267][INFO ][RTBS_ACBPCS--1431700194251][getParameterSignFromRequest RTBS_ACBPCS_SIGN_PARSER.java:36][Instancia del metodo run ]
+[2015May15 09:59:54,271][INFO ][RTBS_ACBPCS--1431700194251][run RTBS_ACBPCS_SIGN_PARSER.java:55][Element Obtenido]
+[2015May15 09:59:54,272][INFO ][RTBS_ACBPCS--1431700194251][run RTBS_ACBPCS_SIGN_PARSER.java:66][Aplicar Signo al AppliedAmount: false]
+[2015May15 09:59:54,280][INFO ][RTBS_ACBPCS--1431700194251][info RTBS_ACBPCS.java:118][ _M execute: before getRtbsAcbpcs() ]
+[2015May15 09:59:54,281][DEBUG][RTBS_ACBPCS--1431700194251][debug RTBS_ACBPCS.java:113][ _I getRtbsAcbpcs:]
+[2015May15 09:59:54,286][INFO ][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcs RTBS_ACBPCS.java:353][_M getRtbsAcbpcs: Recibiendo: channel= FEATC,msisdn=584122592444,startDate=2015-04-16T00:00:00.000-04:30,endDate=2015-05-15T23:59:59.000-04:30,maxNumRecords=10]
+[2015May15 09:59:54,288][INFO ][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcs RTBS_ACBPCS.java:360][_M getRtbsAcbpcs: Recibiendo mtrReason= [Ljava.lang.String;@1e2c79d]
+[2015May15 09:59:54,289][INFO ][RTBS_ACBPCS-584122592444-1431700194251][info RTBS_ACBPCS.java:118][_M getRtbsAcbpcs: No hay offerReason]
+[2015May15 09:59:54,291][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcs RTBS_ACBPCS.java:411][ limit_date=Sun Apr 26 00:00:00 VET 2015]
+[2015May15 09:59:54,292][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcs RTBS_ACBPCS.java:420][ limitDateLessOne=Sat Apr 25 23:59:59 VET 2015]
+[2015May15 09:59:54,294][INFO ][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcs RTBS_ACBPCS.java:456][Tipo de Consulta: BOTHrecentStartDate Sun Apr 26 00:00:00 VET 2015recentEndDate Fri May 15 23:59:59 VET 2015historicalStartDate Thu Apr 16 00:00:00 VET 2015historicalEndDateSat Apr 25 23:59:59 VET 2015]
+[2015May15 09:59:54,295][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][debug RTBS_ACBPCS.java:113][ _M getRtbsAcbpcs: before procesing:]
+[2015May15 09:59:54,299][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRecentData RTBS_ACBPCS.java:859][_M getRtbsAcbpcs: INPUT RECENT: <RecentAppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs">
+  <Channel>FEATC</Channel>
+  <MSISDN>584122592444</MSISDN>
+  <SearchDateRange>
+    <StartDate>2015-04-26T00:00:00.000-04:30</StartDate>
+    <EndDate>2015-05-15T23:59:59.000-04:30</EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>10</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason>
+      <Reason>Cobro de Plan</Reason>
+      <Reason>COS CHANGE</Reason>
+      <Reason>pc_</Reason>
+      <Reason>ALCO Cobro</Reason>
+    </SearchMTRReason>
+    <SearchOfferReason>
+      <Reason>SUBSCRIPTION</Reason>
+      <Reason>UNSUBSCRIPTION</Reason>
+      <Reason>RCSTATE</Reason>
+    </SearchOfferReason>
+  </ProductChargeConditions>
+</RecentAppliedCustomerBillingProductChargeSearchRequest>]
+[2015May15 09:59:54,302][INFO ][RTBS_ACBPCS-584122592444-1431700194251][getRecentData RTBS_ACBPCS.java:865][_M getRtbsAcbpcs: INPUT RECENT: <RecentAppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs">
+  <Channel>FEATC</Channel>
+  <MSISDN>584122592444</MSISDN>
+  <SearchDateRange>
+    <StartDate>2015-04-26T00:00:00.000-04:30</StartDate>
+    <EndDate>2015-05-15T23:59:59.000-04:30</EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>10</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason>
+      <Reason>Cobro de Plan</Reason>
+      <Reason>COS CHANGE</Reason>
+      <Reason>pc_</Reason>
+      <Reason>ALCO Cobro</Reason>
+    </SearchMTRReason>
+    <SearchOfferReason>
+      <Reason>SUBSCRIPTION</Reason>
+      <Reason>UNSUBSCRIPTION</Reason>
+      <Reason>RCSTATE</Reason>
+    </SearchOfferReason>
+  </ProductChargeConditions>
+</RecentAppliedCustomerBillingProductChargeSearchRequest>]
+[2015May15 09:59:54,306][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:359][_M getRtbsAcbpcsh: Recibiendo: channel= FEATC,msisdn=584122592444,startDate=2015-04-26T00:00:00.000-04:30,endDate=2015-05-15T23:59:59.000-04:30,maxNumRecords=10]
+[2015May15 09:59:54,308][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:368][_M getRtbsAcbpcsh: Recibiendo mtrReason= [Ljava.lang.String;@19f469f]
+[2015May15 09:59:54,310][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:378][_M getRtbsAcbpcsh: Recibiendo offerReason= [Ljava.lang.String;@1d5a9f9]
+[2015May15 09:59:54,311][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:406][ _M getRtbsAcbpcsr: Validate:]
+[2015May15 09:59:54,313][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][debug DispatcherConnection.java:64][ _M getCcwsConnectionOther]
+[2015May15 09:59:54,333][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][debug DispatcherConnection.java:64][ _M getCcwsConnectionCache]
+[2015May15 09:59:54,354][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:423][ _M getRtbsAcbpcsr: Obteined Ccws:]
+[2015May15 09:59:57,904][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:435][ _M getRtbsAcbpcsr: SubscribeRetrieve(msisdn=584122592444,informationToRetrieve=16512,startDate=Sun Apr 26 00:00:00 VET 2015,endDate=Fri May 15 23:59:59 VET 2015]
+[2015May15 09:59:57,905][INFO ][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:449][ _M getRtbsAcbpcsr: retrieveSubscriberWithIdentityWithHistoryForMultipleIdentities:]
+[2015May15 09:59:57,907][INFO ][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:459][ _M getRtbsAcbpcsr: Obteined MonetaryTransactionRecord and OfferHistoryRecord:]
+[2015May15 09:59:57,908][INFO ][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:464][Obteniendo getCache]
+[2015May15 09:59:57,909][INFO ][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:482][getCache obtenido]
+[2015May15 09:59:57,911][INFO ][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:487][classOfService obtenido]
+[2015May15 09:59:57,913][INFO ][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:495][periodicCharges obtenido]
+[2015May15 09:59:57,914][INFO ][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:501][offers obtenido]
+[2015May15 09:59:57,918][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][debug DispatcherConnection.java:64][ _M jndiConnection]
+[2015May15 09:59:57,919][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][debug DispatcherConnection.java:64][ _M getJndiConnection]
+[2015May15 09:59:57,923][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][debug RtbsHistory.java:54][ _I getApplyDay:]
+[2015May15 09:59:58,616][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][debug RtbsHistory.java:54][ _E getApplyDay:]
+[2015May15 09:59:58,618][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:535][applyDays=1]
+[2015May15 09:59:58,621][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: [Lcom.comverse_in.prepaid.ccws.AccumulatorHistory;@1f4db6e]
+[2015May15 09:59:58,622][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: pc_RB SP100]
+[2015May15 09:59:58,624][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:580][accumulators.length: 3]
+[2015May15 09:59:58,625][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: [Lcom.comverse_in.prepaid.ccws.AccumulatorHistory;@1793d37]
+[2015May15 09:59:58,627][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: null]
+[2015May15 09:59:58,628][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:580][accumulators.length: 3]
+[2015May15 09:59:58,630][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: [Lcom.comverse_in.prepaid.ccws.AccumulatorHistory;@13b2522]
+[2015May15 09:59:58,631][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: COS CHANGE]
+[2015May15 09:59:58,633][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:580][accumulators.length: 3]
+[2015May15 09:59:58,634][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:591][Luego del IF: [Lcom.comverse_in.prepaid.ccws.AccumulatorHistory;@13b2522]
+[2015May15 09:59:58,636][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: null]
+[2015May15 09:59:58,637][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: COS CHANGE]
+[2015May15 09:59:58,639][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:591][Luego del IF: null]
+[2015May15 09:59:58,640][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: null]
+[2015May15 09:59:58,642][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: Cobro de Plan y Dias de Cobro: 30]
+[2015May15 09:59:58,643][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:591][Luego del IF: null]
+[2015May15 09:59:58,645][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: null]
+[2015May15 09:59:58,646][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: COS CHANGE]
+[2015May15 09:59:58,648][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:591][Luego del IF: null]
+[2015May15 09:59:58,649][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: null]
+[2015May15 09:59:58,651][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: Cobro de Plan y Dias de Cobro: 30]
+[2015May15 09:59:58,652][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:591][Luego del IF: null]
+[2015May15 09:59:58,654][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: [Lcom.comverse_in.prepaid.ccws.AccumulatorHistory;@1f4db6e]
+[2015May15 09:59:58,655][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: pc_RB SP100]
+[2015May15 09:59:58,657][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:580][accumulators.length: 3]
+[2015May15 09:59:58,658][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: [Lcom.comverse_in.prepaid.ccws.AccumulatorHistory;@1793d37]
+[2015May15 09:59:58,660][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: null]
+[2015May15 09:59:58,661][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:580][accumulators.length: 3]
+[2015May15 09:59:58,663][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: [Lcom.comverse_in.prepaid.ccws.AccumulatorHistory;@13b2522]
+[2015May15 09:59:58,664][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: COS CHANGE]
+[2015May15 09:59:58,666][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:580][accumulators.length: 3]
+[2015May15 09:59:58,667][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:591][Luego del IF: [Lcom.comverse_in.prepaid.ccws.AccumulatorHistory;@13b2522]
+[2015May15 09:59:58,669][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: null]
+[2015May15 09:59:58,670][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: COS CHANGE]
+[2015May15 09:59:58,672][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:591][Luego del IF: null]
+[2015May15 09:59:58,673][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: null]
+[2015May15 09:59:58,675][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: Cobro de Plan y Dias de Cobro: 30]
+[2015May15 09:59:58,676][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:591][Luego del IF: null]
+[2015May15 09:59:58,678][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: null]
+[2015May15 09:59:58,679][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: COS CHANGE]
+[2015May15 09:59:58,681][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:591][Luego del IF: null]
+[2015May15 09:59:58,682][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: null]
+[2015May15 09:59:58,684][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: Cobro de Plan y Dias de Cobro: 30]
+[2015May15 09:59:58,685][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:591][Luego del IF: null]
+[2015May15 09:59:58,687][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: [Lcom.comverse_in.prepaid.ccws.AccumulatorHistory;@1f4db6e]
+[2015May15 09:59:58,688][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: pc_RB SP100]
+[2015May15 09:59:58,689][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:580][accumulators.length: 3]
+[2015May15 09:59:58,691][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: [Lcom.comverse_in.prepaid.ccws.AccumulatorHistory;@1793d37]
+[2015May15 09:59:58,692][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: null]
+[2015May15 09:59:58,694][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:580][accumulators.length: 3]
+[2015May15 09:59:58,695][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: [Lcom.comverse_in.prepaid.ccws.AccumulatorHistory;@13b2522]
+[2015May15 09:59:58,697][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: COS CHANGE]
+[2015May15 09:59:58,698][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:580][accumulators.length: 3]
+[2015May15 09:59:58,700][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:591][Luego del IF: [Lcom.comverse_in.prepaid.ccws.AccumulatorHistory;@13b2522]
+[2015May15 09:59:58,701][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: null]
+[2015May15 09:59:58,703][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: COS CHANGE]
+[2015May15 09:59:58,704][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:591][Luego del IF: null]
+[2015May15 09:59:58,706][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: null]
+[2015May15 09:59:58,707][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: Cobro de Plan y Dias de Cobro: 30]
+[2015May15 09:59:58,709][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:591][Luego del IF: null]
+[2015May15 09:59:58,710][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: null]
+[2015May15 09:59:58,712][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: COS CHANGE]
+[2015May15 09:59:58,713][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:591][Luego del IF: null]
+[2015May15 09:59:58,715][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: null]
+[2015May15 09:59:58,716][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: Cobro de Plan y Dias de Cobro: 30]
+[2015May15 09:59:58,718][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:591][Luego del IF: null]
+[2015May15 09:59:58,719][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: [Lcom.comverse_in.prepaid.ccws.AccumulatorHistory;@1f4db6e]
+[2015May15 09:59:58,721][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: pc_RB SP100]
+[2015May15 09:59:58,722][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:580][accumulators.length: 3]
+[2015May15 09:59:58,724][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: [Lcom.comverse_in.prepaid.ccws.AccumulatorHistory;@1793d37]
+[2015May15 09:59:58,725][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: null]
+[2015May15 09:59:58,727][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:580][accumulators.length: 3]
+[2015May15 09:59:58,728][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: [Lcom.comverse_in.prepaid.ccws.AccumulatorHistory;@13b2522]
+[2015May15 09:59:58,730][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: COS CHANGE]
+[2015May15 09:59:58,731][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:580][accumulators.length: 3]
+[2015May15 09:59:58,733][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:591][Luego del IF: [Lcom.comverse_in.prepaid.ccws.AccumulatorHistory;@13b2522]
+[2015May15 09:59:58,734][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: null]
+[2015May15 09:59:58,736][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: COS CHANGE]
+[2015May15 09:59:58,737][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:591][Luego del IF: null]
+[2015May15 09:59:58,739][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: null]
+[2015May15 09:59:58,740][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: Cobro de Plan y Dias de Cobro: 30]
+[2015May15 09:59:58,742][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:591][Luego del IF: null]
+[2015May15 09:59:58,743][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: null]
+[2015May15 09:59:58,745][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: COS CHANGE]
+[2015May15 09:59:58,746][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:591][Luego del IF: null]
+[2015May15 09:59:58,747][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:577][Accumulators: null]
+[2015May15 09:59:58,749][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:578][MTRComment: Cobro de Plan y Dias de Cobro: 30]
+[2015May15 09:59:58,750][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:591][Luego del IF: null]
+[2015May15 09:59:58,752][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:809][ _M getRtbsAcbpcsr: monetaryTransactionRecord filtered:]
+[2015May15 09:59:58,753][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:924][ _M getRtbsAcbpcsr: offerHistory filtered:]
+[2015May15 09:59:58,755][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:937][ _M getRtbsAcbpcsr: acbProductChargeList Ordered:]
+[2015May15 09:59:58,757][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:957][ _M getRtbsAcbpcsr: acbProductChargeList Valid:]
+[2015May15 09:59:58,759][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:1084][ _M getRtbsAcbpcsr: before procesing aCBProductChargeList:]
+[2015May15 09:59:58,760][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:1091][ _M getRtbsAcbpcsr: before procesing aCBProductChargeList:]
+[2015May15 09:59:58,765][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: BAM 750, Type: PLAN DES.
+ ]
+[2015May15 09:59:58,781][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: Core, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:58,797][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SMS, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:58,813][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_MMS, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:58,828][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SEC_M2MF_ON-OFF-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:58,844][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SEC_M2MF_ON-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:58,860][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SEC_M2MF_OFF-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:58,876][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SMS_PREMIUM, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:58,908][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_KB, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:58,924][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_BS, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:58,940][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_SEC_M2MF_ON-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:58,956][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_SEC_M2MF_ON-OFF-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:58,971][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_SEC_M2MF_OFF-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:58,987][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_SMS, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,003][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_SMS_PREMIUM, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,020][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_MMS, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,035][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_KB, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,051][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SEC_LDI, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,068][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: BAM 750, Type: PLAN DES.
+ ]
+[2015May15 09:59:59,084][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: BAM 550, Type: PLAN DES.
+ ]
+[2015May15 09:59:59,100][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: Core, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,115][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SMS, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,131][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_MMS, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,147][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SEC_M2MF_ON-OFF-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,165][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SEC_M2MF_ON-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,187][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SEC_M2MF_OFF-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,205][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SMS_PREMIUM, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,224][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_KB, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,241][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_BS, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,258][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_SEC_M2MF_ON-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,274][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_SEC_M2MF_ON-OFF-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,290][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_SEC_M2MF_OFF-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,306][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_SMS, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,322][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_SMS_PREMIUM, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,338][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_MMS, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,354][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_KB, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,370][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SEC_LDI, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,388][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: BAM 550, Type: PLAN DES.
+ ]
+[2015May15 09:59:59,404][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: Core, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,420][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SMS, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,436][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_MMS, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,452][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SEC_M2MF_ON-OFF-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,468][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SEC_M2MF_ON-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,484][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SEC_M2MF_OFF-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,500][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SMS_PREMIUM, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,516][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_KB, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,532][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_BS, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,548][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_SEC_M2MF_ON-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,564][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_SEC_M2MF_ON-OFF-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,580][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_SEC_M2MF_OFF-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,596][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_SMS, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,611][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_SMS_PREMIUM, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,626][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_MMS, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,641][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_KB, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,654][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SEC_LDI, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,671][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: BAM 550, Type: PLAN DES.
+ ]
+[2015May15 09:59:59,687][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: BAM 750, Type: PLAN DES.
+ ]
+[2015May15 09:59:59,703][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: Core, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,719][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SMS, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,735][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_MMS, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,751][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SEC_M2MF_ON-OFF-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,767][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SEC_M2MF_ON-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,782][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SEC_M2MF_OFF-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,798][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SMS_PREMIUM, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,814][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_KB, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,831][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_BS, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,846][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_SEC_M2MF_ON-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,862][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_SEC_M2MF_ON-OFF-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,879][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_SEC_M2MF_OFF-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,895][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_SMS, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,911][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_SMS_PREMIUM, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,927][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_MMS, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,943][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_KB, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,959][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SEC_LDI, Type: TIPO BALANCE.
+ ]
+[2015May15 09:59:59,976][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: BAM 750, Type: PLAN DES.
+ ]
+[2015May15 09:59:59,991][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: Super Pegado 100, Type: PLAN DES.
+ ]
+[2015May15 10:00:00,008][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: Core, Type: TIPO BALANCE.
+ ]
+[2015May15 10:00:00,025][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SMS, Type: TIPO BALANCE.
+ ]
+[2015May15 10:00:00,042][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_MMS, Type: TIPO BALANCE.
+ ]
+[2015May15 10:00:00,058][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SEC_M2MF_ON-OFF-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 10:00:00,074][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SEC_M2MF_ON-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 10:00:00,090][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SEC_M2MF_OFF-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 10:00:00,106][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SMS_PREMIUM, Type: TIPO BALANCE.
+ ]
+[2015May15 10:00:00,122][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_KB, Type: TIPO BALANCE.
+ ]
+[2015May15 10:00:00,138][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_BS, Type: TIPO BALANCE.
+ ]
+[2015May15 10:00:00,154][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_SEC_M2MF_ON-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 10:00:00,170][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_SEC_M2MF_ON-OFF-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 10:00:00,187][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_SEC_M2MF_OFF-NET, Type: TIPO BALANCE.
+ ]
+[2015May15 10:00:00,203][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_SMS, Type: TIPO BALANCE.
+ ]
+[2015May15 10:00:00,219][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_SMS_PREMIUM, Type: TIPO BALANCE.
+ ]
+[2015May15 10:00:00,235][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_MMS, Type: TIPO BALANCE.
+ ]
+[2015May15 10:00:00,251][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: F_KB, Type: TIPO BALANCE.
+ ]
+[2015May15 10:00:00,267][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SEC_LDI, Type: TIPO BALANCE.
+ ]
+[2015May15 10:00:00,283][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getGenericDataValue DataValueLookupDelegator.java:207][Obteniendo equivalencia genérica para tripleta: 
+ System: RTBS,Value: NF_SEC_FF, Type: TIPO BALANCE.
+ ]
+[2015May15 10:00:00,297][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][debug RTBS_ACBPCSRecent.java:152][ _M getRtbsAcbpcsr: after procesing aCBProductChargeList:]
+[2015May15 10:00:00,299][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:1388][ _E getRtbsAcbpcsr:]
+[2015May15 10:00:00,342][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcs RTBS_ACBPCS.java:618][_M getRtbsAcbpcs: OUTPUT RECENT:<RecentAppliedCustomerBillingProductChargeSearchResponse xmlns="http://integra.la/rtbs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MSISDN>584122592444</MSISDN>
+  <ACBProductCharges>
+    <ACBProductCharge>
+      <AccountType>Individual</AccountType>
+      <ServiceProvider>DIGITEL</ServiceProvider>
+      <LoginName>mwprepaid</LoginName>
+      <ProductChargeReason>Cobro de Plan y Dias de Cobro: 30</ProductChargeReason>
+      <ProductChargeReasonDesc xsi:nil="true"/>
+      <ProductChargeDate>2015-05-11T10:09:05.000-04:30</ProductChargeDate>
+      <GroupID xsi:nil="true"/>
+      <CurrentProductOfferingName>BAM 750</CurrentProductOfferingName>
+      <PreviousProductOfferingName xsi:nil="true"/>
+      <UnitTypeName xsi:nil="true"/>
+      <FundUsageType>Balances</FundUsageType>
+      <IsoCode>VEB</IsoCode>
+      <PreviousIsoCode xsi:nil="true"/>
+      <ConversionRate>0.0</ConversionRate>
+      <BonusAwarded>0.0</BonusAwarded>
+      <DiscountAwarded>0.0</DiscountAwarded>
+      <BonusPlanName xsi:nil="true"/>
+      <DiscountPLanName xsi:nil="true"/>
+      <ChargeCode xsi:nil="true"/>
+      <RecurringProdOfferPriceChargePeriod xsi:nil="true"/>
+      <RecurringProdOfferPriceChargeApplyDay xsi:nil="true"/>
+      <PPSAccount xsi:nil="true"/>
+      <ProductOfferingType xsi:nil="true"/>
+      <AppliedProductChargeSource>MTR</AppliedProductChargeSource>
+      <AppliedCustomerBillingAlowance>
+        <CustomerAllowance>
+          <BalanceName>Saldo en Bs.</BalanceName>
+          <AccountExpiration>2016-05-10T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>216.44</AppliedAmount>
+          <CreditBalanceAmount>123.822402</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>SMS</BalanceName>
+          <AccountExpiration>2015-05-31T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>600.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>MMS</BalanceName>
+          <AccountExpiration>2015-05-31T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>10.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Seg Mov-Bas Dgtl+OtOper</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Seg Mov-Bas Dgtl</BalanceName>
+          <AccountExpiration>2015-05-31T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>12000.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Seg Mov-Bas OtOper</BalanceName>
+          <AccountExpiration>2015-05-31T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>7200.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>SMS Premiun</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>KB</BalanceName>
+          <AccountExpiration>2015-06-10T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>768000.0</AppliedAmount>
+          <CreditBalanceAmount>1351680.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono en Bs.</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono Seg Mov-Bas Dgtl</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono Seg Mov-Bas Dgtl+OtOper</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono Seg Mov-Bas OtOper</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono SMS</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono SMS Premium</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono MMS</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono KB</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Seg LDI</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+      </AppliedCustomerBillingAlowance>
+    </ACBProductCharge>
+    <ACBProductCharge>
+      <AccountType>Individual</AccountType>
+      <ServiceProvider>DIGITEL</ServiceProvider>
+      <LoginName>mwprepaid</LoginName>
+      <ProductChargeReason>COS CHANGE</ProductChargeReason>
+      <ProductChargeReasonDesc xsi:nil="true"/>
+      <ProductChargeDate>2015-05-11T10:09:05.000-04:30</ProductChargeDate>
+      <GroupID xsi:nil="true"/>
+      <CurrentProductOfferingName>BAM 750</CurrentProductOfferingName>
+      <PreviousProductOfferingName>BAM 550</PreviousProductOfferingName>
+      <UnitTypeName xsi:nil="true"/>
+      <FundUsageType>Balances</FundUsageType>
+      <IsoCode>VEB</IsoCode>
+      <PreviousIsoCode xsi:nil="true"/>
+      <ConversionRate>0.0</ConversionRate>
+      <BonusAwarded>0.0</BonusAwarded>
+      <DiscountAwarded>0.0</DiscountAwarded>
+      <BonusPlanName xsi:nil="true"/>
+      <DiscountPLanName xsi:nil="true"/>
+      <ChargeCode xsi:nil="true"/>
+      <RecurringProdOfferPriceChargePeriod xsi:nil="true"/>
+      <RecurringProdOfferPriceChargeApplyDay xsi:nil="true"/>
+      <PPSAccount xsi:nil="true"/>
+      <ProductOfferingType xsi:nil="true"/>
+      <AppliedProductChargeSource>MTR</AppliedProductChargeSource>
+      <AppliedCustomerBillingAlowance>
+        <CustomerAllowance>
+          <BalanceName>Saldo en Bs.</BalanceName>
+          <AccountExpiration>2016-05-10T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>340.262402</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>SMS</BalanceName>
+          <AccountExpiration>2015-05-31T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>600.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>MMS</BalanceName>
+          <AccountExpiration>2015-05-31T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>10.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Seg Mov-Bas Dgtl+OtOper</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Seg Mov-Bas Dgtl</BalanceName>
+          <AccountExpiration>2015-05-31T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>12000.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Seg Mov-Bas OtOper</BalanceName>
+          <AccountExpiration>2015-05-31T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>7200.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>SMS Premiun</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>KB</BalanceName>
+          <AccountExpiration>2015-06-10T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>583680.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono en Bs.</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono Seg Mov-Bas Dgtl</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono Seg Mov-Bas Dgtl+OtOper</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono Seg Mov-Bas OtOper</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono SMS</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono SMS Premium</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono MMS</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono KB</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Seg LDI</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+      </AppliedCustomerBillingAlowance>
+    </ACBProductCharge>
+    <ACBProductCharge>
+      <AccountType>Individual</AccountType>
+      <ServiceProvider>DIGITEL</ServiceProvider>
+      <LoginName>mwprepaid</LoginName>
+      <ProductChargeReason>Cobro de Plan y Dias de Cobro: 30</ProductChargeReason>
+      <ProductChargeReasonDesc xsi:nil="true"/>
+      <ProductChargeDate>2015-05-11T10:06:30.000-04:30</ProductChargeDate>
+      <GroupID xsi:nil="true"/>
+      <CurrentProductOfferingName>BAM 550</CurrentProductOfferingName>
+      <PreviousProductOfferingName xsi:nil="true"/>
+      <UnitTypeName xsi:nil="true"/>
+      <FundUsageType>Balances</FundUsageType>
+      <IsoCode>VEB</IsoCode>
+      <PreviousIsoCode xsi:nil="true"/>
+      <ConversionRate>0.0</ConversionRate>
+      <BonusAwarded>0.0</BonusAwarded>
+      <DiscountAwarded>0.0</DiscountAwarded>
+      <BonusPlanName xsi:nil="true"/>
+      <DiscountPLanName xsi:nil="true"/>
+      <ChargeCode xsi:nil="true"/>
+      <RecurringProdOfferPriceChargePeriod xsi:nil="true"/>
+      <RecurringProdOfferPriceChargeApplyDay xsi:nil="true"/>
+      <PPSAccount xsi:nil="true"/>
+      <ProductOfferingType xsi:nil="true"/>
+      <AppliedProductChargeSource>MTR</AppliedProductChargeSource>
+      <AppliedCustomerBillingAlowance>
+        <CustomerAllowance>
+          <BalanceName>Saldo en Bs.</BalanceName>
+          <AccountExpiration>2016-05-10T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>160.944</AppliedAmount>
+          <CreditBalanceAmount>340.262402</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>SMS</BalanceName>
+          <AccountExpiration>2015-05-31T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>600.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>MMS</BalanceName>
+          <AccountExpiration>2015-05-31T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>10.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Seg Mov-Bas Dgtl+OtOper</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Seg Mov-Bas Dgtl</BalanceName>
+          <AccountExpiration>2015-05-31T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>12000.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Seg Mov-Bas OtOper</BalanceName>
+          <AccountExpiration>2015-05-31T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>7200.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>SMS Premiun</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>KB</BalanceName>
+          <AccountExpiration>2015-06-10T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>563200.0</AppliedAmount>
+          <CreditBalanceAmount>583680.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono en Bs.</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono Seg Mov-Bas Dgtl</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono Seg Mov-Bas Dgtl+OtOper</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono Seg Mov-Bas OtOper</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono SMS</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono SMS Premium</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono MMS</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono KB</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Seg LDI</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+      </AppliedCustomerBillingAlowance>
+    </ACBProductCharge>
+    <ACBProductCharge>
+      <AccountType>Individual</AccountType>
+      <ServiceProvider>DIGITEL</ServiceProvider>
+      <LoginName>mwprepaid</LoginName>
+      <ProductChargeReason>COS CHANGE</ProductChargeReason>
+      <ProductChargeReasonDesc xsi:nil="true"/>
+      <ProductChargeDate>2015-05-11T10:06:29.000-04:30</ProductChargeDate>
+      <GroupID xsi:nil="true"/>
+      <CurrentProductOfferingName>BAM 550</CurrentProductOfferingName>
+      <PreviousProductOfferingName>BAM 750</PreviousProductOfferingName>
+      <UnitTypeName xsi:nil="true"/>
+      <FundUsageType>Balances</FundUsageType>
+      <IsoCode>VEB</IsoCode>
+      <PreviousIsoCode xsi:nil="true"/>
+      <ConversionRate>0.0</ConversionRate>
+      <BonusAwarded>0.0</BonusAwarded>
+      <DiscountAwarded>0.0</DiscountAwarded>
+      <BonusPlanName xsi:nil="true"/>
+      <DiscountPLanName xsi:nil="true"/>
+      <ChargeCode xsi:nil="true"/>
+      <RecurringProdOfferPriceChargePeriod xsi:nil="true"/>
+      <RecurringProdOfferPriceChargeApplyDay xsi:nil="true"/>
+      <PPSAccount xsi:nil="true"/>
+      <ProductOfferingType xsi:nil="true"/>
+      <AppliedProductChargeSource>MTR</AppliedProductChargeSource>
+      <AppliedCustomerBillingAlowance>
+        <CustomerAllowance>
+          <BalanceName>Saldo en Bs.</BalanceName>
+          <AccountExpiration>2016-05-10T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>501.206402</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>SMS</BalanceName>
+          <AccountExpiration>2015-05-31T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>600.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>MMS</BalanceName>
+          <AccountExpiration>2015-05-31T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>10.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Seg Mov-Bas Dgtl+OtOper</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Seg Mov-Bas Dgtl</BalanceName>
+          <AccountExpiration>2015-05-31T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>12000.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Seg Mov-Bas OtOper</BalanceName>
+          <AccountExpiration>2015-05-31T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>7200.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>SMS Premiun</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>KB</BalanceName>
+          <AccountExpiration>2015-05-31T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>20480.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono en Bs.</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono Seg Mov-Bas Dgtl</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono Seg Mov-Bas Dgtl+OtOper</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono Seg Mov-Bas OtOper</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono SMS</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono SMS Premium</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono MMS</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono KB</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Seg LDI</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+      </AppliedCustomerBillingAlowance>
+    </ACBProductCharge>
+    <ACBProductCharge>
+      <AccountType>Individual</AccountType>
+      <ServiceProvider>DIGITEL</ServiceProvider>
+      <LoginName>mwprepaid</LoginName>
+      <ProductChargeReason>COS CHANGE</ProductChargeReason>
+      <ProductChargeReasonDesc xsi:nil="true"/>
+      <ProductChargeDate>2015-05-11T10:03:40.000-04:30</ProductChargeDate>
+      <GroupID xsi:nil="true"/>
+      <CurrentProductOfferingName>BAM 750</CurrentProductOfferingName>
+      <PreviousProductOfferingName>Plan Super Pegado 100</PreviousProductOfferingName>
+      <UnitTypeName xsi:nil="true"/>
+      <FundUsageType>Balances</FundUsageType>
+      <IsoCode>VEB</IsoCode>
+      <PreviousIsoCode xsi:nil="true"/>
+      <ConversionRate>0.0</ConversionRate>
+      <BonusAwarded>0.0</BonusAwarded>
+      <DiscountAwarded>0.0</DiscountAwarded>
+      <BonusPlanName xsi:nil="true"/>
+      <DiscountPLanName xsi:nil="true"/>
+      <ChargeCode xsi:nil="true"/>
+      <RecurringProdOfferPriceChargePeriod xsi:nil="true"/>
+      <RecurringProdOfferPriceChargeApplyDay xsi:nil="true"/>
+      <PPSAccount xsi:nil="true"/>
+      <ProductOfferingType xsi:nil="true"/>
+      <AppliedProductChargeSource>MTR</AppliedProductChargeSource>
+      <AppliedCustomerBillingAlowance>
+        <CustomerAllowance>
+          <BalanceName>Saldo en Bs.</BalanceName>
+          <AccountExpiration>2016-05-10T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>501.206402</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>SMS</BalanceName>
+          <AccountExpiration>2015-05-31T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>600.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>MMS</BalanceName>
+          <AccountExpiration>2015-05-31T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>10.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Seg Mov-Bas Dgtl+OtOper</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Seg Mov-Bas Dgtl</BalanceName>
+          <AccountExpiration>2015-05-31T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>12000.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Seg Mov-Bas OtOper</BalanceName>
+          <AccountExpiration>2015-05-31T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>7200.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>SMS Premiun</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>KB</BalanceName>
+          <AccountExpiration>2015-05-31T23:59:59.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>20480.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono en Bs.</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono Seg Mov-Bas Dgtl</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono Seg Mov-Bas Dgtl+OtOper</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono Seg Mov-Bas OtOper</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono SMS</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono SMS Premium</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono MMS</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Bono KB</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Seg LDI</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+        <CustomerAllowance>
+          <BalanceName>Sec Friend-Family</BalanceName>
+          <AccountExpiration>0001-01-01T00:00:00.000-04:30</AccountExpiration>
+          <AppliedAmount>0.0</AppliedAmount>
+          <CreditBalanceAmount>0.0</CreditBalanceAmount>
+        </CustomerAllowance>
+      </AppliedCustomerBillingAlowance>
+    </ACBProductCharge>
+  </ACBProductCharges>
+  <OperationMessage>
+    <Code xmlns="">GEN_S0002-OM0001</Code>
+    <Message xmlns="">Operacion ejecutada de forma exitosa</Message>
+  </OperationMessage>
+</RecentAppliedCustomerBillingProductChargeSearchResponse>]
+[2015May15 10:00:00,347][INFO ][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcs RTBS_ACBPCS.java:624][_M getRtbsAcbpcs: OUTPUT RECENT: ]
+[2015May15 10:00:00,352][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getHistoricData RTBS_ACBPCS.java:803][_M getRtbsAcbpcs: INPUT HISTORY:<HistoryAppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs">
+  <Channel>FEATC</Channel>
+  <MSISDN>584122592444</MSISDN>
+  <SearchDateRange>
+    <StartDate>2015-04-16T00:00:00.000-04:30</StartDate>
+    <EndDate>2015-04-25T23:59:59.999-04:30</EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>5</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason>
+      <Reason>Cobro de Plan</Reason>
+      <Reason>COS CHANGE</Reason>
+      <Reason>pc_</Reason>
+      <Reason>ALCO Cobro</Reason>
+    </SearchMTRReason>
+    <SearchOfferReason>
+      <Reason>SUBSCRIPTION</Reason>
+      <Reason>UNSUBSCRIPTION</Reason>
+      <Reason>RCSTATE</Reason>
+    </SearchOfferReason>
+  </ProductChargeConditions>
+</HistoryAppliedCustomerBillingProductChargeSearchRequest>]
+[2015May15 10:00:00,355][INFO ][RTBS_ACBPCS-584122592444-1431700194251][getHistoricData RTBS_ACBPCS.java:809][_M getRtbsAcbpcs: INPUT HISTORY: <HistoryAppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs">
+  <Channel>FEATC</Channel>
+  <MSISDN>584122592444</MSISDN>
+  <SearchDateRange>
+    <StartDate>2015-04-16T00:00:00.000-04:30</StartDate>
+    <EndDate>2015-04-25T23:59:59.999-04:30</EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>5</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason>
+      <Reason>Cobro de Plan</Reason>
+      <Reason>COS CHANGE</Reason>
+      <Reason>pc_</Reason>
+      <Reason>ALCO Cobro</Reason>
+    </SearchMTRReason>
+    <SearchOfferReason>
+      <Reason>SUBSCRIPTION</Reason>
+      <Reason>UNSUBSCRIPTION</Reason>
+      <Reason>RCSTATE</Reason>
+    </SearchOfferReason>
+  </ProductChargeConditions>
+</HistoryAppliedCustomerBillingProductChargeSearchRequest>]
+[2015May15 10:00:00,357][INFO ][RTBS_ACBPCS-584122592444-1431700194251][info RTBS_ACBPCSHistory.java:178][ _I getRtbsAcbpcsh:]
+[2015May15 10:00:00,361][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsh RTBS_ACBPCSHistory.java:385][_M getRtbsAcbpcsh: Recibiendo: channel= FEATC,msisdn=584122592444,startDate=2015-04-16T00:00:00.000-04:30,endDate=2015-04-25T23:59:59.999-04:30,maxNumRecords=5]
+[2015May15 10:00:00,363][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsh RTBS_ACBPCSHistory.java:392][_M getRtbsAcbpcsh: Recibiendo mtrReason= [Ljava.lang.String;@1d1e1d3]
+[2015May15 10:00:00,364][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsh RTBS_ACBPCSHistory.java:403][_M getRtbsAcbpcsh: Recibiendo offerReason= [Ljava.lang.String;@412119]
+[2015May15 10:00:00,366][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsh RTBS_ACBPCSHistory.java:422][valores:863999999,93.0,2015-04-16T00:00:00.000-04:30,2015-04-25T23:59:59.999-04:30]
+[2015May15 10:00:00,368][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcsh RTBS_ACBPCSHistory.java:440][ _M getRtbsAcbpcsh: Validate:]
+[2015May15 10:00:00,369][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][debug DispatcherConnection.java:64][ _M jndiConnection]
+[2015May15 10:00:00,371][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][debug DispatcherConnection.java:64][ _M getJndiConnection]
+[2015May15 10:00:00,374][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][debug RTBS_ACBPCSHistory.java:173][_M getRtbsAcbpcsh: before BdHitory - StoreProcedure ApplyDay]
+[2015May15 10:00:00,376][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][debug RtbsHistory.java:54][ _I getApplyDay:]
+[2015May15 10:00:01,063][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][debug RtbsHistory.java:54][ _E getApplyDay:]
+[2015May15 10:00:01,065][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][debug RTBS_ACBPCSHistory.java:173][_M getRtbsAcbpcsh: after BdHitory - StoreProcedure ApplyDay]
+[2015May15 10:00:01,066][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][debug RTBS_ACBPCSHistory.java:173][_M getRtbsAcbpcsh: before BdHitory - StoreProcedure MtrHist]
+[2015May15 10:00:01,068][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][debug RtbsHistory.java:54][ _I getMtrHist:]
+[2015May15 10:00:01,069][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getMtrHist RtbsHistory.java:142][ _I getMtrHist: dataTypeScheme=null]
+[2015May15 10:00:01,085][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][debug RtbsHistory.java:54][ _E getMtrHist:]
+[2015May15 10:00:01,087][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][debug RTBS_ACBPCSHistory.java:173][_M getRtbsAcbpcsh: after BdHitory - StoreProcedure MtrHist]
+[2015May15 10:00:01,091][DEBUG][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcs RTBS_ACBPCS.java:685][_M getRtbsAcbpcs: OUTPUT HISTORY:<HistoryAppliedCustomerBillingProductChargeSearchResponse xmlns="http://integra.la/rtbs">
+  <OperationMessage>
+    <Code xmlns="">GEN_S0003-OM0003</Code>
+    <Message xmlns="">La informacion solicitada no ha sido encontrada en la base de datos</Message>
+  </OperationMessage>
+</HistoryAppliedCustomerBillingProductChargeSearchResponse>]
+[2015May15 10:00:01,093][INFO ][RTBS_ACBPCS-584122592444-1431700194251][getRtbsAcbpcs RTBS_ACBPCS.java:691][_M getRtbsAcbpcs: OUTPUT HISTORY: ]
+[2015May15 10:00:01,094][INFO ][RTBS_ACBPCS-584122592444-1431700194251][info RTBS_ACBPCS.java:118][ _E getRtbsAcbpcs:]
+[2015May15 10:00:01,096][INFO ][RTBS_ACBPCS-584122592444-1431700194251][info RTBS_ACBPCS.java:118][ _M execute: after getRtbsAcbpcs() ]
+[2015May15 10:00:01,097][INFO ][RTBS_ACBPCS-584122592444-1431700194251][info RTBS_ACBPCS.java:118][ _E execute:]

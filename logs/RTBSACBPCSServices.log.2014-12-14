@@ -1,0 +1,663 @@
+[2014Dec14 15:51:51,505][INFO ][][configurarLogger BSSIntLogger.java:67][APLICACION: RTBSACBPCSServices - VERSION: 1.0]
+[2014Dec14 15:51:51,520][INFO ][][configurarLogger BSSIntLogger.java:69][DESCRIPCION: Servicios de Historico de Planes y Servicios - RTBSACBPCSServices]
+[2014Dec14 15:51:51,524][INFO ][RTBS_ACBPCS--1418588511522][service AcbpcsServlet.java:51][Input:<AppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs"><Channel>FEATC</Channel><MSISDN>584129117195</MSISDN><SearchDateRange><StartDate>2014-11-15T00:00:00.000-04:30</StartDate><EndDate>2014-12-14T23:59:59.000-04:30</EndDate></SearchDateRange><SearchMaxRecords>10</SearchMaxRecords><ProductChargeConditions><SearchMTRReason><Reason>Cobro de Plan</Reason><Reason>COS CHANGE</Reason><Reason>pc_</Reason><Reason>ALCO Cobro</Reason></SearchMTRReason><SearchOfferReason><Reason>SUBSCRIPTION</Reason><Reason>UNSUBSCRIPTION</Reason><Reason>RCSTATE</Reason></SearchOfferReason></ProductChargeConditions></AppliedCustomerBillingProductChargeSearchRequest>]
+[2014Dec14 15:51:51,560][INFO ][RTBS_ACBPCS--1418588511522][execute RTBS_ACBPCS.java:180][ _I execute:]
+[2014Dec14 15:51:51,590][INFO ][RTBS_ACBPCS--1418588511522][getParameterSignFromRequest RTBS_ACBPCS_SIGN_PARSER.java:30][Parser para obtener filtro del signo para debito o credito con el xml: <AppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs"><Channel>FEATC</Channel><MSISDN>584129117195</MSISDN><SearchDateRange><StartDate>2014-11-15T00:00:00.000-04:30</StartDate><EndDate>2014-12-14T23:59:59.000-04:30</EndDate></SearchDateRange><SearchMaxRecords>10</SearchMaxRecords><ProductChargeConditions><SearchMTRReason><Reason>Cobro de Plan</Reason><Reason>COS CHANGE</Reason><Reason>pc_</Reason><Reason>ALCO Cobro</Reason></SearchMTRReason><SearchOfferReason><Reason>SUBSCRIPTION</Reason><Reason>UNSUBSCRIPTION</Reason><Reason>RCSTATE</Reason></SearchOfferReason></ProductChargeConditions></AppliedCustomerBillingProductChargeSearchRequest>]
+[2014Dec14 15:51:51,738][INFO ][RTBS_ACBPCS--1418588511522][getParameterSignFromRequest RTBS_ACBPCS_SIGN_PARSER.java:36][Instancia del metodo run ]
+[2014Dec14 15:51:52,044][INFO ][RTBS_ACBPCS--1418588511522][run RTBS_ACBPCS_SIGN_PARSER.java:55][Element Obtenido]
+[2014Dec14 15:51:52,045][INFO ][RTBS_ACBPCS--1418588511522][run RTBS_ACBPCS_SIGN_PARSER.java:66][Aplicar Signo al AppliedAmount: false]
+[2014Dec14 15:51:53,074][INFO ][RTBS_ACBPCS--1418588511522][info RTBS_ACBPCS.java:118][ _M execute: before getRtbsAcbpcs() ]
+[2014Dec14 15:51:53,076][DEBUG][RTBS_ACBPCS--1418588511522][debug RTBS_ACBPCS.java:113][ _I getRtbsAcbpcs:]
+[2014Dec14 15:51:53,078][INFO ][RTBS_ACBPCS--1418588511522][loadProperties RTBS_ACBPCS.java:292][ _M getRtbsAcbpcs: Obteined Information of Properties: (rtbsAcbpcs.maxRecentNumRecords=250,rtbsAcbpcs.maxHistoricalNumRecords=250,rtbsAcbpcs.maxNumDates=90.0,rtbsAcbpcs.recentNumDays=20)]
+[2014Dec14 15:51:53,328][INFO ][RTBS_ACBPCS-584129117195-1418588511522][getRtbsAcbpcs RTBS_ACBPCS.java:353][_M getRtbsAcbpcs: Recibiendo: channel= FEATC,msisdn=584129117195,startDate=2014-11-15T00:00:00.000-04:30,endDate=2014-12-14T23:59:59.000-04:30,maxNumRecords=10]
+[2014Dec14 15:51:53,329][INFO ][RTBS_ACBPCS-584129117195-1418588511522][getRtbsAcbpcs RTBS_ACBPCS.java:360][_M getRtbsAcbpcs: Recibiendo mtrReason= [Ljava.lang.String;@661dd9]
+[2014Dec14 15:51:53,331][INFO ][RTBS_ACBPCS-584129117195-1418588511522][info RTBS_ACBPCS.java:118][_M getRtbsAcbpcs: No hay offerReason]
+[2014Dec14 15:51:53,363][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][getRtbsAcbpcs RTBS_ACBPCS.java:411][ limit_date=Tue Nov 25 00:00:00 VET 2014]
+[2014Dec14 15:51:53,365][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][getRtbsAcbpcs RTBS_ACBPCS.java:420][ limitDateLessOne=Mon Nov 24 23:59:59 VET 2014]
+[2014Dec14 15:51:53,367][INFO ][RTBS_ACBPCS-584129117195-1418588511522][getRtbsAcbpcs RTBS_ACBPCS.java:456][Tipo de Consulta: BOTHrecentStartDate Tue Nov 25 00:00:00 VET 2014recentEndDate Sun Dec 14 23:59:59 VET 2014historicalStartDate Sat Nov 15 00:00:00 VET 2014historicalEndDateMon Nov 24 23:59:59 VET 2014]
+[2014Dec14 15:51:53,393][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug RTBS_ACBPCS.java:113][ _M getRtbsAcbpcs: before procesing:]
+[2014Dec14 15:51:53,462][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][getRecentData RTBS_ACBPCS.java:859][_M getRtbsAcbpcs: INPUT RECENT: <RecentAppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs">
+  <Channel>FEATC</Channel>
+  <MSISDN>584129117195</MSISDN>
+  <SearchDateRange>
+    <StartDate>2014-11-25T00:00:00.000-04:30</StartDate>
+    <EndDate>2014-12-14T23:59:59.000-04:30</EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>10</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason>
+      <Reason>Cobro de Plan</Reason>
+      <Reason>COS CHANGE</Reason>
+      <Reason>pc_</Reason>
+      <Reason>ALCO Cobro</Reason>
+    </SearchMTRReason>
+    <SearchOfferReason>
+      <Reason>SUBSCRIPTION</Reason>
+      <Reason>UNSUBSCRIPTION</Reason>
+      <Reason>RCSTATE</Reason>
+    </SearchOfferReason>
+  </ProductChargeConditions>
+</RecentAppliedCustomerBillingProductChargeSearchRequest>]
+[2014Dec14 15:51:53,470][INFO ][RTBS_ACBPCS-584129117195-1418588511522][getRecentData RTBS_ACBPCS.java:865][_M getRtbsAcbpcs: INPUT RECENT: <RecentAppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs">
+  <Channel>FEATC</Channel>
+  <MSISDN>584129117195</MSISDN>
+  <SearchDateRange>
+    <StartDate>2014-11-25T00:00:00.000-04:30</StartDate>
+    <EndDate>2014-12-14T23:59:59.000-04:30</EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>10</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason>
+      <Reason>Cobro de Plan</Reason>
+      <Reason>COS CHANGE</Reason>
+      <Reason>pc_</Reason>
+      <Reason>ALCO Cobro</Reason>
+    </SearchMTRReason>
+    <SearchOfferReason>
+      <Reason>SUBSCRIPTION</Reason>
+      <Reason>UNSUBSCRIPTION</Reason>
+      <Reason>RCSTATE</Reason>
+    </SearchOfferReason>
+  </ProductChargeConditions>
+</RecentAppliedCustomerBillingProductChargeSearchRequest>]
+[2014Dec14 15:51:53,482][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][loadProperties RTBS_ACBPCSRecent.java:276][ _M getRtbsAcbpcsr: maxNumRecords: 250]
+[2014Dec14 15:51:53,484][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][loadProperties RTBS_ACBPCSRecent.java:296][ _M getRtbsAcbpcsr: maxNumDates: 20.0]
+[2014Dec14 15:51:53,485][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][loadProperties RTBS_ACBPCSRecent.java:303][ _M getRtbsAcbpcsr: Obteined Information of Properties:]
+[2014Dec14 15:51:53,492][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:359][_M getRtbsAcbpcsh: Recibiendo: channel= FEATC,msisdn=584129117195,startDate=2014-11-25T00:00:00.000-04:30,endDate=2014-12-14T23:59:59.000-04:30,maxNumRecords=10]
+[2014Dec14 15:51:53,493][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:368][_M getRtbsAcbpcsh: Recibiendo mtrReason= [Ljava.lang.String;@6ad8c4]
+[2014Dec14 15:51:53,495][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:378][_M getRtbsAcbpcsh: Recibiendo offerReason= [Ljava.lang.String;@bd6584]
+[2014Dec14 15:51:53,496][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:406][ _M getRtbsAcbpcsr: Validate:]
+[2014Dec14 15:51:53,501][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug DispatcherConnection.java:64][ _M getCcwsConnectionOther]
+[2014Dec14 15:51:55,853][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug DispatcherConnection.java:64][ _M getCcwsConnectionCache]
+[2014Dec14 15:51:55,876][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:423][ _M getRtbsAcbpcsr: Obteined Ccws:]
+[2014Dec14 15:52:15,135][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:435][ _M getRtbsAcbpcsr: SubscribeRetrieve(msisdn=584129117195,informationToRetrieve=16512,startDate=Tue Nov 25 00:00:00 VET 2014,endDate=Sun Dec 14 23:59:59 VET 2014]
+[2014Dec14 15:52:15,137][INFO ][RTBS_ACBPCS-584129117195-1418588511522][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:449][ _M getRtbsAcbpcsr: retrieveSubscriberWithIdentityWithHistoryForMultipleIdentities:]
+[2014Dec14 15:52:15,139][INFO ][RTBS_ACBPCS-584129117195-1418588511522][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:459][ _M getRtbsAcbpcsr: Obteined MonetaryTransactionRecord and OfferHistoryRecord:]
+[2014Dec14 15:52:15,140][INFO ][RTBS_ACBPCS-584129117195-1418588511522][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:464][Obteniendo getCache]
+[2014Dec14 15:52:15,145][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClaseFactory.java:47][_I getCacheManagerService()]
+[2014Dec14 15:52:15,146][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][getCacheManagerService ClaseFactory.java:65][_M getCacheManagerService: Llamando al init:server-config-traffic.properties]
+[2014Dec14 15:52:15,148][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][init ClaseFactory.java:222][_I init(server-config-traffic.properties)]
+[2014Dec14 15:52:15,162][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][init ClaseFactory.java:237][_M init: Setting initialContext to: weblogic.jndi.WLInitialContextFactory]
+[2014Dec14 15:52:15,163][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][init ClaseFactory.java:246][_M init: Setting providerURL to: t3://cfglobd05:8601]
+[2014Dec14 15:52:15,165][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][init ClaseFactory.java:255][_M init: Setting jndiName to: ejb/CacheManagerBean]
+[2014Dec14 15:52:15,166][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][init ClaseFactory.java:264][_M init: Setting securityPrincipal to: null]
+[2014Dec14 15:52:15,168][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][init ClaseFactory.java:288][_E init:true]
+[2014Dec14 15:52:15,169][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][getCacheManagerService ClaseFactory.java:74][_M getCacheManagerService: factoryInitialized:true]
+[2014Dec14 15:52:15,170][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][getCacheManagerService ClaseFactory.java:81][_M getCacheManagerService: Luego de Llamar al init:server-config-traffic.properties]
+[2014Dec14 15:52:15,172][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClaseFactory.java:47][_M getCacheManagerService: factoryInitialized:Entro]
+[2014Dec14 15:52:15,173][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][getCacheManagerService ClaseFactory.java:97][_M getCacheManagerService: antes del initialcontext:weblogic.jndi.WLInitialContextFactory]
+[2014Dec14 15:52:15,175][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][getCacheManagerService ClaseFactory.java:106][_M getCacheManagerService: providerURL:t3://cfglobd05:8601]
+[2014Dec14 15:52:15,176][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][getCacheManagerService ClaseFactory.java:115][_M getCacheManagerService: securityPrincipal:null]
+[2014Dec14 15:52:15,178][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClaseFactory.java:47][_M getCacheManagerService: antes del jndiContext]
+[2014Dec14 15:52:15,180][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][getCacheManagerService ClaseFactory.java:128][_M getCacheManagerService: propertiesContext: {java.naming.provider.url=t3://cfglobd05:8601, java.naming.factory.initial=weblogic.jndi.WLInitialContextFactory}]
+[2014Dec14 15:52:15,182][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][getCacheManagerService ClaseFactory.java:137][_M getCacheManagerService: luego del jndiContext:javax.naming.InitialContext@1122edd]
+[2014Dec14 15:52:15,183][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][getCacheManagerService ClaseFactory.java:144][_M getCacheManagerService:jndiName:ejb/CacheManagerBean]
+[2014Dec14 15:52:15,208][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClaseFactory.java:47][_M getCacheManagerService: Haciendo narrow]
+[2014Dec14 15:52:15,210][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClaseFactory.java:47][_M getCacheManagerService: Haciendo create]
+[2014Dec14 15:52:15,228][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][getCacheManagerService ClaseFactory.java:210][_E getCacheManagerService: ClusterableRemoteRef(-915920958669225732S:10.192.13.38:[8601,8601,-1,-1,8601,-1,-1,0,0]:PRESERVINT:AdmPreServ [-915920958669225732S:10.192.13.38:[8601,8601,-1,-1,8601,-1,-1,0,0]:PRESERVINT:AdmPreServ/5821])/5821]
+[2014Dec14 15:52:15,230][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug CachedCcws.java:34][ M_ getCache: DeclaratedCache]
+[2014Dec14 15:54:04,458][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Tarificador,periodicCharges.length: 0]
+[2014Dec14 15:54:04,460][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Tarificador ZF,periodicCharges.length: 0]
+[2014Dec14 15:54:04,462][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:CDLL,periodicCharges.length: 0]
+[2014Dec14 15:54:04,463][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:CDLL ZF,periodicCharges.length: 0]
+[2014Dec14 15:54:04,465][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Cobertura,periodicCharges.length: 1]
+[2014Dec14 15:54:04,467][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Cobertura ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,468][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Habla Sin Parar,periodicCharges.length: 2]
+[2014Dec14 15:54:04,470][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Super Pegado 50 ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,472][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Super Pegado 100 ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,473][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Gremial ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,475][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Nexo 2,periodicCharges.length: 1]
+[2014Dec14 15:54:04,477][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Nexo 2 ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,478][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Rumba 412 ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,480][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Super Pegado 1200 ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,481][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Super Pegado 200 ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,483][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Super Pegado 600 ZF,periodicCharges.length: 2]
+[2014Dec14 15:54:04,485][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Super Pegado Ilimitado ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,486][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Gremial,periodicCharges.length: 1]
+[2014Dec14 15:54:04,488][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Super Pegado 200,periodicCharges.length: 1]
+[2014Dec14 15:54:04,490][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Radicall Plus ZF,periodicCharges.length: 0]
+[2014Dec14 15:54:04,491][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Super Pegado Ilimitado,periodicCharges.length: 1]
+[2014Dec14 15:54:04,493][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Super Pegado 1200,periodicCharges.length: 1]
+[2014Dec14 15:54:04,495][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Super Pegado 100,periodicCharges.length: 1]
+[2014Dec14 15:54:04,496][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Rumba 412,periodicCharges.length: 1]
+[2014Dec14 15:54:04,498][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Super Pegado 600,periodicCharges.length: 2]
+[2014Dec14 15:54:04,500][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Super Pegado 50,periodicCharges.length: 1]
+[2014Dec14 15:54:04,502][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Radicall Plus,periodicCharges.length: 0]
+[2014Dec14 15:54:04,503][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Habla Sin Parar ZF,periodicCharges.length: 2]
+[2014Dec14 15:54:04,505][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Microempresa Control,periodicCharges.length: 0]
+[2014Dec14 15:54:04,506][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Microempresa Control ZF,periodicCharges.length: 0]
+[2014Dec14 15:54:04,508][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Plus Control,periodicCharges.length: 0]
+[2014Dec14 15:54:04,510][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Super Control,periodicCharges.length: 0]
+[2014Dec14 15:54:04,511][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Plus Control ZF,periodicCharges.length: 0]
+[2014Dec14 15:54:04,513][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Super Control ZF,periodicCharges.length: 0]
+[2014Dec14 15:54:04,514][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Radicall Plus BAM,periodicCharges.length: 0]
+[2014Dec14 15:54:04,516][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Radicall Plus BAM ZF,periodicCharges.length: 0]
+[2014Dec14 15:54:04,517][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:BAM 3G Moderado,periodicCharges.length: 2]
+[2014Dec14 15:54:04,519][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:BAM 3G Moderado ZF,periodicCharges.length: 2]
+[2014Dec14 15:54:04,521][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:BAM 3G Frecuente,periodicCharges.length: 2]
+[2014Dec14 15:54:04,522][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:BAM 3G Frecuente ZF,periodicCharges.length: 2]
+[2014Dec14 15:54:04,524][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:BAM 3G Avanzado,periodicCharges.length: 3]
+[2014Dec14 15:54:04,526][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:BAM 3G Avanzado ZF,periodicCharges.length: 3]
+[2014Dec14 15:54:04,527][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:BAM 3G Experto,periodicCharges.length: 2]
+[2014Dec14 15:54:04,529][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:BAM 3G Experto ZF,periodicCharges.length: 2]
+[2014Dec14 15:54:04,530][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:BlackBerry Ilimitado,periodicCharges.length: 1]
+[2014Dec14 15:54:04,532][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:BlackBerry Ilimitado ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,534][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:BAM 3G 10GB,periodicCharges.length: 1]
+[2014Dec14 15:54:04,535][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:BAM 3G 10GB ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,537][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Calling Card,periodicCharges.length: 0]
+[2014Dec14 15:54:04,538][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Radicall Pruebas,periodicCharges.length: 1]
+[2014Dec14 15:54:04,540][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Fijo Control Plus,periodicCharges.length: 0]
+[2014Dec14 15:54:04,542][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Fijo Control Super,periodicCharges.length: 0]
+[2014Dec14 15:54:04,543][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Fijo Control Plus ZF,periodicCharges.length: 0]
+[2014Dec14 15:54:04,545][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Fijo Control Super ZF,periodicCharges.length: 0]
+[2014Dec14 15:54:04,546][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Super Pegado 3000,periodicCharges.length: 1]
+[2014Dec14 15:54:04,548][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Super Pegado 3000 ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,550][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:BAM 3G Eventual,periodicCharges.length: 2]
+[2014Dec14 15:54:04,551][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:BAM 3G Eventual ZF,periodicCharges.length: 2]
+[2014Dec14 15:54:04,553][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Premium Control,periodicCharges.length: 0]
+[2014Dec14 15:54:04,554][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Platinum Control,periodicCharges.length: 0]
+[2014Dec14 15:54:04,556][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Premium Control ZF,periodicCharges.length: 0]
+[2014Dec14 15:54:04,558][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Platinum Control ZF,periodicCharges.length: 0]
+[2014Dec14 15:54:04,559][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Super Pegado 3000 Dist ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,561][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Super Pegado 3000 Dist,periodicCharges.length: 1]
+[2014Dec14 15:54:04,563][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:iPhone Eventual,periodicCharges.length: 1]
+[2014Dec14 15:54:04,564][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:iPhone Eventual ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,566][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:iPhone Moderado,periodicCharges.length: 1]
+[2014Dec14 15:54:04,567][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:iPhone Moderado ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,569][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:iPhone Avanzado,periodicCharges.length: 1]
+[2014Dec14 15:54:04,571][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:iPhone Avanzado ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,572][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Telefonia Publica,periodicCharges.length: 0]
+[2014Dec14 15:54:04,574][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Social,periodicCharges.length: 0]
+[2014Dec14 15:54:04,575][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Empresarial 18000,periodicCharges.length: 1]
+[2014Dec14 15:54:04,577][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Empresarial 18000 ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,579][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Empresarial 48000,periodicCharges.length: 1]
+[2014Dec14 15:54:04,580][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Empresarial 48000 ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,582][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Empresarial 87000,periodicCharges.length: 1]
+[2014Dec14 15:54:04,584][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Empresarial 87000 ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,585][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Pre Activo Movil,periodicCharges.length: 0]
+[2014Dec14 15:54:04,587][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Pre Activo Movil ZF,periodicCharges.length: 0]
+[2014Dec14 15:54:04,588][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Pre Activo BAM,periodicCharges.length: 0]
+[2014Dec14 15:54:04,590][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Pre Activo BAM ZF,periodicCharges.length: 0]
+[2014Dec14 15:54:04,591][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Pre Activo Fija,periodicCharges.length: 0]
+[2014Dec14 15:54:04,593][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Pre Activo Fija ZF,periodicCharges.length: 0]
+[2014Dec14 15:54:04,595][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:INTER,periodicCharges.length: 0]
+[2014Dec14 15:54:04,596][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Inteligente 500,periodicCharges.length: 1]
+[2014Dec14 15:54:04,598][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Inteligente 500 ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,599][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Inteligente 1000,periodicCharges.length: 1]
+[2014Dec14 15:54:04,601][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Inteligente 1000 ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,603][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Inteligente 1500,periodicCharges.length: 1]
+[2014Dec14 15:54:04,604][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Inteligente 1500 ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,606][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:BAM 2000,periodicCharges.length: 1]
+[2014Dec14 15:54:04,608][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:BAM 2000 ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,609][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Radicall Fijo,periodicCharges.length: 0]
+[2014Dec14 15:54:04,611][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Radicall Fijo ZF,periodicCharges.length: 0]
+[2014Dec14 15:54:04,612][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Fijo 412,periodicCharges.length: 1]
+[2014Dec14 15:54:04,614][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Fijo 412 ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,616][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:BAM 550,periodicCharges.length: 1]
+[2014Dec14 15:54:04,617][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:BAM 750,periodicCharges.length: 1]
+[2014Dec14 15:54:04,619][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:BAM 1250,periodicCharges.length: 1]
+[2014Dec14 15:54:04,620][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:BAM 550 ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,622][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:BAM 750 ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,623][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:BAM 1250 ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,625][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Super Pegado 300,periodicCharges.length: 1]
+[2014Dec14 15:54:04,627][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Super Pegado 300 ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,628][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Mega Control,periodicCharges.length: 0]
+[2014Dec14 15:54:04,630][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Mega Control ZF,periodicCharges.length: 0]
+[2014Dec14 15:54:04,632][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Mega Plus Control,periodicCharges.length: 0]
+[2014Dec14 15:54:04,633][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Mega Plus Control ZF,periodicCharges.length: 0]
+[2014Dec14 15:54:04,635][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Plan Anulacion Movil,periodicCharges.length: 0]
+[2014Dec14 15:54:04,636][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Plan Anulacion Movil ZF,periodicCharges.length: 0]
+[2014Dec14 15:54:04,638][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Plan Anulacion Fija,periodicCharges.length: 0]
+[2014Dec14 15:54:04,639][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Plan Anulacion Fija ZF,periodicCharges.length: 0]
+[2014Dec14 15:54:04,641][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Plan Anulacion BAM,periodicCharges.length: 0]
+[2014Dec14 15:54:04,643][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Plan Anulacion BAM ZF,periodicCharges.length: 0]
+[2014Dec14 15:54:04,644][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Super Pegado Plus 450,periodicCharges.length: 1]
+[2014Dec14 15:54:04,646][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Super Pegado Plus 450ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,647][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Super Pegado Plus 850,periodicCharges.length: 1]
+[2014Dec14 15:54:04,649][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Super Pegado Plus 850ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,651][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Super Pegado Plus 1500,periodicCharges.length: 1]
+[2014Dec14 15:54:04,652][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Super Pegado Plus 1500ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,654][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Internet Movil 1.5 GB,periodicCharges.length: 1]
+[2014Dec14 15:54:04,656][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Internet Movil 1.5 GB ZF,periodicCharges.length: 1]
+[2014Dec14 15:54:04,657][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug ClassOfService.java:31][ _M ClassOfService:Prueba Cache,periodicCharges.length: 1]
+[2014Dec14 15:54:04,669][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Recarga 20mil - BORRAR ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,671][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SMS]
+[2014Dec14 15:54:04,673][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 1]:NF_MMS]
+[2014Dec14 15:54:04,674][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Guindaito ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,676][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SMS]
+[2014Dec14 15:54:04,677][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 1]:NF_MMS]
+[2014Dec14 15:54:04,679][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Guindate 30.000 ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,680][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SMS]
+[2014Dec14 15:54:04,682][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 1]:NF_MMS]
+[2014Dec14 15:54:04,684][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Guindate 60.000 ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,685][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SMS]
+[2014Dec14 15:54:04,687][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 1]:NF_SEC_M2MF_ON-OFF-NET]
+[2014Dec14 15:54:04,688][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Habla con Todos ZF ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,690][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SMS]
+[2014Dec14 15:54:04,691][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 1]:NF_MMS]
+[2014Dec14 15:54:04,693][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Mix 412 ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,695][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SEC_LDI]
+[2014Dec14 15:54:04,696][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:30 Min LDI ,balanceType:2 ,resultingType:SECONDS]
+[2014Dec14 15:54:04,698][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SEC_M2MF_ON-NET]
+[2014Dec14 15:54:04,699][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Todos 412 Min ,balanceType:2 ,resultingType:SECONDS]
+[2014Dec14 15:54:04,701][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SEC_M2MF_ON-NET]
+[2014Dec14 15:54:04,702][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Todos 412 Min ZF ,balanceType:2 ,resultingType:SECONDS]
+[2014Dec14 15:54:04,704][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SMS]
+[2014Dec14 15:54:04,706][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 1]:NF_MMS]
+[2014Dec14 15:54:04,707][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Guindaito ZF ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,709][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SMS]
+[2014Dec14 15:54:04,710][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Xcribe Full Bs.15 ,balanceType:1 ,resultingType:SMS]
+[2014Dec14 15:54:04,712][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SMS]
+[2014Dec14 15:54:04,713][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Xcribe Full Bs.15 ZF ,balanceType:1 ,resultingType:SMS]
+[2014Dec14 15:54:04,715][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SMS]
+[2014Dec14 15:54:04,717][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 1]:F_SEC_M2MF_ON-NET]
+[2014Dec14 15:54:04,718][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Xcribe Full Bs.30 ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,720][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SMS]
+[2014Dec14 15:54:04,721][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 1]:F_SEC_M2MF_ON-NET]
+[2014Dec14 15:54:04,723][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Xcribe Full Bs.30 ZF ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,724][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Ubica2 412 ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,726][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Ubica2 412 ZF ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,728][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Music Ton - BORRAR ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,729][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SMS]
+[2014Dec14 15:54:04,731][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 1]:NF_MMS]
+[2014Dec14 15:54:04,732][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Guindate 60.000 ZF ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,734][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SEC_F2F_LDN_ON-OFF-NET_N-W]
+[2014Dec14 15:54:04,736][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Noches y Fines LDN ,balanceType:2 ,resultingType:SECONDS]
+[2014Dec14 15:54:04,737][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SEC_M2MF_ON-NET]
+[2014Dec14 15:54:04,739][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Ilimitado Nocturno ,balanceType:2 ,resultingType:SECONDS]
+[2014Dec14 15:54:04,740][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SEC_F2F_LDN_ON-OFF-NET_N-W]
+[2014Dec14 15:54:04,742][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Noches y Fines LDN ZF ,balanceType:2 ,resultingType:SECONDS]
+[2014Dec14 15:54:04,743][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SEC_F_LDI]
+[2014Dec14 15:54:04,745][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:30 Min LDI Fija ,balanceType:2 ,resultingType:SECONDS]
+[2014Dec14 15:54:04,747][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SEC_F_LDI]
+[2014Dec14 15:54:04,748][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:30 Min LDI Fija ZF ,balanceType:2 ,resultingType:SECONDS]
+[2014Dec14 15:54:04,750][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SEC_LDI]
+[2014Dec14 15:54:04,751][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:30 Min LDI ZF ,balanceType:2 ,resultingType:SECONDS]
+[2014Dec14 15:54:04,753][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:04,755][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Blackberry 500 ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:04,756][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Asistente Hogar 412 ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,758][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Music Ton ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,759][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SEC_LDI]
+[2014Dec14 15:54:04,761][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Roaming VIP ,balanceType:2 ,resultingType:SECONDS]
+[2014Dec14 15:54:04,762][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SMS]
+[2014Dec14 15:54:04,764][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Xcribe Ilimitado ,balanceType:1 ,resultingType:SMS]
+[2014Dec14 15:54:04,766][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Asistente Hogar 412 ZF ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,767][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Music Ton ZF ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,769][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SEC_LDI]
+[2014Dec14 15:54:04,770][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Roaming VIP ZF ,balanceType:2 ,resultingType:SECONDS]
+[2014Dec14 15:54:04,772][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SMS]
+[2014Dec14 15:54:04,774][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Xcribe Ilimitado ZF ,balanceType:1 ,resultingType:SMS]
+[2014Dec14 15:54:04,775][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:04,777][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Blackberry Ilimitado ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:04,778][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:04,780][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Blackberry Ilimitado ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:04,781][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:04,783][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Blackberry 500 ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:04,785][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:04,786][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Blackberry Basico ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:04,788][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:04,789][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Blackberry Basico ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:04,791][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:04,792][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full Ilimitado ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:04,794][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:04,796][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full Ilimitado ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:04,797][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SMS]
+[2014Dec14 15:54:04,799][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 1]:NF_MMS]
+[2014Dec14 15:54:04,800][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Mix 412 ZF ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,802][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SMS]
+[2014Dec14 15:54:04,803][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 1]:NF_SEC_M2MF_ON-OFF-NET]
+[2014Dec14 15:54:04,805][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Habla con Todos ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,807][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SMS]
+[2014Dec14 15:54:04,808][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 1]:NF_MMS]
+[2014Dec14 15:54:04,810][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Guindate 30.000 ZF ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,811][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SEC_M2MF_ON-NET]
+[2014Dec14 15:54:04,813][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Ilimitado Nocturno ZF ,balanceType:2 ,resultingType:SECONDS]
+[2014Dec14 15:54:04,815][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SEC_M2MF_ON-NET]
+[2014Dec14 15:54:04,816][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Todos 412 ,balanceType:2 ,resultingType:SECONDS]
+[2014Dec14 15:54:04,818][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SEC_M2MF_ON-NET]
+[2014Dec14 15:54:04,819][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Todos 412 ZF ,balanceType:2 ,resultingType:SECONDS]
+[2014Dec14 15:54:04,821][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:04,822][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full 50MB ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:04,824][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:04,826][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full 5MB ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:04,827][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:04,829][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full 50MB ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:04,830][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:04,832][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full 5MB ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:04,834][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SEC_M2MF_ON-NET]
+[2014Dec14 15:54:04,835][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Ilimitado Nocturno Min ,balanceType:2 ,resultingType:SECONDS]
+[2014Dec14 15:54:04,837][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SEC_M2MF_ON-NET]
+[2014Dec14 15:54:04,838][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Ilimitado Nocturno Min ZF ,balanceType:2 ,resultingType:SECONDS]
+[2014Dec14 15:54:04,840][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SMS]
+[2014Dec14 15:54:04,841][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 1]:F_SMS]
+[2014Dec14 15:54:04,843][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 2]:F_KB]
+[2014Dec14 15:54:04,845][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Xcribe Full Bs.15 Fija ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,846][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SMS]
+[2014Dec14 15:54:04,848][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 1]:F_SMS]
+[2014Dec14 15:54:04,849][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 2]:F_KB]
+[2014Dec14 15:54:04,851][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Xcribe Full Bs.15 Fija ZF ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,852][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SMS]
+[2014Dec14 15:54:04,854][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 1]:F_SMS]
+[2014Dec14 15:54:04,856][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 2]:F_KB]
+[2014Dec14 15:54:04,857][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Xcribe Full Bs.30 Fija ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,859][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SMS]
+[2014Dec14 15:54:04,860][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 1]:F_SMS]
+[2014Dec14 15:54:04,862][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 2]:F_KB]
+[2014Dec14 15:54:04,863][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Xcribe Full Bs.30 Fija ZF ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,865][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:F_SEC_M2MF_ON-NET]
+[2014Dec14 15:54:04,867][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 1]:F_SEC_M2MF_OFF-NET]
+[2014Dec14 15:54:04,868][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 2]:F_SMS]
+[2014Dec14 15:54:04,870][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Prom Plan 200 ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,871][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:F_SEC_M2MF_ON-NET]
+[2014Dec14 15:54:04,873][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 1]:F_SEC_M2MF_OFF-NET]
+[2014Dec14 15:54:04,874][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 2]:F_SMS]
+[2014Dec14 15:54:04,876][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Prom Plan 600 ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,878][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:F_SEC_M2MF_ON-NET]
+[2014Dec14 15:54:04,879][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 1]:F_SEC_M2MF_OFF-NET]
+[2014Dec14 15:54:04,881][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 2]:F_SMS]
+[2014Dec14 15:54:04,882][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Prom Plan 1200 ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,884][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:F_SEC_M2MF_ON-OFF-NET]
+[2014Dec14 15:54:04,885][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 1]:F_SMS]
+[2014Dec14 15:54:04,887][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Prom Plan BB50MB ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,889][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:F_SEC_M2MF_ON-OFF-NET]
+[2014Dec14 15:54:04,890][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 1]:F_SMS]
+[2014Dec14 15:54:04,892][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Prom Alcance30 ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,893][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:F_SEC_M2MF_ON-OFF-NET]
+[2014Dec14 15:54:04,895][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 1]:F_SMS]
+[2014Dec14 15:54:04,896][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Prom Alcance60 ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,898][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:F_SMS]
+[2014Dec14 15:54:04,900][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 1]:F_SEC_F2M_ON-NET]
+[2014Dec14 15:54:04,901][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Prom Plan Cobertura ,balanceType:5 ,resultingType:PACKAGE]
+[2014Dec14 15:54:04,903][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:04,904][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Nokia Messaging ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:04,906][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:04,908][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Nokia Messaging ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:04,909][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SMS]
+[2014Dec14 15:54:04,911][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Xcribe Full Bs.20 ,balanceType:1 ,resultingType:SMS]
+[2014Dec14 15:54:04,912][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SMS]
+[2014Dec14 15:54:04,914][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Xcribe Full Bs.20 ZF ,balanceType:1 ,resultingType:SMS]
+[2014Dec14 15:54:04,915][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SMS]
+[2014Dec14 15:54:04,917][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Xcribe Full Bs.20 Fija ,balanceType:1 ,resultingType:SMS]
+[2014Dec14 15:54:04,919][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SMS]
+[2014Dec14 15:54:04,920][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Xcribe Full Bs.20 Fija ZF ,balanceType:1 ,resultingType:SMS]
+[2014Dec14 15:54:04,922][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:04,923][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Blackberry 10 ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:04,925][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:04,926][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Blackberry 10 ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:04,928][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:04,930][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full 250MB ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:04,931][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:04,933][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full 250MB ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:04,934][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:04,936][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Blackberry BES 1GB ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:04,938][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:04,939][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Blackberry BES 1GB ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:04,941][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:04,942][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full 1GB ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:04,944][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:04,945][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full 1GB ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:04,947][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:04,949][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full 3GB ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,003][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,005][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full 3GB ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,007][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,009][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Blackberry PIN 50MB ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,010][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,012][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Blackberry PIN 50MB ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,014][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,015][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Blackberry PIN 250MB ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,017][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,018][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Blackberry PIN 250MB ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,020][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,021][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Blackberry 50 ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,023][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,025][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Blackberry 50 ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,026][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,028][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Blackberry 1GB ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,029][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,031][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Blackberry 1GB ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,032][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,034][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Blackberry 3GB ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,036][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,037][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Blackberry 3GB ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,039][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,040][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full 1 GB Corp ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,042][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,044][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full 1 GB Corp ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,045][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,047][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full 3 GB Corp ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,048][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,050][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full 3 GB Corp ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,051][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,053][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:BlackBerry 100 ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,055][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,056][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:BlackBerry 100 ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,058][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SEC_M2MF_OFF-NET]
+[2014Dec14 15:54:05,059][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Habla con Otros 100 ,balanceType:2 ,resultingType:SECONDS]
+[2014Dec14 15:54:05,061][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SEC_M2MF_OFF-NET]
+[2014Dec14 15:54:05,063][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Habla con Otros 100 ZF ,balanceType:2 ,resultingType:SECONDS]
+[2014Dec14 15:54:05,064][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SEC_M2MF_OFF-NET]
+[2014Dec14 15:54:05,066][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Habla con Otros 50 ,balanceType:2 ,resultingType:SECONDS]
+[2014Dec14 15:54:05,067][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_SEC_M2MF_OFF-NET]
+[2014Dec14 15:54:05,069][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Habla con Otros 50 ZF ,balanceType:2 ,resultingType:SECONDS]
+[2014Dec14 15:54:05,070][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,072][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Blackberry 250 ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,074][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,075][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Blackberry 250 ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,077][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,078][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full 500MB ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,080][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,081][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full 500MB ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,083][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,085][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full 100MB ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,086][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,088][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full 100MB ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,089][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,091][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full Super Corp 1.2GB ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,093][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,094][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full Super Corp 1.2GB ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,096][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,097][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full Super Corp 3.2GB ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,099][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,100][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full Super Corp 3.2GB ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,102][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,104][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full 550MB ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,105][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,107][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full 550MB ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,108][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,110][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full 750MB ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,111][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,113][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full 750MB ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,115][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,116][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full 1250MB ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,118][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,119][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full 1250MB ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,121][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,123][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full 550MB Corp ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,124][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,126][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full 550MB Corp ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,127][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,129][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:BlackBerry 500MB Corp ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,130][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,132][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:BlackBerry 500MB Corp ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,134][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,135][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full BAM 4G ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,137][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,138][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full BAM 4G ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,140][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,142][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full BAM 250MB ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,143][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,145][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full BAM 250MB ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,146][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,148][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full BAM 550MB ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,150][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,151][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full BAM 550MB ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,153][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,155][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full BAM 750MB ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:05,156][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType-BalanceName[ 0]:NF_KB]
+[2014Dec14 15:54:05,158][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug OfferList.java:44][ _M generateType- offer:Navega Full BAM 750MB ZF ,balanceType:3 ,resultingType:KB]
+[2014Dec14 15:54:06,438][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug CachedCcws.java:34][ M_ getCache:  AddCache]
+[2014Dec14 15:54:06,439][INFO ][RTBS_ACBPCS-584129117195-1418588511522][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:482][getCache obtenido]
+[2014Dec14 15:54:06,441][INFO ][RTBS_ACBPCS-584129117195-1418588511522][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:487][classOfService obtenido]
+[2014Dec14 15:54:06,443][INFO ][RTBS_ACBPCS-584129117195-1418588511522][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:495][periodicCharges obtenido]
+[2014Dec14 15:54:06,445][INFO ][RTBS_ACBPCS-584129117195-1418588511522][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:501][offers obtenido]
+[2014Dec14 15:54:06,449][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug DispatcherConnection.java:64][ _M jndiConnection]
+[2014Dec14 15:54:06,451][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug DispatcherConnection.java:64][ _M getJndiConnection]
+[2014Dec14 15:54:06,465][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug RtbsHistory.java:54][ _I getApplyDay:]
+[2014Dec14 15:54:06,467][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][debug RtbsHistory.java:54][ _M getApplyDay:  PROBLEM CONSULTING BD (getApplyDay) ]
+[2014Dec14 15:54:06,471][ERROR][RTBS_ACBPCS-584129117195-1418588511522][<init> RtbsHistoryException.java:26][RtbsHistoryException -  PROBLEM CONSULTING BD (getApplyDay) ]
+java.sql.SQLException: OALL8 is in an inconsistent state.
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:125)
+	at oracle.jdbc.driver.T4C8Oall.init(T4C8Oall.java:309)
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:166)
+	at oracle.jdbc.driver.T4CCallableStatement.execute_for_rows(T4CCallableStatement.java:870)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1081)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:2905)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:2996)
+	at oracle.jdbc.driver.OracleCallableStatement.execute(OracleCallableStatement.java:4120)
+	at weblogic.jdbc.wrapper.PreparedStatement.execute(PreparedStatement.java:102)
+	at la.integra.digitel.ivr.history.RtbsHistory.getApplyDay(RtbsHistory.java:92)
+	at la.integra.digitel.RTBS_ACBPCSRecent.RTBS_ACBPCSRecent.getRtbsAcbpcsr(RTBS_ACBPCSRecent.java:531)
+	at la.integra.digitel.RTBS_ACBPCS.RTBS_ACBPCS.getRecentData(RTBS_ACBPCS.java:871)
+	at la.integra.digitel.RTBS_ACBPCS.RTBS_ACBPCS.getRtbsAcbpcs(RTBS_ACBPCS.java:609)
+	at la.integra.digitel.RTBS_ACBPCS.RTBS_ACBPCS.execute(RTBS_ACBPCS.java:211)
+	at servlet.AcbpcsServlet.service(AcbpcsServlet.java:52)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:853)
+	at weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run(ServletStubImpl.java:1072)
+	at weblogic.servlet.internal.ServletStubImpl.invokeServlet(ServletStubImpl.java:465)
+	at weblogic.servlet.internal.ServletStubImpl.invokeServlet(ServletStubImpl.java:348)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:6981)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.invokeServlet(WebAppServletContext.java:3892)
+	at weblogic.servlet.internal.ServletRequestImpl.execute(ServletRequestImpl.java:2766)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:224)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:183)
+[2014Dec14 15:54:06,502][DEBUG][RTBS_ACBPCS-584129117195-1418588511522][getRtbsAcbpcs RTBS_ACBPCS.java:618][_M getRtbsAcbpcs: OUTPUT RECENT:<RecentAppliedCustomerBillingProductChargeSearchResponse xmlns="http://integra.la/rtbs">
+  <Error>
+    <Code xmlns="">GEN_S0002-EM0002</Code>
+    <Detail xmlns="">Falla tecnica. Error de comunicación con sistema externo</Detail>
+    <Trace xmlns="">RtbsHistory</Trace>
+    <From xmlns="">PROBLEM CONSULTING BD (getApplyDay)</From>
+  </Error>
+</RecentAppliedCustomerBillingProductChargeSearchResponse>]
+[2014Dec14 15:54:06,504][INFO ][RTBS_ACBPCS-584129117195-1418588511522][getRtbsAcbpcs RTBS_ACBPCS.java:624][_M getRtbsAcbpcs: OUTPUT RECENT: ]
+[2014Dec14 15:54:06,507][INFO ][RTBS_ACBPCS-584129117195-1418588511522][info RTBS_ACBPCS.java:118][ _M execute: after getRtbsAcbpcs() ]
+[2014Dec14 15:54:06,508][INFO ][RTBS_ACBPCS-584129117195-1418588511522][info RTBS_ACBPCS.java:118][ _E execute:]
+[2014Dec14 17:24:53,012][INFO ][RTBS_ACBPCS--1418594093011][service AcbpcsServlet.java:51][Input:<AppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs"><Channel>FEATC</Channel><MSISDN>584129117195</MSISDN><SearchDateRange><StartDate>2014-11-15T00:00:00.000-04:30</StartDate><EndDate>2014-12-14T23:59:59.000-04:30</EndDate></SearchDateRange><SearchMaxRecords>10</SearchMaxRecords><ProductChargeConditions><SearchMTRReason><Reason>Cobro de Plan</Reason><Reason>COS CHANGE</Reason><Reason>pc_</Reason><Reason>ALCO Cobro</Reason></SearchMTRReason><SearchOfferReason><Reason>SUBSCRIPTION</Reason><Reason>UNSUBSCRIPTION</Reason><Reason>RCSTATE</Reason></SearchOfferReason></ProductChargeConditions></AppliedCustomerBillingProductChargeSearchRequest>]
+[2014Dec14 17:24:53,013][INFO ][RTBS_ACBPCS--1418594093011][execute RTBS_ACBPCS.java:180][ _I execute:]
+[2014Dec14 17:24:53,014][INFO ][RTBS_ACBPCS--1418594093011][getParameterSignFromRequest RTBS_ACBPCS_SIGN_PARSER.java:30][Parser para obtener filtro del signo para debito o credito con el xml: <AppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs"><Channel>FEATC</Channel><MSISDN>584129117195</MSISDN><SearchDateRange><StartDate>2014-11-15T00:00:00.000-04:30</StartDate><EndDate>2014-12-14T23:59:59.000-04:30</EndDate></SearchDateRange><SearchMaxRecords>10</SearchMaxRecords><ProductChargeConditions><SearchMTRReason><Reason>Cobro de Plan</Reason><Reason>COS CHANGE</Reason><Reason>pc_</Reason><Reason>ALCO Cobro</Reason></SearchMTRReason><SearchOfferReason><Reason>SUBSCRIPTION</Reason><Reason>UNSUBSCRIPTION</Reason><Reason>RCSTATE</Reason></SearchOfferReason></ProductChargeConditions></AppliedCustomerBillingProductChargeSearchRequest>]
+[2014Dec14 17:24:53,026][INFO ][RTBS_ACBPCS--1418594093011][getParameterSignFromRequest RTBS_ACBPCS_SIGN_PARSER.java:36][Instancia del metodo run ]
+[2014Dec14 17:24:53,029][INFO ][RTBS_ACBPCS--1418594093011][run RTBS_ACBPCS_SIGN_PARSER.java:55][Element Obtenido]
+[2014Dec14 17:24:53,030][INFO ][RTBS_ACBPCS--1418594093011][run RTBS_ACBPCS_SIGN_PARSER.java:66][Aplicar Signo al AppliedAmount: false]
+[2014Dec14 17:24:53,038][INFO ][RTBS_ACBPCS--1418594093011][info RTBS_ACBPCS.java:118][ _M execute: before getRtbsAcbpcs() ]
+[2014Dec14 17:24:53,040][DEBUG][RTBS_ACBPCS--1418594093011][debug RTBS_ACBPCS.java:113][ _I getRtbsAcbpcs:]
+[2014Dec14 17:24:53,046][INFO ][RTBS_ACBPCS-584129117195-1418594093011][getRtbsAcbpcs RTBS_ACBPCS.java:353][_M getRtbsAcbpcs: Recibiendo: channel= FEATC,msisdn=584129117195,startDate=2014-11-15T00:00:00.000-04:30,endDate=2014-12-14T23:59:59.000-04:30,maxNumRecords=10]
+[2014Dec14 17:24:53,048][INFO ][RTBS_ACBPCS-584129117195-1418594093011][getRtbsAcbpcs RTBS_ACBPCS.java:360][_M getRtbsAcbpcs: Recibiendo mtrReason= [Ljava.lang.String;@137ae9f]
+[2014Dec14 17:24:53,049][INFO ][RTBS_ACBPCS-584129117195-1418594093011][info RTBS_ACBPCS.java:118][_M getRtbsAcbpcs: No hay offerReason]
+[2014Dec14 17:24:53,051][DEBUG][RTBS_ACBPCS-584129117195-1418594093011][getRtbsAcbpcs RTBS_ACBPCS.java:411][ limit_date=Tue Nov 25 00:00:00 VET 2014]
+[2014Dec14 17:24:53,052][DEBUG][RTBS_ACBPCS-584129117195-1418594093011][getRtbsAcbpcs RTBS_ACBPCS.java:420][ limitDateLessOne=Mon Nov 24 23:59:59 VET 2014]
+[2014Dec14 17:24:53,053][INFO ][RTBS_ACBPCS-584129117195-1418594093011][getRtbsAcbpcs RTBS_ACBPCS.java:456][Tipo de Consulta: BOTHrecentStartDate Tue Nov 25 00:00:00 VET 2014recentEndDate Sun Dec 14 23:59:59 VET 2014historicalStartDate Sat Nov 15 00:00:00 VET 2014historicalEndDateMon Nov 24 23:59:59 VET 2014]
+[2014Dec14 17:24:53,055][DEBUG][RTBS_ACBPCS-584129117195-1418594093011][debug RTBS_ACBPCS.java:113][ _M getRtbsAcbpcs: before procesing:]
+[2014Dec14 17:24:53,066][DEBUG][RTBS_ACBPCS-584129117195-1418594093011][getRecentData RTBS_ACBPCS.java:859][_M getRtbsAcbpcs: INPUT RECENT: <RecentAppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs">
+  <Channel>FEATC</Channel>
+  <MSISDN>584129117195</MSISDN>
+  <SearchDateRange>
+    <StartDate>2014-11-25T00:00:00.000-04:30</StartDate>
+    <EndDate>2014-12-14T23:59:59.000-04:30</EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>10</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason>
+      <Reason>Cobro de Plan</Reason>
+      <Reason>COS CHANGE</Reason>
+      <Reason>pc_</Reason>
+      <Reason>ALCO Cobro</Reason>
+    </SearchMTRReason>
+    <SearchOfferReason>
+      <Reason>SUBSCRIPTION</Reason>
+      <Reason>UNSUBSCRIPTION</Reason>
+      <Reason>RCSTATE</Reason>
+    </SearchOfferReason>
+  </ProductChargeConditions>
+</RecentAppliedCustomerBillingProductChargeSearchRequest>]
+[2014Dec14 17:24:53,073][INFO ][RTBS_ACBPCS-584129117195-1418594093011][getRecentData RTBS_ACBPCS.java:865][_M getRtbsAcbpcs: INPUT RECENT: <RecentAppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs">
+  <Channel>FEATC</Channel>
+  <MSISDN>584129117195</MSISDN>
+  <SearchDateRange>
+    <StartDate>2014-11-25T00:00:00.000-04:30</StartDate>
+    <EndDate>2014-12-14T23:59:59.000-04:30</EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>10</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason>
+      <Reason>Cobro de Plan</Reason>
+      <Reason>COS CHANGE</Reason>
+      <Reason>pc_</Reason>
+      <Reason>ALCO Cobro</Reason>
+    </SearchMTRReason>
+    <SearchOfferReason>
+      <Reason>SUBSCRIPTION</Reason>
+      <Reason>UNSUBSCRIPTION</Reason>
+      <Reason>RCSTATE</Reason>
+    </SearchOfferReason>
+  </ProductChargeConditions>
+</RecentAppliedCustomerBillingProductChargeSearchRequest>]
+[2014Dec14 17:24:53,079][DEBUG][RTBS_ACBPCS-584129117195-1418594093011][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:359][_M getRtbsAcbpcsh: Recibiendo: channel= FEATC,msisdn=584129117195,startDate=2014-11-25T00:00:00.000-04:30,endDate=2014-12-14T23:59:59.000-04:30,maxNumRecords=10]
+[2014Dec14 17:24:53,080][DEBUG][RTBS_ACBPCS-584129117195-1418594093011][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:368][_M getRtbsAcbpcsh: Recibiendo mtrReason= [Ljava.lang.String;@a97eb0]
+[2014Dec14 17:24:53,082][DEBUG][RTBS_ACBPCS-584129117195-1418594093011][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:378][_M getRtbsAcbpcsh: Recibiendo offerReason= [Ljava.lang.String;@1bc790e]
+[2014Dec14 17:24:53,083][DEBUG][RTBS_ACBPCS-584129117195-1418594093011][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:406][ _M getRtbsAcbpcsr: Validate:]
+[2014Dec14 17:24:53,085][DEBUG][RTBS_ACBPCS-584129117195-1418594093011][debug DispatcherConnection.java:64][ _M getCcwsConnectionOther]
+[2014Dec14 17:24:53,107][DEBUG][RTBS_ACBPCS-584129117195-1418594093011][debug DispatcherConnection.java:64][ _M getCcwsConnectionCache]
+[2014Dec14 17:24:53,127][DEBUG][RTBS_ACBPCS-584129117195-1418594093011][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:423][ _M getRtbsAcbpcsr: Obteined Ccws:]
+[2014Dec14 17:25:05,354][DEBUG][RTBS_ACBPCS-584129117195-1418594093011][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:435][ _M getRtbsAcbpcsr: SubscribeRetrieve(msisdn=584129117195,informationToRetrieve=16512,startDate=Tue Nov 25 00:00:00 VET 2014,endDate=Sun Dec 14 23:59:59 VET 2014]
+[2014Dec14 17:25:05,356][INFO ][RTBS_ACBPCS-584129117195-1418594093011][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:449][ _M getRtbsAcbpcsr: retrieveSubscriberWithIdentityWithHistoryForMultipleIdentities:]
+[2014Dec14 17:25:05,357][INFO ][RTBS_ACBPCS-584129117195-1418594093011][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:459][ _M getRtbsAcbpcsr: Obteined MonetaryTransactionRecord and OfferHistoryRecord:]
+[2014Dec14 17:25:05,359][INFO ][RTBS_ACBPCS-584129117195-1418594093011][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:464][Obteniendo getCache]
+[2014Dec14 17:25:05,360][INFO ][RTBS_ACBPCS-584129117195-1418594093011][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:482][getCache obtenido]
+[2014Dec14 17:25:05,361][INFO ][RTBS_ACBPCS-584129117195-1418594093011][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:487][classOfService obtenido]
+[2014Dec14 17:25:05,363][INFO ][RTBS_ACBPCS-584129117195-1418594093011][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:495][periodicCharges obtenido]
+[2014Dec14 17:25:05,365][INFO ][RTBS_ACBPCS-584129117195-1418594093011][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:501][offers obtenido]
+[2014Dec14 17:25:05,369][DEBUG][RTBS_ACBPCS-584129117195-1418594093011][debug DispatcherConnection.java:64][ _M jndiConnection]
+[2014Dec14 17:25:05,370][DEBUG][RTBS_ACBPCS-584129117195-1418594093011][debug DispatcherConnection.java:64][ _M getJndiConnection]
+[2014Dec14 17:25:05,372][DEBUG][RTBS_ACBPCS-584129117195-1418594093011][debug RtbsHistory.java:54][ _I getApplyDay:]
+[2014Dec14 17:25:05,375][DEBUG][RTBS_ACBPCS-584129117195-1418594093011][debug RtbsHistory.java:54][ _M getApplyDay:  PROBLEM CONSULTING BD (getApplyDay) ]
+[2014Dec14 17:25:05,376][ERROR][RTBS_ACBPCS-584129117195-1418594093011][<init> RtbsHistoryException.java:26][RtbsHistoryException -  PROBLEM CONSULTING BD (getApplyDay) ]
+java.sql.SQLException: Io exception: Broken pipe
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:125)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:162)
+	at oracle.jdbc.driver.DatabaseError.throwSqlException(DatabaseError.java:274)
+	at oracle.jdbc.driver.T4CCallableStatement.execute_for_rows(T4CCallableStatement.java:886)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1081)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:2905)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:2996)
+	at oracle.jdbc.driver.OracleCallableStatement.execute(OracleCallableStatement.java:4120)
+	at weblogic.jdbc.wrapper.PreparedStatement.execute(PreparedStatement.java:102)
+	at la.integra.digitel.ivr.history.RtbsHistory.getApplyDay(RtbsHistory.java:92)
+	at la.integra.digitel.RTBS_ACBPCSRecent.RTBS_ACBPCSRecent.getRtbsAcbpcsr(RTBS_ACBPCSRecent.java:531)
+	at la.integra.digitel.RTBS_ACBPCS.RTBS_ACBPCS.getRecentData(RTBS_ACBPCS.java:871)
+	at la.integra.digitel.RTBS_ACBPCS.RTBS_ACBPCS.getRtbsAcbpcs(RTBS_ACBPCS.java:609)
+	at la.integra.digitel.RTBS_ACBPCS.RTBS_ACBPCS.execute(RTBS_ACBPCS.java:211)
+	at servlet.AcbpcsServlet.service(AcbpcsServlet.java:52)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:853)
+	at weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run(ServletStubImpl.java:1072)
+	at weblogic.servlet.internal.ServletStubImpl.invokeServlet(ServletStubImpl.java:465)
+	at weblogic.servlet.internal.ServletStubImpl.invokeServlet(ServletStubImpl.java:348)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:6981)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.invokeServlet(WebAppServletContext.java:3892)
+	at weblogic.servlet.internal.ServletRequestImpl.execute(ServletRequestImpl.java:2766)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:224)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:183)
+[2014Dec14 17:25:05,385][DEBUG][RTBS_ACBPCS-584129117195-1418594093011][getRtbsAcbpcs RTBS_ACBPCS.java:618][_M getRtbsAcbpcs: OUTPUT RECENT:<RecentAppliedCustomerBillingProductChargeSearchResponse xmlns="http://integra.la/rtbs">
+  <Error>
+    <Code xmlns="">GEN_S0002-EM0002</Code>
+    <Detail xmlns="">Falla tecnica. Error de comunicación con sistema externo</Detail>
+    <Trace xmlns="">RtbsHistory</Trace>
+    <From xmlns="">PROBLEM CONSULTING BD (getApplyDay)</From>
+  </Error>
+</RecentAppliedCustomerBillingProductChargeSearchResponse>]
+[2014Dec14 17:25:05,386][INFO ][RTBS_ACBPCS-584129117195-1418594093011][getRtbsAcbpcs RTBS_ACBPCS.java:624][_M getRtbsAcbpcs: OUTPUT RECENT: ]
+[2014Dec14 17:25:05,389][INFO ][RTBS_ACBPCS-584129117195-1418594093011][info RTBS_ACBPCS.java:118][ _M execute: after getRtbsAcbpcs() ]
+[2014Dec14 17:25:05,390][INFO ][RTBS_ACBPCS-584129117195-1418594093011][info RTBS_ACBPCS.java:118][ _E execute:]

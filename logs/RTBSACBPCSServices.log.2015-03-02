@@ -1,0 +1,198 @@
+[2015Mar02 16:20:41,929][INFO ][RTBS_ACBPCS--1425329441927][service AcbpcsServlet.java:51][Input:solicitud=<AppliedCustomerBillingProductChargeSearchRequest>
+  <Channel>FEATC</Channel>
+  <MSISDN>584120100407</MSISDN>
+  <SearchDateRange>
+    <StartDate>
+      <time>1422765000000</time>
+      <timezone>GMT-04:30</timezone>
+    </StartDate>
+    <EndDate>
+      <time>1425184199000</time>
+      <timezone>GMT-04:30</timezone>
+    </EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>10</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason>
+      <Reason>
+        <string>Cobro de Plan</string>
+        <string>COS CHANGE</string>
+        <string>pc_</string>
+        <string>ALCO Cobro</string>
+      </Reason>
+    </SearchMTRReason>
+    <SearchOfferReason>
+      <Reason>
+        <string>SUBSCRIPTION</string>
+        <string>UNSUBSCRIPTION</string>
+        <string>RCSTATE</string>
+      </Reason>
+    </SearchOfferReason>
+  </ProductChargeConditions>
+</AppliedCustomerBillingProductChargeSearchRequest>]
+[2015Mar02 16:20:41,939][INFO ][RTBS_ACBPCS--1425329441927][execute RTBS_ACBPCS.java:180][ _I execute:]
+[2015Mar02 16:20:41,940][INFO ][RTBS_ACBPCS--1425329441927][getParameterSignFromRequest RTBS_ACBPCS_SIGN_PARSER.java:30][Parser para obtener filtro del signo para debito o credito con el xml: solicitud=<AppliedCustomerBillingProductChargeSearchRequest>
+  <Channel>FEATC</Channel>
+  <MSISDN>584120100407</MSISDN>
+  <SearchDateRange>
+    <StartDate>
+      <time>1422765000000</time>
+      <timezone>GMT-04:30</timezone>
+    </StartDate>
+    <EndDate>
+      <time>1425184199000</time>
+      <timezone>GMT-04:30</timezone>
+    </EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>10</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason>
+      <Reason>
+        <string>Cobro de Plan</string>
+        <string>COS CHANGE</string>
+        <string>pc_</string>
+        <string>ALCO Cobro</string>
+      </Reason>
+    </SearchMTRReason>
+    <SearchOfferReason>
+      <Reason>
+        <string>SUBSCRIPTION</string>
+        <string>UNSUBSCRIPTION</string>
+        <string>RCSTATE</string>
+      </Reason>
+    </SearchOfferReason>
+  </ProductChargeConditions>
+</AppliedCustomerBillingProductChargeSearchRequest>]
+[2015Mar02 16:20:41,985][INFO ][RTBS_ACBPCS--1425329441927][info RTBS_ACBPCS.java:118][ _E execute:]
+[2015Mar02 17:42:54,977][INFO ][RTBS_ACBPCS--1425334374976][service AcbpcsServlet.java:51][Input:solicitud=<AppliedCustomerBillingProductChargeSearchRequest>
+  <Channel>FEATC</Channel>
+  <MSISDN>584120100407</MSISDN>
+  <SearchDateRange>
+    <StartDate>
+      <time>1422765000000</time>
+      <timezone>GMT-04:30</timezone>
+    </StartDate>
+    <EndDate>
+      <time>1425184199000</time>
+      <timezone>GMT-04:30</timezone>
+    </EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>10</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason>
+      <Reason>
+        <string>Cobro de Plan</string>
+        <string>COS CHANGE</string>
+        <string>pc_</string>
+        <string>ALCO Cobro</string>
+      </Reason>
+    </SearchMTRReason>
+    <SearchOfferReason>
+      <Reason>
+        <string>SUBSCRIPTION</string>
+        <string>UNSUBSCRIPTION</string>
+        <string>RCSTATE</string>
+      </Reason>
+    </SearchOfferReason>
+  </ProductChargeConditions>
+</AppliedCustomerBillingProductChargeSearchRequest>]
+[2015Mar02 17:42:54,979][INFO ][RTBS_ACBPCS--1425334374976][execute RTBS_ACBPCS.java:180][ _I execute:]
+[2015Mar02 17:42:54,981][INFO ][RTBS_ACBPCS--1425334374976][getParameterSignFromRequest RTBS_ACBPCS_SIGN_PARSER.java:30][Parser para obtener filtro del signo para debito o credito con el xml: solicitud=<AppliedCustomerBillingProductChargeSearchRequest>
+  <Channel>FEATC</Channel>
+  <MSISDN>584120100407</MSISDN>
+  <SearchDateRange>
+    <StartDate>
+      <time>1422765000000</time>
+      <timezone>GMT-04:30</timezone>
+    </StartDate>
+    <EndDate>
+      <time>1425184199000</time>
+      <timezone>GMT-04:30</timezone>
+    </EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>10</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason>
+      <Reason>
+        <string>Cobro de Plan</string>
+        <string>COS CHANGE</string>
+        <string>pc_</string>
+        <string>ALCO Cobro</string>
+      </Reason>
+    </SearchMTRReason>
+    <SearchOfferReason>
+      <Reason>
+        <string>SUBSCRIPTION</string>
+        <string>UNSUBSCRIPTION</string>
+        <string>RCSTATE</string>
+      </Reason>
+    </SearchOfferReason>
+  </ProductChargeConditions>
+</AppliedCustomerBillingProductChargeSearchRequest>]
+[2015Mar02 17:42:54,992][INFO ][RTBS_ACBPCS--1425334374976][info RTBS_ACBPCS.java:118][ _E execute:]
+[2015Mar02 17:49:59,634][INFO ][RTBS_ACBPCS--1425334799632][service AcbpcsServlet.java:51][Input:solicitud=<AppliedCustomerBillingProductChargeSearchRequest>
+  <Channel>FEATC</Channel>
+  <MSISDN>584120100407</MSISDN>
+  <SearchDateRange>
+    <StartDate>
+      <time>1422765000000</time>
+      <timezone>GMT-04:30</timezone>
+    </StartDate>
+    <EndDate>
+      <time>1425184199000</time>
+      <timezone>GMT-04:30</timezone>
+    </EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>10</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason>
+      <Reason>
+        <string>Cobro de Plan</string>
+        <string>COS CHANGE</string>
+        <string>pc_</string>
+        <string>ALCO Cobro</string>
+      </Reason>
+    </SearchMTRReason>
+    <SearchOfferReason>
+      <Reason>
+        <string>SUBSCRIPTION</string>
+        <string>UNSUBSCRIPTION</string>
+        <string>RCSTATE</string>
+      </Reason>
+    </SearchOfferReason>
+  </ProductChargeConditions>
+</AppliedCustomerBillingProductChargeSearchRequest>]
+[2015Mar02 17:49:59,635][INFO ][RTBS_ACBPCS--1425334799632][execute RTBS_ACBPCS.java:180][ _I execute:]
+[2015Mar02 17:49:59,637][INFO ][RTBS_ACBPCS--1425334799632][getParameterSignFromRequest RTBS_ACBPCS_SIGN_PARSER.java:30][Parser para obtener filtro del signo para debito o credito con el xml: solicitud=<AppliedCustomerBillingProductChargeSearchRequest>
+  <Channel>FEATC</Channel>
+  <MSISDN>584120100407</MSISDN>
+  <SearchDateRange>
+    <StartDate>
+      <time>1422765000000</time>
+      <timezone>GMT-04:30</timezone>
+    </StartDate>
+    <EndDate>
+      <time>1425184199000</time>
+      <timezone>GMT-04:30</timezone>
+    </EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>10</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason>
+      <Reason>
+        <string>Cobro de Plan</string>
+        <string>COS CHANGE</string>
+        <string>pc_</string>
+        <string>ALCO Cobro</string>
+      </Reason>
+    </SearchMTRReason>
+    <SearchOfferReason>
+      <Reason>
+        <string>SUBSCRIPTION</string>
+        <string>UNSUBSCRIPTION</string>
+        <string>RCSTATE</string>
+      </Reason>
+    </SearchOfferReason>
+  </ProductChargeConditions>
+</AppliedCustomerBillingProductChargeSearchRequest>]
+[2015Mar02 17:49:59,648][INFO ][RTBS_ACBPCS--1425334799632][info RTBS_ACBPCS.java:118][ _E execute:]

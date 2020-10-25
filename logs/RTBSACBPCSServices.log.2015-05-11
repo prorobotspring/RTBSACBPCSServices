@@ -1,0 +1,206 @@
+[2015May11 10:11:09,432][INFO ][RTBS_ACBPCS--1431355269261][service AcbpcsServlet.java:51][Input:<AppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs"><Channel>FEATC</Channel><MSISDN>584123944511</MSISDN><SearchDateRange><StartDate>2015-05-01T00:00:00.000-04:30</StartDate><EndDate>2015-05-11T23:59:59.000-04:30</EndDate></SearchDateRange><SearchMaxRecords>50</SearchMaxRecords><ProductChargeConditions><SearchMTRReason/><SearchOfferReason/></ProductChargeConditions></AppliedCustomerBillingProductChargeSearchRequest>]
+[2015May11 10:11:09,436][INFO ][RTBS_ACBPCS--1431355269261][execute RTBS_ACBPCS.java:180][ _I execute:]
+[2015May11 10:11:09,437][INFO ][RTBS_ACBPCS--1431355269261][getParameterSignFromRequest RTBS_ACBPCS_SIGN_PARSER.java:30][Parser para obtener filtro del signo para debito o credito con el xml: <AppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs"><Channel>FEATC</Channel><MSISDN>584123944511</MSISDN><SearchDateRange><StartDate>2015-05-01T00:00:00.000-04:30</StartDate><EndDate>2015-05-11T23:59:59.000-04:30</EndDate></SearchDateRange><SearchMaxRecords>50</SearchMaxRecords><ProductChargeConditions><SearchMTRReason/><SearchOfferReason/></ProductChargeConditions></AppliedCustomerBillingProductChargeSearchRequest>]
+[2015May11 10:11:11,289][INFO ][RTBS_ACBPCS--1431355269261][getParameterSignFromRequest RTBS_ACBPCS_SIGN_PARSER.java:36][Instancia del metodo run ]
+[2015May11 10:11:11,292][INFO ][RTBS_ACBPCS--1431355269261][run RTBS_ACBPCS_SIGN_PARSER.java:55][Element Obtenido]
+[2015May11 10:11:11,293][INFO ][RTBS_ACBPCS--1431355269261][run RTBS_ACBPCS_SIGN_PARSER.java:66][Aplicar Signo al AppliedAmount: false]
+[2015May11 10:11:11,296][INFO ][RTBS_ACBPCS--1431355269261][info RTBS_ACBPCS.java:118][ _M execute: before getRtbsAcbpcs() ]
+[2015May11 10:11:11,298][DEBUG][RTBS_ACBPCS--1431355269261][debug RTBS_ACBPCS.java:113][ _I getRtbsAcbpcs:]
+[2015May11 10:11:12,337][INFO ][RTBS_ACBPCS-584123944511-1431355269261][getRtbsAcbpcs RTBS_ACBPCS.java:353][_M getRtbsAcbpcs: Recibiendo: channel= FEATC,msisdn=584123944511,startDate=2015-05-01T00:00:00.000-04:30,endDate=2015-05-11T23:59:59.000-04:30,maxNumRecords=50]
+[2015May11 10:11:12,339][INFO ][RTBS_ACBPCS-584123944511-1431355269261][getRtbsAcbpcs RTBS_ACBPCS.java:360][_M getRtbsAcbpcs: Recibiendo mtrReason= [Ljava.lang.String;@fdc302]
+[2015May11 10:11:12,340][INFO ][RTBS_ACBPCS-584123944511-1431355269261][info RTBS_ACBPCS.java:118][_M getRtbsAcbpcs: No hay offerReason]
+[2015May11 10:11:12,342][DEBUG][RTBS_ACBPCS-584123944511-1431355269261][getRtbsAcbpcs RTBS_ACBPCS.java:411][ limit_date=Wed Apr 22 00:00:00 VET 2015]
+[2015May11 10:11:12,343][DEBUG][RTBS_ACBPCS-584123944511-1431355269261][getRtbsAcbpcs RTBS_ACBPCS.java:420][ limitDateLessOne=Tue Apr 21 23:59:59 VET 2015]
+[2015May11 10:11:12,345][INFO ][RTBS_ACBPCS-584123944511-1431355269261][getRtbsAcbpcs RTBS_ACBPCS.java:456][Tipo de Consulta: RECENTrecentStartDate Fri May 01 00:00:00 VET 2015recentEndDate Mon May 11 23:59:59 VET 2015historicalStartDate nullhistoricalEndDatenull]
+[2015May11 10:11:12,347][DEBUG][RTBS_ACBPCS-584123944511-1431355269261][debug RTBS_ACBPCS.java:113][ _M getRtbsAcbpcs: before procesing:]
+[2015May11 10:11:12,358][DEBUG][RTBS_ACBPCS-584123944511-1431355269261][getRecentData RTBS_ACBPCS.java:859][_M getRtbsAcbpcs: INPUT RECENT: <RecentAppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs">
+  <Channel>FEATC</Channel>
+  <MSISDN>584123944511</MSISDN>
+  <SearchDateRange>
+    <StartDate>2015-05-01T00:00:00.000-04:30</StartDate>
+    <EndDate>2015-05-11T23:59:59.000-04:30</EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>50</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason/>
+    <SearchOfferReason/>
+  </ProductChargeConditions>
+</RecentAppliedCustomerBillingProductChargeSearchRequest>]
+[2015May11 10:11:12,361][INFO ][RTBS_ACBPCS-584123944511-1431355269261][getRecentData RTBS_ACBPCS.java:865][_M getRtbsAcbpcs: INPUT RECENT: <RecentAppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs">
+  <Channel>FEATC</Channel>
+  <MSISDN>584123944511</MSISDN>
+  <SearchDateRange>
+    <StartDate>2015-05-01T00:00:00.000-04:30</StartDate>
+    <EndDate>2015-05-11T23:59:59.000-04:30</EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>50</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason/>
+    <SearchOfferReason/>
+  </ProductChargeConditions>
+</RecentAppliedCustomerBillingProductChargeSearchRequest>]
+[2015May11 10:11:12,364][DEBUG][RTBS_ACBPCS-584123944511-1431355269261][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:359][_M getRtbsAcbpcsh: Recibiendo: channel= FEATC,msisdn=584123944511,startDate=2015-05-01T00:00:00.000-04:30,endDate=2015-05-11T23:59:59.000-04:30,maxNumRecords=50]
+[2015May11 10:11:12,366][DEBUG][RTBS_ACBPCS-584123944511-1431355269261][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:368][_M getRtbsAcbpcsh: Recibiendo mtrReason= [Ljava.lang.String;@dce5a]
+[2015May11 10:11:12,368][DEBUG][RTBS_ACBPCS-584123944511-1431355269261][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:378][_M getRtbsAcbpcsh: Recibiendo offerReason= [Ljava.lang.String;@66b550]
+[2015May11 10:11:12,369][DEBUG][RTBS_ACBPCS-584123944511-1431355269261][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:406][ _M getRtbsAcbpcsr: Validate:]
+[2015May11 10:11:12,371][DEBUG][RTBS_ACBPCS-584123944511-1431355269261][debug DispatcherConnection.java:64][ _M getCcwsConnectionOther]
+[2015May11 10:11:12,397][DEBUG][RTBS_ACBPCS-584123944511-1431355269261][debug DispatcherConnection.java:64][ _M getCcwsConnectionCache]
+[2015May11 10:11:12,431][DEBUG][RTBS_ACBPCS-584123944511-1431355269261][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:423][ _M getRtbsAcbpcsr: Obteined Ccws:]
+[2015May11 10:11:12,700][DEBUG][RTBS_ACBPCS-584123944511-1431355269261][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:435][ _M getRtbsAcbpcsr: SubscribeRetrieve(msisdn=584123944511,informationToRetrieve=16512,startDate=Fri May 01 00:00:00 VET 2015,endDate=Mon May 11 23:59:59 VET 2015]
+[2015May11 10:11:12,702][INFO ][RTBS_ACBPCS-584123944511-1431355269261][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:449][ _M getRtbsAcbpcsr: retrieveSubscriberWithIdentityWithHistoryForMultipleIdentities:]
+[2015May11 10:11:12,704][INFO ][RTBS_ACBPCS-584123944511-1431355269261][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:459][ _M getRtbsAcbpcsr: Obteined MonetaryTransactionRecord and OfferHistoryRecord:]
+[2015May11 10:11:12,705][INFO ][RTBS_ACBPCS-584123944511-1431355269261][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:464][Obteniendo getCache]
+[2015May11 10:11:12,707][INFO ][RTBS_ACBPCS-584123944511-1431355269261][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:482][getCache obtenido]
+[2015May11 10:11:12,708][INFO ][RTBS_ACBPCS-584123944511-1431355269261][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:487][classOfService obtenido]
+[2015May11 10:11:12,711][INFO ][RTBS_ACBPCS-584123944511-1431355269261][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:495][periodicCharges obtenido]
+[2015May11 10:11:12,713][INFO ][RTBS_ACBPCS-584123944511-1431355269261][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:501][offers obtenido]
+[2015May11 10:11:12,718][DEBUG][RTBS_ACBPCS-584123944511-1431355269261][debug DispatcherConnection.java:64][ _M jndiConnection]
+[2015May11 10:11:12,720][DEBUG][RTBS_ACBPCS-584123944511-1431355269261][debug DispatcherConnection.java:64][ _M getJndiConnection]
+[2015May11 10:11:12,725][DEBUG][RTBS_ACBPCS-584123944511-1431355269261][debug RtbsHistory.java:54][ _I getApplyDay:]
+[2015May11 10:11:13,419][DEBUG][RTBS_ACBPCS-584123944511-1431355269261][debug RtbsHistory.java:54][ _E getApplyDay:]
+[2015May11 10:11:13,421][DEBUG][RTBS_ACBPCS-584123944511-1431355269261][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:535][applyDays=1]
+[2015May11 10:11:13,424][DEBUG][RTBS_ACBPCS-584123944511-1431355269261][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:809][ _M getRtbsAcbpcsr: monetaryTransactionRecord filtered:]
+[2015May11 10:11:13,425][DEBUG][RTBS_ACBPCS-584123944511-1431355269261][getRtbsAcbpcsr RTBS_ACBPCSRecent.java:924][ _M getRtbsAcbpcsr: offerHistory filtered:]
+[2015May11 10:11:13,428][DEBUG][RTBS_ACBPCS-584123944511-1431355269261][getRtbsAcbpcs RTBS_ACBPCS.java:479][_M getRtbsAcbpcs: OUTPUT RECENT:<RecentAppliedCustomerBillingProductChargeSearchResponse xmlns="http://integra.la/rtbs">
+  <OperationMessage>
+    <Code xmlns="">GEN_S0002-OM0003</Code>
+    <Message xmlns="">La informacion solicitada no ha sido encontrada en la base de datos</Message>
+  </OperationMessage>
+</RecentAppliedCustomerBillingProductChargeSearchResponse>]
+[2015May11 10:11:13,429][INFO ][RTBS_ACBPCS-584123944511-1431355269261][getRtbsAcbpcs RTBS_ACBPCS.java:486][_M getRtbsAcbpcs: OUTPUT RECENT: ]
+[2015May11 10:11:13,431][INFO ][RTBS_ACBPCS-584123944511-1431355269261][info RTBS_ACBPCS.java:118][ _M execute: after getRtbsAcbpcs() ]
+[2015May11 10:11:13,432][INFO ][RTBS_ACBPCS-584123944511-1431355269261][info RTBS_ACBPCS.java:118][ _E execute:]
+[2015May11 10:11:46,775][INFO ][RTBS_ACBPCS--1431355306774][service AcbpcsServlet.java:51][Input:<AppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs"><Channel>FEATC</Channel><MSISDN>584123944511</MSISDN><SearchDateRange><StartDate>2015-04-01T00:00:00.000-04:30</StartDate><EndDate>2015-04-15T23:59:59.000-04:30</EndDate></SearchDateRange><SearchMaxRecords>50</SearchMaxRecords><ProductChargeConditions><SearchMTRReason/><SearchOfferReason/></ProductChargeConditions></AppliedCustomerBillingProductChargeSearchRequest>]
+[2015May11 10:11:46,777][INFO ][RTBS_ACBPCS--1431355306774][execute RTBS_ACBPCS.java:180][ _I execute:]
+[2015May11 10:11:46,778][INFO ][RTBS_ACBPCS--1431355306774][getParameterSignFromRequest RTBS_ACBPCS_SIGN_PARSER.java:30][Parser para obtener filtro del signo para debito o credito con el xml: <AppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs"><Channel>FEATC</Channel><MSISDN>584123944511</MSISDN><SearchDateRange><StartDate>2015-04-01T00:00:00.000-04:30</StartDate><EndDate>2015-04-15T23:59:59.000-04:30</EndDate></SearchDateRange><SearchMaxRecords>50</SearchMaxRecords><ProductChargeConditions><SearchMTRReason/><SearchOfferReason/></ProductChargeConditions></AppliedCustomerBillingProductChargeSearchRequest>]
+[2015May11 10:11:46,790][INFO ][RTBS_ACBPCS--1431355306774][getParameterSignFromRequest RTBS_ACBPCS_SIGN_PARSER.java:36][Instancia del metodo run ]
+[2015May11 10:11:46,793][INFO ][RTBS_ACBPCS--1431355306774][run RTBS_ACBPCS_SIGN_PARSER.java:55][Element Obtenido]
+[2015May11 10:11:46,794][INFO ][RTBS_ACBPCS--1431355306774][run RTBS_ACBPCS_SIGN_PARSER.java:66][Aplicar Signo al AppliedAmount: false]
+[2015May11 10:11:46,798][INFO ][RTBS_ACBPCS--1431355306774][info RTBS_ACBPCS.java:118][ _M execute: before getRtbsAcbpcs() ]
+[2015May11 10:11:46,799][DEBUG][RTBS_ACBPCS--1431355306774][debug RTBS_ACBPCS.java:113][ _I getRtbsAcbpcs:]
+[2015May11 10:11:46,804][INFO ][RTBS_ACBPCS-584123944511-1431355306774][getRtbsAcbpcs RTBS_ACBPCS.java:353][_M getRtbsAcbpcs: Recibiendo: channel= FEATC,msisdn=584123944511,startDate=2015-04-01T00:00:00.000-04:30,endDate=2015-04-15T23:59:59.000-04:30,maxNumRecords=50]
+[2015May11 10:11:46,805][INFO ][RTBS_ACBPCS-584123944511-1431355306774][getRtbsAcbpcs RTBS_ACBPCS.java:360][_M getRtbsAcbpcs: Recibiendo mtrReason= [Ljava.lang.String;@15ab14]
+[2015May11 10:11:46,806][INFO ][RTBS_ACBPCS-584123944511-1431355306774][info RTBS_ACBPCS.java:118][_M getRtbsAcbpcs: No hay offerReason]
+[2015May11 10:11:46,808][DEBUG][RTBS_ACBPCS-584123944511-1431355306774][getRtbsAcbpcs RTBS_ACBPCS.java:411][ limit_date=Wed Apr 22 00:00:00 VET 2015]
+[2015May11 10:11:46,810][DEBUG][RTBS_ACBPCS-584123944511-1431355306774][getRtbsAcbpcs RTBS_ACBPCS.java:420][ limitDateLessOne=Tue Apr 21 23:59:59 VET 2015]
+[2015May11 10:11:46,811][INFO ][RTBS_ACBPCS-584123944511-1431355306774][getRtbsAcbpcs RTBS_ACBPCS.java:456][Tipo de Consulta: HISTORICALrecentStartDate nullrecentEndDate nullhistoricalStartDate Wed Apr 01 00:00:00 VET 2015historicalEndDateWed Apr 15 23:59:59 VET 2015]
+[2015May11 10:11:46,813][DEBUG][RTBS_ACBPCS-584123944511-1431355306774][debug RTBS_ACBPCS.java:113][ _M getRtbsAcbpcs: before procesing:]
+[2015May11 10:11:46,816][DEBUG][RTBS_ACBPCS-584123944511-1431355306774][getHistoricData RTBS_ACBPCS.java:803][_M getRtbsAcbpcs: INPUT HISTORY:<HistoryAppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs">
+  <Channel>FEATC</Channel>
+  <MSISDN>584123944511</MSISDN>
+  <SearchDateRange>
+    <StartDate>2015-04-01T00:00:00.000-04:30</StartDate>
+    <EndDate>2015-04-15T23:59:59.000-04:30</EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>50</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason/>
+    <SearchOfferReason/>
+  </ProductChargeConditions>
+</HistoryAppliedCustomerBillingProductChargeSearchRequest>]
+[2015May11 10:11:46,819][INFO ][RTBS_ACBPCS-584123944511-1431355306774][getHistoricData RTBS_ACBPCS.java:809][_M getRtbsAcbpcs: INPUT HISTORY: <HistoryAppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs">
+  <Channel>FEATC</Channel>
+  <MSISDN>584123944511</MSISDN>
+  <SearchDateRange>
+    <StartDate>2015-04-01T00:00:00.000-04:30</StartDate>
+    <EndDate>2015-04-15T23:59:59.000-04:30</EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>50</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason/>
+    <SearchOfferReason/>
+  </ProductChargeConditions>
+</HistoryAppliedCustomerBillingProductChargeSearchRequest>]
+[2015May11 10:11:46,820][INFO ][RTBS_ACBPCS-584123944511-1431355306774][info RTBS_ACBPCSHistory.java:178][ _I getRtbsAcbpcsh:]
+[2015May11 10:11:46,825][DEBUG][RTBS_ACBPCS-584123944511-1431355306774][getRtbsAcbpcsh RTBS_ACBPCSHistory.java:385][_M getRtbsAcbpcsh: Recibiendo: channel= FEATC,msisdn=584123944511,startDate=2015-04-01T00:00:00.000-04:30,endDate=2015-04-15T23:59:59.000-04:30,maxNumRecords=50]
+[2015May11 10:11:46,827][DEBUG][RTBS_ACBPCS-584123944511-1431355306774][getRtbsAcbpcsh RTBS_ACBPCSHistory.java:392][_M getRtbsAcbpcsh: Recibiendo mtrReason= [Ljava.lang.String;@92e789]
+[2015May11 10:11:46,828][DEBUG][RTBS_ACBPCS-584123944511-1431355306774][getRtbsAcbpcsh RTBS_ACBPCSHistory.java:403][_M getRtbsAcbpcsh: Recibiendo offerReason= [Ljava.lang.String;@9ee30d]
+[2015May11 10:11:46,830][DEBUG][RTBS_ACBPCS-584123944511-1431355306774][getRtbsAcbpcsh RTBS_ACBPCSHistory.java:422][valores:1295999000,93.0,2015-04-01T00:00:00.000-04:30,2015-04-15T23:59:59.000-04:30]
+[2015May11 10:11:46,832][DEBUG][RTBS_ACBPCS-584123944511-1431355306774][getRtbsAcbpcsh RTBS_ACBPCSHistory.java:440][ _M getRtbsAcbpcsh: Validate:]
+[2015May11 10:11:46,833][DEBUG][RTBS_ACBPCS-584123944511-1431355306774][debug DispatcherConnection.java:64][ _M jndiConnection]
+[2015May11 10:11:46,835][DEBUG][RTBS_ACBPCS-584123944511-1431355306774][debug DispatcherConnection.java:64][ _M getJndiConnection]
+[2015May11 10:11:46,839][DEBUG][RTBS_ACBPCS-584123944511-1431355306774][debug RTBS_ACBPCSHistory.java:173][_M getRtbsAcbpcsh: before BdHitory - StoreProcedure ApplyDay]
+[2015May11 10:11:46,840][DEBUG][RTBS_ACBPCS-584123944511-1431355306774][debug RtbsHistory.java:54][ _I getApplyDay:]
+[2015May11 10:11:47,527][DEBUG][RTBS_ACBPCS-584123944511-1431355306774][debug RtbsHistory.java:54][ _E getApplyDay:]
+[2015May11 10:11:47,529][DEBUG][RTBS_ACBPCS-584123944511-1431355306774][debug RTBS_ACBPCSHistory.java:173][_M getRtbsAcbpcsh: after BdHitory - StoreProcedure ApplyDay]
+[2015May11 10:11:47,530][DEBUG][RTBS_ACBPCS-584123944511-1431355306774][debug RTBS_ACBPCSHistory.java:173][_M getRtbsAcbpcsh: before BdHitory - StoreProcedure MtrHist]
+[2015May11 10:11:47,531][DEBUG][RTBS_ACBPCS-584123944511-1431355306774][debug RtbsHistory.java:54][ _I getMtrHist:]
+[2015May11 10:11:47,533][DEBUG][RTBS_ACBPCS-584123944511-1431355306774][getMtrHist RtbsHistory.java:142][ _I getMtrHist: dataTypeScheme=null]
+[2015May11 10:11:47,802][DEBUG][RTBS_ACBPCS-584123944511-1431355306774][debug RtbsHistory.java:54][ _E getMtrHist:]
+[2015May11 10:11:47,804][DEBUG][RTBS_ACBPCS-584123944511-1431355306774][debug RTBS_ACBPCSHistory.java:173][_M getRtbsAcbpcsh: after BdHitory - StoreProcedure MtrHist]
+[2015May11 10:11:47,808][DEBUG][RTBS_ACBPCS-584123944511-1431355306774][getRtbsAcbpcs RTBS_ACBPCS.java:548][_M getRtbsAcbpcs: OUTPUT HISTORY:<HistoryAppliedCustomerBillingProductChargeSearchResponse xmlns="http://integra.la/rtbs">
+  <OperationMessage>
+    <Code xmlns="">GEN_S0003-OM0003</Code>
+    <Message xmlns="">La informacion solicitada no ha sido encontrada en la base de datos</Message>
+  </OperationMessage>
+</HistoryAppliedCustomerBillingProductChargeSearchResponse>]
+[2015May11 10:11:47,809][DEBUG][RTBS_ACBPCS-584123944511-1431355306774][getRtbsAcbpcs RTBS_ACBPCS.java:555][_M getRtbsAcbpcs: OUTPUT HISTORY: ]
+[2015May11 10:11:47,813][INFO ][RTBS_ACBPCS-584123944511-1431355306774][info RTBS_ACBPCS.java:118][ _M execute: after getRtbsAcbpcs() ]
+[2015May11 10:11:47,814][INFO ][RTBS_ACBPCS-584123944511-1431355306774][info RTBS_ACBPCS.java:118][ _E execute:]
+[2015May11 10:11:54,769][INFO ][RTBS_ACBPCS--1431355314768][service AcbpcsServlet.java:51][Input:<AppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs"><Channel>FEATC</Channel><MSISDN>584123944511</MSISDN><SearchDateRange><StartDate>2015-04-01T00:00:00.000-04:30</StartDate><EndDate>2015-04-15T23:59:59.000-04:30</EndDate></SearchDateRange><SearchMaxRecords>50</SearchMaxRecords><ProductChargeConditions><SearchMTRReason/><SearchOfferReason/></ProductChargeConditions></AppliedCustomerBillingProductChargeSearchRequest>]
+[2015May11 10:11:54,770][INFO ][RTBS_ACBPCS--1431355314768][execute RTBS_ACBPCS.java:180][ _I execute:]
+[2015May11 10:11:54,772][INFO ][RTBS_ACBPCS--1431355314768][getParameterSignFromRequest RTBS_ACBPCS_SIGN_PARSER.java:30][Parser para obtener filtro del signo para debito o credito con el xml: <AppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs"><Channel>FEATC</Channel><MSISDN>584123944511</MSISDN><SearchDateRange><StartDate>2015-04-01T00:00:00.000-04:30</StartDate><EndDate>2015-04-15T23:59:59.000-04:30</EndDate></SearchDateRange><SearchMaxRecords>50</SearchMaxRecords><ProductChargeConditions><SearchMTRReason/><SearchOfferReason/></ProductChargeConditions></AppliedCustomerBillingProductChargeSearchRequest>]
+[2015May11 10:11:54,783][INFO ][RTBS_ACBPCS--1431355314768][getParameterSignFromRequest RTBS_ACBPCS_SIGN_PARSER.java:36][Instancia del metodo run ]
+[2015May11 10:11:54,786][INFO ][RTBS_ACBPCS--1431355314768][run RTBS_ACBPCS_SIGN_PARSER.java:55][Element Obtenido]
+[2015May11 10:11:54,788][INFO ][RTBS_ACBPCS--1431355314768][run RTBS_ACBPCS_SIGN_PARSER.java:66][Aplicar Signo al AppliedAmount: false]
+[2015May11 10:11:54,792][INFO ][RTBS_ACBPCS--1431355314768][info RTBS_ACBPCS.java:118][ _M execute: before getRtbsAcbpcs() ]
+[2015May11 10:11:54,793][DEBUG][RTBS_ACBPCS--1431355314768][debug RTBS_ACBPCS.java:113][ _I getRtbsAcbpcs:]
+[2015May11 10:11:54,831][INFO ][RTBS_ACBPCS-584123944511-1431355314768][getRtbsAcbpcs RTBS_ACBPCS.java:353][_M getRtbsAcbpcs: Recibiendo: channel= FEATC,msisdn=584123944511,startDate=2015-04-01T00:00:00.000-04:30,endDate=2015-04-15T23:59:59.000-04:30,maxNumRecords=50]
+[2015May11 10:11:54,833][INFO ][RTBS_ACBPCS-584123944511-1431355314768][getRtbsAcbpcs RTBS_ACBPCS.java:360][_M getRtbsAcbpcs: Recibiendo mtrReason= [Ljava.lang.String;@1db50cc]
+[2015May11 10:11:54,834][INFO ][RTBS_ACBPCS-584123944511-1431355314768][info RTBS_ACBPCS.java:118][_M getRtbsAcbpcs: No hay offerReason]
+[2015May11 10:11:54,835][DEBUG][RTBS_ACBPCS-584123944511-1431355314768][getRtbsAcbpcs RTBS_ACBPCS.java:411][ limit_date=Wed Apr 22 00:00:00 VET 2015]
+[2015May11 10:11:54,837][DEBUG][RTBS_ACBPCS-584123944511-1431355314768][getRtbsAcbpcs RTBS_ACBPCS.java:420][ limitDateLessOne=Tue Apr 21 23:59:59 VET 2015]
+[2015May11 10:11:54,838][INFO ][RTBS_ACBPCS-584123944511-1431355314768][getRtbsAcbpcs RTBS_ACBPCS.java:456][Tipo de Consulta: HISTORICALrecentStartDate nullrecentEndDate nullhistoricalStartDate Wed Apr 01 00:00:00 VET 2015historicalEndDateWed Apr 15 23:59:59 VET 2015]
+[2015May11 10:11:54,839][DEBUG][RTBS_ACBPCS-584123944511-1431355314768][debug RTBS_ACBPCS.java:113][ _M getRtbsAcbpcs: before procesing:]
+[2015May11 10:11:54,842][DEBUG][RTBS_ACBPCS-584123944511-1431355314768][getHistoricData RTBS_ACBPCS.java:803][_M getRtbsAcbpcs: INPUT HISTORY:<HistoryAppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs">
+  <Channel>FEATC</Channel>
+  <MSISDN>584123944511</MSISDN>
+  <SearchDateRange>
+    <StartDate>2015-04-01T00:00:00.000-04:30</StartDate>
+    <EndDate>2015-04-15T23:59:59.000-04:30</EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>50</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason/>
+    <SearchOfferReason/>
+  </ProductChargeConditions>
+</HistoryAppliedCustomerBillingProductChargeSearchRequest>]
+[2015May11 10:11:54,844][INFO ][RTBS_ACBPCS-584123944511-1431355314768][getHistoricData RTBS_ACBPCS.java:809][_M getRtbsAcbpcs: INPUT HISTORY: <HistoryAppliedCustomerBillingProductChargeSearchRequest xmlns="http://integra.la/rtbs">
+  <Channel>FEATC</Channel>
+  <MSISDN>584123944511</MSISDN>
+  <SearchDateRange>
+    <StartDate>2015-04-01T00:00:00.000-04:30</StartDate>
+    <EndDate>2015-04-15T23:59:59.000-04:30</EndDate>
+  </SearchDateRange>
+  <SearchMaxRecords>50</SearchMaxRecords>
+  <ProductChargeConditions>
+    <SearchMTRReason/>
+    <SearchOfferReason/>
+  </ProductChargeConditions>
+</HistoryAppliedCustomerBillingProductChargeSearchRequest>]
+[2015May11 10:11:54,846][INFO ][RTBS_ACBPCS-584123944511-1431355314768][info RTBS_ACBPCSHistory.java:178][ _I getRtbsAcbpcsh:]
+[2015May11 10:11:54,849][DEBUG][RTBS_ACBPCS-584123944511-1431355314768][getRtbsAcbpcsh RTBS_ACBPCSHistory.java:385][_M getRtbsAcbpcsh: Recibiendo: channel= FEATC,msisdn=584123944511,startDate=2015-04-01T00:00:00.000-04:30,endDate=2015-04-15T23:59:59.000-04:30,maxNumRecords=50]
+[2015May11 10:11:54,850][DEBUG][RTBS_ACBPCS-584123944511-1431355314768][getRtbsAcbpcsh RTBS_ACBPCSHistory.java:392][_M getRtbsAcbpcsh: Recibiendo mtrReason= [Ljava.lang.String;@1959271]
+[2015May11 10:11:54,851][DEBUG][RTBS_ACBPCS-584123944511-1431355314768][getRtbsAcbpcsh RTBS_ACBPCSHistory.java:403][_M getRtbsAcbpcsh: Recibiendo offerReason= [Ljava.lang.String;@c15c67]
+[2015May11 10:11:54,853][DEBUG][RTBS_ACBPCS-584123944511-1431355314768][getRtbsAcbpcsh RTBS_ACBPCSHistory.java:422][valores:1295999000,93.0,2015-04-01T00:00:00.000-04:30,2015-04-15T23:59:59.000-04:30]
+[2015May11 10:11:54,854][DEBUG][RTBS_ACBPCS-584123944511-1431355314768][getRtbsAcbpcsh RTBS_ACBPCSHistory.java:440][ _M getRtbsAcbpcsh: Validate:]
+[2015May11 10:11:54,856][DEBUG][RTBS_ACBPCS-584123944511-1431355314768][debug DispatcherConnection.java:64][ _M jndiConnection]
+[2015May11 10:11:54,857][DEBUG][RTBS_ACBPCS-584123944511-1431355314768][debug DispatcherConnection.java:64][ _M getJndiConnection]
+[2015May11 10:11:54,861][DEBUG][RTBS_ACBPCS-584123944511-1431355314768][debug RTBS_ACBPCSHistory.java:173][_M getRtbsAcbpcsh: before BdHitory - StoreProcedure ApplyDay]
+[2015May11 10:11:54,862][DEBUG][RTBS_ACBPCS-584123944511-1431355314768][debug RtbsHistory.java:54][ _I getApplyDay:]
+[2015May11 10:11:55,550][DEBUG][RTBS_ACBPCS-584123944511-1431355314768][debug RtbsHistory.java:54][ _E getApplyDay:]
+[2015May11 10:11:55,553][DEBUG][RTBS_ACBPCS-584123944511-1431355314768][debug RTBS_ACBPCSHistory.java:173][_M getRtbsAcbpcsh: after BdHitory - StoreProcedure ApplyDay]
+[2015May11 10:11:55,554][DEBUG][RTBS_ACBPCS-584123944511-1431355314768][debug RTBS_ACBPCSHistory.java:173][_M getRtbsAcbpcsh: before BdHitory - StoreProcedure MtrHist]
+[2015May11 10:11:55,556][DEBUG][RTBS_ACBPCS-584123944511-1431355314768][debug RtbsHistory.java:54][ _I getMtrHist:]
+[2015May11 10:11:55,557][DEBUG][RTBS_ACBPCS-584123944511-1431355314768][getMtrHist RtbsHistory.java:142][ _I getMtrHist: dataTypeScheme=null]
+[2015May11 10:11:55,574][DEBUG][RTBS_ACBPCS-584123944511-1431355314768][debug RtbsHistory.java:54][ _E getMtrHist:]
+[2015May11 10:11:55,575][DEBUG][RTBS_ACBPCS-584123944511-1431355314768][debug RTBS_ACBPCSHistory.java:173][_M getRtbsAcbpcsh: after BdHitory - StoreProcedure MtrHist]
+[2015May11 10:11:55,579][DEBUG][RTBS_ACBPCS-584123944511-1431355314768][getRtbsAcbpcs RTBS_ACBPCS.java:548][_M getRtbsAcbpcs: OUTPUT HISTORY:<HistoryAppliedCustomerBillingProductChargeSearchResponse xmlns="http://integra.la/rtbs">
+  <OperationMessage>
+    <Code xmlns="">GEN_S0003-OM0003</Code>
+    <Message xmlns="">La informacion solicitada no ha sido encontrada en la base de datos</Message>
+  </OperationMessage>
+</HistoryAppliedCustomerBillingProductChargeSearchResponse>]
+[2015May11 10:11:55,581][DEBUG][RTBS_ACBPCS-584123944511-1431355314768][getRtbsAcbpcs RTBS_ACBPCS.java:555][_M getRtbsAcbpcs: OUTPUT HISTORY: ]
+[2015May11 10:11:55,583][INFO ][RTBS_ACBPCS-584123944511-1431355314768][info RTBS_ACBPCS.java:118][ _M execute: after getRtbsAcbpcs() ]
+[2015May11 10:11:55,584][INFO ][RTBS_ACBPCS-584123944511-1431355314768][info RTBS_ACBPCS.java:118][ _E execute:]
